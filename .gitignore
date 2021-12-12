@@ -5,13 +5,13 @@
 __pycache__
 
 # generated application files
-*.bin
-*.o
-*.elf
-*.asm
-*.out
-*.hex
-*_image.vhd
+#*.bin
+#*.o
+#*.elf
+#*.asm
+#*.out
+#*.hex
+#*_image.vhd
 
 # keep default VHDL memory images
 !rtl/core/*_image.vhd
