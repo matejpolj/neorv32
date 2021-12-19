@@ -129,5 +129,5 @@ set_location_assignment GPIO_29 -to gpio_o[20]
 set_location_assignment GPIO_210 -to gpio_o[21]
 set_location_assignment PIN_D9 -to pwm_o[0]
 set_location_assignment PIN_E10 -to pwm_o[1]
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name IP_SEARCH_PATHS "/mnt/5064E3264BEB0448/avalon-wishbone-bridge"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
