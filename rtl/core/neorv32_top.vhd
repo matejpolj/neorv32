@@ -55,7 +55,7 @@ entity neorv32_top is
     ON_CHIP_DEBUGGER_EN          : boolean := false;  -- implement on-chip debugger
 
     -- RISC-V CPU Extensions --
-    CPU_EXTENSION_RISCV_A        : boolean := false;  -- implement atomic extension?
+    CPU_EXTENSION_RISCV_A        : boolean := true;  -- implement atomic extension?
     CPU_EXTENSION_RISCV_B        : boolean := true;  -- implement bit-manipulation extension?
     CPU_EXTENSION_RISCV_C        : boolean := true;  -- implement compressed extension?
     CPU_EXTENSION_RISCV_E        : boolean := true;  -- implement embedded RF extension?
@@ -84,11 +84,11 @@ entity neorv32_top is
 
     -- Internal Instruction memory (IMEM) --
     MEM_INT_IMEM_EN              : boolean := true;  -- implement processor-internal instruction memory
-    MEM_INT_IMEM_SIZE            : natural := 64*1024; -- size of processor-internal instruction memory in bytes
+    MEM_INT_IMEM_SIZE            : natural := 16*1024; -- size of processor-internal instruction memory in bytes
 
     -- Internal Data memory (DMEM) --
-    MEM_INT_DMEM_EN              : boolean := false;  -- implement processor-internal data memory
-    MEM_INT_DMEM_SIZE            : natural := 32*1024; -- size of processor-internal data memory in bytes
+    MEM_INT_DMEM_EN              : boolean := true;  -- implement processor-internal data memory
+    MEM_INT_DMEM_SIZE            : natural := 8*1024; -- size of processor-internal data memory in bytes
 
     -- Internal Cache memory (iCACHE) --
     ICACHE_EN                    : boolean := true;  -- implement instruction cache
