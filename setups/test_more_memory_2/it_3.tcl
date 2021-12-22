@@ -122,7 +122,6 @@ if {$make_assignments} {
     # izhoda za buzzer v obliki pwm
   set_location_assignment PIN_D9 -to pwm_o[0]
   set_location_assignment PIN_E10 -to pwm_o[1]
-    # dodan 
 
 
   set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
