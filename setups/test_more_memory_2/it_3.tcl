@@ -103,22 +103,22 @@ if {$make_assignments} {
   set_location_assignment PIN_D8 -to gpio_o[9]
   set_location_assignment PIN_F8 -to gpio_o[10]
   set_location_assignment PIN_E9 -to gpio_o[11]
-  set_location_assignment PIN_D5 -to gpio_i[8]
-  set_location_assignment PIN_A6 -to gpio_i[9]
-  set_location_assignment PIN_D6 -to gpio_i[10]
-  set_location_assignment PIN_C6 -to gpio_i[11]
+  set_location_assignment PIN_D5 -to gpio_i[4]
+  set_location_assignment PIN_A6 -to gpio_i[5]
+  set_location_assignment PIN_D6 -to gpio_i[6]
+  set_location_assignment PIN_C6 -to gpio_i[7]
     # izbira matrike ali vga
-  set_location_assignment GPIO_21 -to gpio_o[12]
-  set_location_assignment GPIO_22 -to gpio_o[13]
+  set_location_assignment PIN_B16 -to gpio_o[12]
+  set_location_assignment PIN_C14 -to gpio_o[13]
     # data za matriko ali vga
-  set_location_assignment GPIO_23 -to gpio_o[14]
-  set_location_assignment GPIO_24 -to gpio_o[15]
-  set_location_assignment GPIO_25 -to gpio_o[16]
-  set_location_assignment GPIO_26 -to gpio_o[17]
-  set_location_assignment GPIO_27 -to gpio_o[18]
-  set_location_assignment GPIO_28 -to gpio_o[19]
-  set_location_assignment GPIO_29 -to gpio_o[20]
-  set_location_assignment GPIO_210 -to gpio_o[21]
+  set_location_assignment PIN_C16 -to gpio_o[14]
+  set_location_assignment PIN_C15 -to gpio_o[15]
+  set_location_assignment PIN_D16 -to gpio_o[16]
+  set_location_assignment PIN_D15 -to gpio_o[17]
+  set_location_assignment PIN_D14 -to gpio_o[18]
+  set_location_assignment PIN_F15 -to gpio_o[19]
+  set_location_assignment PIN_F16 -to gpio_o[20]
+  set_location_assignment PIN_F14 -to gpio_o[21]
     # izhoda za buzzer v obliki pwm
   set_location_assignment PIN_D9 -to pwm_o[0]
   set_location_assignment PIN_E10 -to pwm_o[1]
@@ -128,3 +128,4 @@ if {$make_assignments} {
 
   # Commit assignments
   export_assignments
+}
