@@ -8,8 +8,8 @@ Disassembly of section .text:
    0:	00000037          	lui	zero,0x0
 
 00000004 <__crt0_pointer_init>:
-   4:	80018117          	auipc	sp,0x80018
-   8:	ff810113          	addi	sp,sp,-8 # 80017ffc <__ctr0_io_space_begin+0x800181fc>
+   4:	80002117          	auipc	sp,0x80002
+   8:	ff810113          	addi	sp,sp,-8 # 80001ffc <__ctr0_io_space_begin+0x800021fc>
    c:	80000197          	auipc	gp,0x80000
   10:	7f418193          	addi	gp,gp,2036 # 80000800 <__ctr0_io_space_begin+0x80000a00>
 
