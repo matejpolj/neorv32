@@ -65,7 +65,7 @@ architecture neorv32_test_setup_bootloader_rtl of neorv32_test_setup_bootloader 
 
   signal con_gpio_o : std_ulogic_vector(63 downto 0);
   signal con_gpio_i : std_ulogic_vector(63 downto 0);
-  signal con_pwm_o  : std_ulogic_vector(1 downto 0);
+  signal con_pwm_o  : std_ulogic_vector(IO_PWM_NUM_CH-1 downto 0);
 
 begin
 
@@ -116,7 +116,7 @@ begin
 
   -- GPIO output --
   gpio_o <= con_gpio_o(21 downto 0);
-  pwm_o  <= con_pwm_o(1 downto 0);
+  pwm_o  <= con_pwm_o(IO_PWM_NUM_CH-1 downto 0);
 
 
 
