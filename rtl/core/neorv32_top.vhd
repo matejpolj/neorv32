@@ -49,28 +49,28 @@ entity neorv32_top is
     -- General --
     CLOCK_FREQUENCY              : natural;           -- clock frequency of clk_i in Hz
     HW_THREAD_ID                 : natural := 0;      -- hardware thread id (32-bit)
-    INT_BOOTLOADER_EN            : boolean := true;  -- boot configuration: true = boot explicit bootloader; false = boot from int/ext (I)MEM
+    INT_BOOTLOADER_EN            : boolean := false;  -- boot configuration: true = boot explicit bootloader; false = boot from int/ext (I)MEM
 
     -- On-Chip Debugger (OCD) --
     ON_CHIP_DEBUGGER_EN          : boolean := false;  -- implement on-chip debugger
 
     -- RISC-V CPU Extensions --
-    CPU_EXTENSION_RISCV_A        : boolean := true;  -- implement atomic extension?
-    CPU_EXTENSION_RISCV_B        : boolean := true;  -- implement bit-manipulation extension?
-    CPU_EXTENSION_RISCV_C        : boolean := true;  -- implement compressed extension?
-    CPU_EXTENSION_RISCV_E        : boolean := true;  -- implement embedded RF extension?
-    CPU_EXTENSION_RISCV_M        : boolean := true;  -- implement mul/div extension?
-    CPU_EXTENSION_RISCV_U        : boolean := true;  -- implement user mode extension?
-    CPU_EXTENSION_RISCV_Zfinx    : boolean := true;  -- implement 32-bit floating-point extension (using INT regs!)
+    CPU_EXTENSION_RISCV_A        : boolean := false;  -- implement atomic extension?
+    CPU_EXTENSION_RISCV_B        : boolean := false;  -- implement bit-manipulation extension?
+    CPU_EXTENSION_RISCV_C        : boolean := false;  -- implement compressed extension?
+    CPU_EXTENSION_RISCV_E        : boolean := false;  -- implement embedded RF extension?
+    CPU_EXTENSION_RISCV_M        : boolean := false;  -- implement mul/div extension?
+    CPU_EXTENSION_RISCV_U        : boolean := false;  -- implement user mode extension?
+    CPU_EXTENSION_RISCV_Zfinx    : boolean := false;  -- implement 32-bit floating-point extension (using INT regs!)
     CPU_EXTENSION_RISCV_Zicsr    : boolean := true;   -- implement CSR system?
     CPU_EXTENSION_RISCV_Zicntr   : boolean := true;   -- implement base counters?
-    CPU_EXTENSION_RISCV_Zihpm    : boolean := true;  -- implement hardware performance monitors?
-    CPU_EXTENSION_RISCV_Zifencei : boolean := true;  -- implement instruction stream sync.?
-    CPU_EXTENSION_RISCV_Zmmul    : boolean := true;  -- implement multiply-only M sub-extension?
+    CPU_EXTENSION_RISCV_Zihpm    : boolean := false;  -- implement hardware performance monitors?
+    CPU_EXTENSION_RISCV_Zifencei : boolean := false;  -- implement instruction stream sync.?
+    CPU_EXTENSION_RISCV_Zmmul    : boolean := false;  -- implement multiply-only M sub-extension?
 
     -- Extension Options --
-    FAST_MUL_EN                  : boolean := true;  -- use DSPs for M extension's multiplier
-    FAST_SHIFT_EN                : boolean := true;  -- use barrel shifter for shift operations
+    FAST_MUL_EN                  : boolean := false;  -- use DSPs for M extension's multiplier
+    FAST_SHIFT_EN                : boolean := false;  -- use barrel shifter for shift operations
     CPU_CNT_WIDTH                : natural := 64;     -- total width of CPU cycle and instret counters (0..64)
     CPU_IPB_ENTRIES              : natural := 2;      -- entries is instruction prefetch buffer, has to be a power of 2
 
@@ -91,7 +91,7 @@ entity neorv32_top is
     MEM_INT_DMEM_SIZE            : natural := 8*1024; -- size of processor-internal data memory in bytes
 
     -- Internal Cache memory (iCACHE) --
-    ICACHE_EN                    : boolean := true;  -- implement instruction cache
+    ICACHE_EN                    : boolean := false;  -- implement instruction cache
     ICACHE_NUM_BLOCKS            : natural := 4;      -- i-cache: number of blocks (min 1), has to be a power of 2
     ICACHE_BLOCK_SIZE            : natural := 64;     -- i-cache: block size in bytes (min 4), has to be a power of 2
     ICACHE_ASSOCIATIVITY         : natural := 1;      -- i-cache: associativity / number of sets (1=direct_mapped), has to be a power of 2
@@ -115,9 +115,9 @@ entity neorv32_top is
     XIRQ_TRIGGER_POLARITY        : std_ulogic_vector(31 downto 0) := x"ffffffff"; -- trigger polarity: 0=low-level/falling-edge, 1=high-level/rising-edge
 
     -- Processor peripherals --
-    IO_GPIO_EN                   : boolean := true;  -- implement general purpose input/output port unit (GPIO)?
+    IO_GPIO_EN                   : boolean := false;  -- implement general purpose input/output port unit (GPIO)?
     IO_MTIME_EN                  : boolean := false;  -- implement machine system timer (MTIME)?
-    IO_UART0_EN                  : boolean := true;  -- implement primary universal asynchronous receiver/transmitter (UART0)?
+    IO_UART0_EN                  : boolean := false;  -- implement primary universal asynchronous receiver/transmitter (UART0)?
     IO_UART0_RX_FIFO             : natural := 1;      -- RX fifo depth, has to be a power of two, min 1
     IO_UART0_TX_FIFO             : natural := 1;      -- TX fifo depth, has to be a power of two, min 1
     IO_UART1_EN                  : boolean := false;  -- implement secondary universal asynchronous receiver/transmitter (UART1)?
