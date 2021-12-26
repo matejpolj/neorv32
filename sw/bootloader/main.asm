@@ -160,13 +160,13 @@ Disassembly of section .text:
  1d0:	00000613          	li	a2,0
  1d4:	00000593          	li	a1,0
  1d8:	00200513          	li	a0,2
- 1dc:	37d000ef          	jal	ra,d58 <neorv32_spi_setup>
- 1e0:	411000ef          	jal	ra,df0 <neorv32_gpio_available>
+ 1dc:	3a9000ef          	jal	ra,d84 <neorv32_spi_setup>
+ 1e0:	43d000ef          	jal	ra,e1c <neorv32_gpio_available>
  1e4:	00048493          	mv	s1,s1
  1e8:	00050863          	beqz	a0,1f8 <main+0x78>
  1ec:	00100513          	li	a0,1
  1f0:	00000593          	li	a1,0
- 1f4:	43d000ef          	jal	ra,e30 <neorv32_gpio_port_set>
+ 1f4:	469000ef          	jal	ra,e5c <neorv32_gpio_port_set>
  1f8:	00005537          	lui	a0,0x5
  1fc:	00000613          	li	a2,0
  200:	00000593          	li	a1,0
@@ -174,7 +174,7 @@ Disassembly of section .text:
  208:	1fd000ef          	jal	ra,c04 <neorv32_uart0_setup>
  20c:	1c1000ef          	jal	ra,bcc <neorv32_mtime_available>
  210:	02050a63          	beqz	a0,244 <main+0xc4>
- 214:	42d000ef          	jal	ra,e40 <neorv32_cpu_get_systime>
+ 214:	345000ef          	jal	ra,d58 <neorv32_cpu_get_systime>
  218:	fe002783          	lw	a5,-32(zero) # ffffffe0 <__ctr0_io_space_begin+0x1e0>
  21c:	0027d793          	srli	a5,a5,0x2
  220:	00a78533          	add	a0,a5,a0
@@ -235,7 +235,7 @@ Disassembly of section .text:
  2fc:	00001537          	lui	a0,0x1
  300:	0ac50513          	addi	a0,a0,172 # 10ac <__etext+0x18c>
  304:	1fd000ef          	jal	ra,d00 <neorv32_uart0_print>
- 308:	339000ef          	jal	ra,e40 <neorv32_cpu_get_systime>
+ 308:	251000ef          	jal	ra,d58 <neorv32_cpu_get_systime>
  30c:	fe002403          	lw	s0,-32(zero) # ffffffe0 <__ctr0_io_space_begin+0x1e0>
  310:	00341413          	slli	s0,s0,0x3
  314:	00a40933          	add	s2,s0,a0
@@ -243,7 +243,7 @@ Disassembly of section .text:
  31c:	00b40433          	add	s0,s0,a1
  320:	0d5000ef          	jal	ra,bf4 <neorv32_uart0_available>
  324:	02051663          	bnez	a0,350 <main+0x1d0>
- 328:	319000ef          	jal	ra,e40 <neorv32_cpu_get_systime>
+ 328:	231000ef          	jal	ra,d58 <neorv32_cpu_get_systime>
  32c:	fe85eae3          	bltu	a1,s0,320 <main+0x1a0>
  330:	00b41463          	bne	s0,a1,338 <main+0x1b8>
  334:	ff2566e3          	bltu	a0,s2,320 <main+0x1a0>
@@ -337,11 +337,11 @@ Disassembly of section .text:
  47c:	30047073          	csrci	mstatus,8
  480:	00000013          	nop
  484:	00000013          	nop
- 488:	169000ef          	jal	ra,df0 <neorv32_gpio_available>
+ 488:	195000ef          	jal	ra,e1c <neorv32_gpio_available>
  48c:	00050863          	beqz	a0,49c <system_error+0x48>
  490:	00100513          	li	a0,1
  494:	00000593          	li	a1,0
- 498:	199000ef          	jal	ra,e30 <neorv32_gpio_port_set>
+ 498:	1c5000ef          	jal	ra,e5c <neorv32_gpio_port_set>
  49c:	0000006f          	j	49c <system_error+0x48>
 
 000004a0 <print_hex_word>:
@@ -398,13 +398,13 @@ Disassembly of section .text:
  560:	800007b7          	lui	a5,0x80000
  564:	00778793          	addi	a5,a5,7 # 80000007 <__ctr0_io_space_begin+0x80000207>
  568:	08f49463          	bne	s1,a5,5f0 <bootloader_trap_handler+0xe0>
- 56c:	085000ef          	jal	ra,df0 <neorv32_gpio_available>
+ 56c:	0b1000ef          	jal	ra,e1c <neorv32_gpio_available>
  570:	00050663          	beqz	a0,57c <bootloader_trap_handler+0x6c>
  574:	00000513          	li	a0,0
- 578:	089000ef          	jal	ra,e00 <neorv32_gpio_pin_toggle>
+ 578:	0b5000ef          	jal	ra,e2c <neorv32_gpio_pin_toggle>
  57c:	650000ef          	jal	ra,bcc <neorv32_mtime_available>
  580:	02050063          	beqz	a0,5a0 <bootloader_trap_handler+0x90>
- 584:	0bd000ef          	jal	ra,e40 <neorv32_cpu_get_systime>
+ 584:	7d4000ef          	jal	ra,d58 <neorv32_cpu_get_systime>
  588:	fe002783          	lw	a5,-32(zero) # ffffffe0 <__ctr0_io_space_begin+0x1e0>
  58c:	0027d793          	srli	a5,a5,0x2
  590:	00a78533          	add	a0,a5,a0
@@ -466,14 +466,14 @@ Disassembly of section .text:
  668:	00000513          	li	a0,0
  66c:	00112623          	sw	ra,12(sp)
  670:	00812423          	sw	s0,8(sp)
- 674:	724000ef          	jal	ra,d98 <neorv32_spi_cs_en>
+ 674:	750000ef          	jal	ra,dc4 <neorv32_spi_cs_en>
  678:	09e00513          	li	a0,158
- 67c:	760000ef          	jal	ra,ddc <neorv32_spi_trans>
+ 67c:	78c000ef          	jal	ra,e08 <neorv32_spi_trans>
  680:	00000513          	li	a0,0
- 684:	758000ef          	jal	ra,ddc <neorv32_spi_trans>
+ 684:	784000ef          	jal	ra,e08 <neorv32_spi_trans>
  688:	00050413          	mv	s0,a0
  68c:	00000513          	li	a0,0
- 690:	728000ef          	jal	ra,db8 <neorv32_spi_cs_dis>
+ 690:	754000ef          	jal	ra,de4 <neorv32_spi_cs_dis>
  694:	00c12083          	lw	ra,12(sp)
  698:	0ff47513          	andi	a0,s0,255
  69c:	00812403          	lw	s0,8(sp)
@@ -485,15 +485,15 @@ Disassembly of section .text:
  6ac:	00112623          	sw	ra,12(sp)
  6b0:	00812423          	sw	s0,8(sp)
  6b4:	00000513          	li	a0,0
- 6b8:	6e0000ef          	jal	ra,d98 <neorv32_spi_cs_en>
+ 6b8:	70c000ef          	jal	ra,dc4 <neorv32_spi_cs_en>
  6bc:	00500513          	li	a0,5
- 6c0:	71c000ef          	jal	ra,ddc <neorv32_spi_trans>
+ 6c0:	748000ef          	jal	ra,e08 <neorv32_spi_trans>
  6c4:	00000513          	li	a0,0
- 6c8:	714000ef          	jal	ra,ddc <neorv32_spi_trans>
+ 6c8:	740000ef          	jal	ra,e08 <neorv32_spi_trans>
  6cc:	00050413          	mv	s0,a0
  6d0:	00147413          	andi	s0,s0,1
  6d4:	00000513          	li	a0,0
- 6d8:	6e0000ef          	jal	ra,db8 <neorv32_spi_cs_dis>
+ 6d8:	70c000ef          	jal	ra,de4 <neorv32_spi_cs_dis>
  6dc:	fc041ce3          	bnez	s0,6b4 <spi_flash_write_wait+0xc>
  6e0:	00c12083          	lw	ra,12(sp)
  6e4:	00812403          	lw	s0,8(sp)
@@ -504,13 +504,13 @@ Disassembly of section .text:
  6f0:	ff010113          	addi	sp,sp,-16
  6f4:	00000513          	li	a0,0
  6f8:	00112623          	sw	ra,12(sp)
- 6fc:	69c000ef          	jal	ra,d98 <neorv32_spi_cs_en>
+ 6fc:	6c8000ef          	jal	ra,dc4 <neorv32_spi_cs_en>
  700:	00600513          	li	a0,6
- 704:	6d8000ef          	jal	ra,ddc <neorv32_spi_trans>
+ 704:	704000ef          	jal	ra,e08 <neorv32_spi_trans>
  708:	00c12083          	lw	ra,12(sp)
  70c:	00000513          	li	a0,0
  710:	01010113          	addi	sp,sp,16
- 714:	6a40006f          	j	db8 <neorv32_spi_cs_dis>
+ 714:	6d00006f          	j	de4 <neorv32_spi_cs_dis>
 
 00000718 <spi_flash_write_addr>:
  718:	ff010113          	addi	sp,sp,-16
@@ -519,15 +519,15 @@ Disassembly of section .text:
  724:	01055513          	srli	a0,a0,0x10
  728:	0ff57513          	andi	a0,a0,255
  72c:	00112623          	sw	ra,12(sp)
- 730:	6ac000ef          	jal	ra,ddc <neorv32_spi_trans>
+ 730:	6d8000ef          	jal	ra,e08 <neorv32_spi_trans>
  734:	00845513          	srli	a0,s0,0x8
  738:	0ff57513          	andi	a0,a0,255
- 73c:	6a0000ef          	jal	ra,ddc <neorv32_spi_trans>
+ 73c:	6cc000ef          	jal	ra,e08 <neorv32_spi_trans>
  740:	0ff47513          	andi	a0,s0,255
  744:	00812403          	lw	s0,8(sp)
  748:	00c12083          	lw	ra,12(sp)
  74c:	01010113          	addi	sp,sp,16
- 750:	68c0006f          	j	ddc <neorv32_spi_trans>
+ 750:	6b80006f          	j	e08 <neorv32_spi_trans>
 
 00000754 <spi_flash_read_byte>:
  754:	ff010113          	addi	sp,sp,-16
@@ -535,16 +535,16 @@ Disassembly of section .text:
  75c:	00050413          	mv	s0,a0
  760:	00000513          	li	a0,0
  764:	00112623          	sw	ra,12(sp)
- 768:	630000ef          	jal	ra,d98 <neorv32_spi_cs_en>
+ 768:	65c000ef          	jal	ra,dc4 <neorv32_spi_cs_en>
  76c:	00300513          	li	a0,3
- 770:	66c000ef          	jal	ra,ddc <neorv32_spi_trans>
+ 770:	698000ef          	jal	ra,e08 <neorv32_spi_trans>
  774:	00040513          	mv	a0,s0
  778:	fa1ff0ef          	jal	ra,718 <spi_flash_write_addr>
  77c:	00000513          	li	a0,0
- 780:	65c000ef          	jal	ra,ddc <neorv32_spi_trans>
+ 780:	688000ef          	jal	ra,e08 <neorv32_spi_trans>
  784:	00050413          	mv	s0,a0
  788:	00000513          	li	a0,0
- 78c:	62c000ef          	jal	ra,db8 <neorv32_spi_cs_dis>
+ 78c:	658000ef          	jal	ra,de4 <neorv32_spi_cs_dis>
  790:	00c12083          	lw	ra,12(sp)
  794:	0ff47513          	andi	a0,s0,255
  798:	00812403          	lw	s0,8(sp)
@@ -674,15 +674,15 @@ Disassembly of section .text:
  970:	00050493          	mv	s1,a0
  974:	d7dff0ef          	jal	ra,6f0 <spi_flash_write_enable>
  978:	00000513          	li	a0,0
- 97c:	41c000ef          	jal	ra,d98 <neorv32_spi_cs_en>
+ 97c:	448000ef          	jal	ra,dc4 <neorv32_spi_cs_en>
  980:	00200513          	li	a0,2
- 984:	458000ef          	jal	ra,ddc <neorv32_spi_trans>
+ 984:	484000ef          	jal	ra,e08 <neorv32_spi_trans>
  988:	00048513          	mv	a0,s1
  98c:	d8dff0ef          	jal	ra,718 <spi_flash_write_addr>
  990:	00040513          	mv	a0,s0
- 994:	448000ef          	jal	ra,ddc <neorv32_spi_trans>
+ 994:	474000ef          	jal	ra,e08 <neorv32_spi_trans>
  998:	00000513          	li	a0,0
- 99c:	41c000ef          	jal	ra,db8 <neorv32_spi_cs_dis>
+ 99c:	448000ef          	jal	ra,de4 <neorv32_spi_cs_dis>
  9a0:	00812403          	lw	s0,8(sp)
  9a4:	00c12083          	lw	ra,12(sp)
  9a8:	00412483          	lw	s1,4(sp)
@@ -720,13 +720,13 @@ Disassembly of section .text:
  a18:	00050413          	mv	s0,a0
  a1c:	cd5ff0ef          	jal	ra,6f0 <spi_flash_write_enable>
  a20:	00000513          	li	a0,0
- a24:	374000ef          	jal	ra,d98 <neorv32_spi_cs_en>
+ a24:	3a0000ef          	jal	ra,dc4 <neorv32_spi_cs_en>
  a28:	0d800513          	li	a0,216
- a2c:	3b0000ef          	jal	ra,ddc <neorv32_spi_trans>
+ a2c:	3dc000ef          	jal	ra,e08 <neorv32_spi_trans>
  a30:	00040513          	mv	a0,s0
  a34:	ce5ff0ef          	jal	ra,718 <spi_flash_write_addr>
  a38:	00000513          	li	a0,0
- a3c:	37c000ef          	jal	ra,db8 <neorv32_spi_cs_dis>
+ a3c:	3a8000ef          	jal	ra,de4 <neorv32_spi_cs_dis>
  a40:	00812403          	lw	s0,8(sp)
  a44:	00c12083          	lw	ra,12(sp)
  a48:	01010113          	addi	sp,sp,16
@@ -946,89 +946,89 @@ Disassembly of section .text:
  d50:	f61ff0ef          	jal	ra,cb0 <neorv32_uart0_putc>
  d54:	fc9ff06f          	j	d1c <neorv32_uart0_print+0x1c>
 
-00000d58 <neorv32_spi_setup>:
- d58:	00757513          	andi	a0,a0,7
- d5c:	0036f793          	andi	a5,a3,3
- d60:	00167613          	andi	a2,a2,1
- d64:	00a51513          	slli	a0,a0,0xa
- d68:	00d79793          	slli	a5,a5,0xd
- d6c:	0015f593          	andi	a1,a1,1
- d70:	00f567b3          	or	a5,a0,a5
- d74:	00f61613          	slli	a2,a2,0xf
- d78:	00c7e7b3          	or	a5,a5,a2
- d7c:	00959593          	slli	a1,a1,0x9
- d80:	fa800713          	li	a4,-88
- d84:	00b7e7b3          	or	a5,a5,a1
- d88:	00072023          	sw	zero,0(a4) # 40000 <__crt0_copy_data_src_begin+0x3eef8>
- d8c:	1007e793          	ori	a5,a5,256
- d90:	00f72023          	sw	a5,0(a4)
- d94:	00008067          	ret
+00000d58 <neorv32_cpu_get_systime>:
+ d58:	ff010113          	addi	sp,sp,-16
+ d5c:	c81026f3          	rdtimeh	a3
+ d60:	c0102773          	rdtime	a4
+ d64:	c81027f3          	rdtimeh	a5
+ d68:	fed79ae3          	bne	a5,a3,d5c <neorv32_cpu_get_systime+0x4>
+ d6c:	00e12023          	sw	a4,0(sp)
+ d70:	00f12223          	sw	a5,4(sp)
+ d74:	00012503          	lw	a0,0(sp)
+ d78:	00412583          	lw	a1,4(sp)
+ d7c:	01010113          	addi	sp,sp,16
+ d80:	00008067          	ret
 
-00000d98 <neorv32_spi_cs_en>:
- d98:	fa800713          	li	a4,-88
- d9c:	00072683          	lw	a3,0(a4)
- da0:	00757793          	andi	a5,a0,7
- da4:	00100513          	li	a0,1
- da8:	00f51533          	sll	a0,a0,a5
- dac:	00d56533          	or	a0,a0,a3
- db0:	00a72023          	sw	a0,0(a4)
- db4:	00008067          	ret
+00000d84 <neorv32_spi_setup>:
+ d84:	00757513          	andi	a0,a0,7
+ d88:	0036f793          	andi	a5,a3,3
+ d8c:	00167613          	andi	a2,a2,1
+ d90:	00a51513          	slli	a0,a0,0xa
+ d94:	00d79793          	slli	a5,a5,0xd
+ d98:	0015f593          	andi	a1,a1,1
+ d9c:	00f567b3          	or	a5,a0,a5
+ da0:	00f61613          	slli	a2,a2,0xf
+ da4:	00c7e7b3          	or	a5,a5,a2
+ da8:	00959593          	slli	a1,a1,0x9
+ dac:	fa800713          	li	a4,-88
+ db0:	00b7e7b3          	or	a5,a5,a1
+ db4:	00072023          	sw	zero,0(a4) # 40000 <__crt0_copy_data_src_begin+0x3eef8>
+ db8:	1007e793          	ori	a5,a5,256
+ dbc:	00f72023          	sw	a5,0(a4)
+ dc0:	00008067          	ret
 
-00000db8 <neorv32_spi_cs_dis>:
- db8:	fa800713          	li	a4,-88
- dbc:	00072683          	lw	a3,0(a4)
- dc0:	00757513          	andi	a0,a0,7
- dc4:	00100793          	li	a5,1
- dc8:	00a797b3          	sll	a5,a5,a0
- dcc:	fff7c793          	not	a5,a5
- dd0:	00d7f7b3          	and	a5,a5,a3
- dd4:	00f72023          	sw	a5,0(a4)
- dd8:	00008067          	ret
+00000dc4 <neorv32_spi_cs_en>:
+ dc4:	fa800713          	li	a4,-88
+ dc8:	00072683          	lw	a3,0(a4)
+ dcc:	00757793          	andi	a5,a0,7
+ dd0:	00100513          	li	a0,1
+ dd4:	00f51533          	sll	a0,a0,a5
+ dd8:	00d56533          	or	a0,a0,a3
+ ddc:	00a72023          	sw	a0,0(a4)
+ de0:	00008067          	ret
 
-00000ddc <neorv32_spi_trans>:
- ddc:	faa02623          	sw	a0,-84(zero) # ffffffac <__ctr0_io_space_begin+0x1ac>
- de0:	fa802783          	lw	a5,-88(zero) # ffffffa8 <__ctr0_io_space_begin+0x1a8>
- de4:	fe07cee3          	bltz	a5,de0 <neorv32_spi_trans+0x4>
- de8:	fac02503          	lw	a0,-84(zero) # ffffffac <__ctr0_io_space_begin+0x1ac>
- dec:	00008067          	ret
+00000de4 <neorv32_spi_cs_dis>:
+ de4:	fa800713          	li	a4,-88
+ de8:	00072683          	lw	a3,0(a4)
+ dec:	00757513          	andi	a0,a0,7
+ df0:	00100793          	li	a5,1
+ df4:	00a797b3          	sll	a5,a5,a0
+ df8:	fff7c793          	not	a5,a5
+ dfc:	00d7f7b3          	and	a5,a5,a3
+ e00:	00f72023          	sw	a5,0(a4)
+ e04:	00008067          	ret
 
-00000df0 <neorv32_gpio_available>:
- df0:	fe802503          	lw	a0,-24(zero) # ffffffe8 <__ctr0_io_space_begin+0x1e8>
- df4:	01055513          	srli	a0,a0,0x10
- df8:	00157513          	andi	a0,a0,1
- dfc:	00008067          	ret
+00000e08 <neorv32_spi_trans>:
+ e08:	faa02623          	sw	a0,-84(zero) # ffffffac <__ctr0_io_space_begin+0x1ac>
+ e0c:	fa802783          	lw	a5,-88(zero) # ffffffa8 <__ctr0_io_space_begin+0x1a8>
+ e10:	fe07cee3          	bltz	a5,e0c <neorv32_spi_trans+0x4>
+ e14:	fac02503          	lw	a0,-84(zero) # ffffffac <__ctr0_io_space_begin+0x1ac>
+ e18:	00008067          	ret
 
-00000e00 <neorv32_gpio_pin_toggle>:
- e00:	00100793          	li	a5,1
- e04:	01f00713          	li	a4,31
- e08:	00a797b3          	sll	a5,a5,a0
- e0c:	00a74a63          	blt	a4,a0,e20 <neorv32_gpio_pin_toggle+0x20>
- e10:	fc802703          	lw	a4,-56(zero) # ffffffc8 <__ctr0_io_space_begin+0x1c8>
- e14:	00f747b3          	xor	a5,a4,a5
- e18:	fcf02423          	sw	a5,-56(zero) # ffffffc8 <__ctr0_io_space_begin+0x1c8>
- e1c:	00008067          	ret
- e20:	fcc02703          	lw	a4,-52(zero) # ffffffcc <__ctr0_io_space_begin+0x1cc>
- e24:	00f747b3          	xor	a5,a4,a5
- e28:	fcf02623          	sw	a5,-52(zero) # ffffffcc <__ctr0_io_space_begin+0x1cc>
- e2c:	00008067          	ret
+00000e1c <neorv32_gpio_available>:
+ e1c:	fe802503          	lw	a0,-24(zero) # ffffffe8 <__ctr0_io_space_begin+0x1e8>
+ e20:	01055513          	srli	a0,a0,0x10
+ e24:	00157513          	andi	a0,a0,1
+ e28:	00008067          	ret
 
-00000e30 <neorv32_gpio_port_set>:
- e30:	fc000793          	li	a5,-64
- e34:	00a7a423          	sw	a0,8(a5)
- e38:	00b7a623          	sw	a1,12(a5)
- e3c:	00008067          	ret
+00000e2c <neorv32_gpio_pin_toggle>:
+ e2c:	00100793          	li	a5,1
+ e30:	01f00713          	li	a4,31
+ e34:	00a797b3          	sll	a5,a5,a0
+ e38:	00a74a63          	blt	a4,a0,e4c <neorv32_gpio_pin_toggle+0x20>
+ e3c:	fc802703          	lw	a4,-56(zero) # ffffffc8 <__ctr0_io_space_begin+0x1c8>
+ e40:	00f747b3          	xor	a5,a4,a5
+ e44:	fcf02423          	sw	a5,-56(zero) # ffffffc8 <__ctr0_io_space_begin+0x1c8>
+ e48:	00008067          	ret
+ e4c:	fcc02703          	lw	a4,-52(zero) # ffffffcc <__ctr0_io_space_begin+0x1cc>
+ e50:	00f747b3          	xor	a5,a4,a5
+ e54:	fcf02623          	sw	a5,-52(zero) # ffffffcc <__ctr0_io_space_begin+0x1cc>
+ e58:	00008067          	ret
 
-00000e40 <neorv32_cpu_get_systime>:
- e40:	ff010113          	addi	sp,sp,-16
- e44:	c81026f3          	rdtimeh	a3
- e48:	c0102773          	rdtime	a4
- e4c:	c81027f3          	rdtimeh	a5
- e50:	fed79ae3          	bne	a5,a3,e44 <neorv32_cpu_get_systime+0x4>
- e54:	00e12023          	sw	a4,0(sp)
- e58:	00f12223          	sw	a5,4(sp)
- e5c:	00012503          	lw	a0,0(sp)
- e60:	00412583          	lw	a1,4(sp)
- e64:	01010113          	addi	sp,sp,16
+00000e5c <neorv32_gpio_port_set>:
+ e5c:	fc000793          	li	a5,-64
+ e60:	00a7a423          	sw	a0,8(a5)
+ e64:	00b7a623          	sw	a1,12(a5)
  e68:	00008067          	ret
 
 00000e6c <__divsi3>:

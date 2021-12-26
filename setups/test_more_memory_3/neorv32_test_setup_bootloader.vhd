@@ -52,7 +52,7 @@ entity neorv32_test_setup_bootloader is
     rstn_i      : in  std_ulogic; -- global reset, low-active, async
     -- GPIO --
     gpio_o      : out std_ulogic_vector(21 downto 0); -- parallel output
-    gpio_i      : in std_ulogic_vector(7 downto 0); -- parallel input
+    gpio_i      : in  std_ulogic_vector(7 downto 0); -- parallel input
     -- UART0 --
     uart0_txd_o : out std_ulogic; -- UART0 send data
     uart0_rxd_i : in  std_ulogic;  -- UART0 receive data
@@ -77,7 +77,7 @@ begin
     CLOCK_FREQUENCY              => CLOCK_FREQUENCY,   -- clock frequency of clk_i in Hz
     INT_BOOTLOADER_EN            => true,              -- boot configuration: true = boot explicit bootloader; false = boot from int/ext (I)MEM
     -- RISC-V CPU Extensions --
-	  CPU_EXTENSION_RISCV_A        => true,					 -- implement atomic extension?
+	 CPU_EXTENSION_RISCV_A        => true,					 -- implement atomic extension?
     CPU_EXTENSION_RISCV_B        => true,  			    -- implement bit-manipulation extension?
     CPU_EXTENSION_RISCV_C        => true,  				 -- implement compressed extension?
     CPU_EXTENSION_RISCV_E        => true,  				 -- implement embedded RF extension?
