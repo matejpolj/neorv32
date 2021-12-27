@@ -1,0 +1,9 @@
+do sedaj ne dela nič poleg originalne konfiguracije, poskusil bom še z vsemi dodatki amapk brez extentionov za core
+poskus z vsemi dodatni amapk z originalnimi extention cori: ne dela, sumim, da je fora v F12 povezavi, ki jo moram ročno nastaviti na output only
+modificirano neorv32.ls file na imem memmory size
+ne dela spreminjam nazaj
+poskus s test_iteration_ full extention odstarniti vse extentione in potem dodajati, dokler ne dela
+samo to ne dela
+noup, tudi full extention ne dela za test_more_memmory: dodam samo ustrezne extentione
+pač to dela, končno!!!!!!!!!!!!!!!!!!!!!!!!
+poskus tega še s full addition pač vsemi gpio pini in tem sranjem: this šhit works!!¨!!!!!!!!!!!!!!!!!

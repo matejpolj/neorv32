@@ -77,17 +77,10 @@ begin
     CLOCK_FREQUENCY              => CLOCK_FREQUENCY,   -- clock frequency of clk_i in Hz
     INT_BOOTLOADER_EN            => true,              -- boot configuration: true = boot explicit bootloader; false = boot from int/ext (I)MEM
     -- RISC-V CPU Extensions --
-	 CPU_EXTENSION_RISCV_A        => true,					 -- implement atomic extension?
-    CPU_EXTENSION_RISCV_B        => true,  			    -- implement bit-manipulation extension?
-    CPU_EXTENSION_RISCV_C        => true,  				 -- implement compressed extension?
-    CPU_EXTENSION_RISCV_E        => true,  				 -- implement embedded RF extension?
-    CPU_EXTENSION_RISCV_M        => true, 				 -- implement mul/div extension?
-    CPU_EXTENSION_RISCV_U        => true,  				 -- implement user mode extension?
-    CPU_EXTENSION_RISCV_Zfinx    => true,  				 -- implement 32-bit floating-point extension (using INT regs!)
-    CPU_EXTENSION_RISCV_Zicsr    => true,   				 -- implement CSR system?
-    CPU_EXTENSION_RISCV_Zicntr   => true,   				 -- implement base counters?
-    CPU_EXTENSION_RISCV_Zihpm    => true,  				 -- implement hardware performance monitors?
-    CPU_EXTENSION_RISCV_Zifencei => true,  				 -- implement instruction stream sync.?
+	 CPU_EXTENSION_RISCV_C        => true,              -- implement compressed extension?
+    CPU_EXTENSION_RISCV_M        => true,              -- implement mul/div extension?
+    CPU_EXTENSION_RISCV_Zicsr    => true,              -- implement CSR system?
+    CPU_EXTENSION_RISCV_Zicntr   => true,              -- implement base counters?
     -- Internal Instruction memory --
     MEM_INT_IMEM_EN              => true,              -- implement processor-internal instruction memory
     MEM_INT_IMEM_SIZE            => MEM_INT_IMEM_SIZE, -- size of processor-internal instruction memory in bytes
