@@ -1,0 +1,39 @@
+<<< Processor Configuration Overview >>><\r><\n>
+<\r><\n>
+=== << CPU >> ===<\r><\n>
+Clock speed:       50000000 Hz<\r><\n>
+Full HW reset:     no<\r><\n>
+On-chip debugger:  no<\r><\n>
+Hart ID:           0x00000000<\r><\n>
+Vendor ID:         0x00000000<\r><\n>
+Architecture ID:   0x00000013 (NEORV32)<\r><\n>
+Implementation ID: 0x01060304 (1.6.3.4)<\r><\n>
+Architecture:      rv32-little<\r><\n>
+ISA extensions:    C I M X Zicsr Zicntr <\r><\n>
+PMP:               not implemented<\r><\n>
+<\r><\n>
+=== << Memory System >> ===<\r><\n>
+Boot Config.:        Boot via Bootloader<\r><\n>
+Instr. base address: 0x00000000<\r><\n>
+Internal IMEM:       yes, 32768 bytes<\r><\n>
+Data base address:   0x80000000<\r><\n>
+Internal DMEM:       yes, 16384 bytes<\r><\n>
+Internal i-cache:    no<\r><\n>
+Ext. bus interface:  no<\r><\n>
+Ext. bus Endianness: little<\r><\n>
+<\r><\n>
+=== << Peripherals >> ===<\r><\n>
+[x] GPIO<\r><\n>
+[x] MTIME<\r><\n>
+[x] UART0<\r><\n>
+[ ] UART1<\r><\n>
+[ ] SPI<\r><\n>
+[ ] TWI<\r><\n>
+[ ] PWM<\r><\n>
+[ ] WDT<\r><\n>
+[ ] TRNG<\r><\n>
+[ ] CFS<\r><\n>
+[ ] SLINK<\r><\n>
+[ ] NEOLED<\r><\n>
+[ ] XIRQ<\r><\n>
+[ ] GPTMR<\r><\n>

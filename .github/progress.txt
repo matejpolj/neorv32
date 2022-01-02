@@ -12,3 +12,6 @@ dela!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 mogoče še uredim, da delajo software in external interupti, ampak to kasneje
 poskušam še urediti, da delajo interupti.. ne dela, pač bom preživel brez tega, itak je to bolj napredno ali nekaj
+poskus odprave napake s tem, da disablam extentione, če je to problem
+ne, ni fore, pač je trma ali nekaj
+očitno dela?????
