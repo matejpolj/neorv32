@@ -53,7 +53,7 @@ RISCV_PREFIX ?= riscv32-unknown-elf-
 
 # CPU architecture and ABI
 MARCH ?= rv32i
-MABI  ?= ilp32
+MABI  ?= ilp32 # če uporabimo E extention, potrebno spremeniti na ilp32e
 
 # User flags for additional configuration (will be added to compiler flags)
 USER_FLAGS ?=

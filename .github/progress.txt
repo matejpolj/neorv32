@@ -7,3 +7,8 @@ samo to ne dela
 noup, tudi full extention ne dela za test_more_memmory: dodam samo ustrezne extentione
 pač to dela, končno!!!!!!!!!!!!!!!!!!!!!!!!
 poskus tega še s full addition pač vsemi gpio pini in tem sranjem: this šhit works!!¨!!!!!!!!!!!!!!!!!
+preverimo, kaj sploh rabnimo pri extentionih, da ne povzroča šreglavic preveč vse skupaj
+dela!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+mogoče še uredim, da delajo software in external interupti, ampak to kasneje
+poskušam še urediti, da delajo interupti.. ne dela, pač bom preživel brez tega, itak je to bolj napredno ali nekaj

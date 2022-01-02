@@ -15,6 +15,32 @@ arbiter.state.RETIRE 0 0 1 0 1
 arbiter.state.BUSY_SWITCHED 0 1 0 0 1 
 arbiter.state.RETIRE_SWITCHED 1 0 0 0 1 
 
+State Machine - |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_fpu:\neorv32_cpu_cp_fpu_inst_true:neorv32_cpu_cp_fpu_inst|neorv32_cpu_cp_fpu_normalizer:neorv32_cpu_cp_fpu_normalizer_inst|ctrl.state
+Name ctrl.state.S_FINALIZE ctrl.state.S_CHECK ctrl.state.S_ROUND ctrl.state.S_NORMALIZE_BUSY ctrl.state.S_PREPARE_SHIFT ctrl.state.S_PREPARE_NORM ctrl.state.S_CHECK_I2F ctrl.state.S_PREPARE_I2F ctrl.state.S_IDLE 
+ctrl.state.S_IDLE 0 0 0 0 0 0 0 0 0 
+ctrl.state.S_PREPARE_I2F 0 0 0 0 0 0 0 1 1 
+ctrl.state.S_CHECK_I2F 0 0 0 0 0 0 1 0 1 
+ctrl.state.S_PREPARE_NORM 0 0 0 0 0 1 0 0 1 
+ctrl.state.S_PREPARE_SHIFT 0 0 0 0 1 0 0 0 1 
+ctrl.state.S_NORMALIZE_BUSY 0 0 0 1 0 0 0 0 1 
+ctrl.state.S_ROUND 0 0 1 0 0 0 0 0 1 
+ctrl.state.S_CHECK 0 1 0 0 0 0 0 0 1 
+ctrl.state.S_FINALIZE 1 0 0 0 0 0 0 0 1 
+
+State Machine - |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_fpu:\neorv32_cpu_cp_fpu_inst_true:neorv32_cpu_cp_fpu_inst|neorv32_cpu_cp_fpu_f2i:neorv32_cpu_cp_fpu_f2i_inst|ctrl.state
+Name ctrl.state.S_FINALIZE ctrl.state.S_ROUND ctrl.state.S_NORMALIZE_BUSY ctrl.state.S_PREPARE_F2I ctrl.state.S_IDLE 
+ctrl.state.S_IDLE 0 0 0 0 0 
+ctrl.state.S_PREPARE_F2I 0 0 0 1 1 
+ctrl.state.S_NORMALIZE_BUSY 0 0 1 0 1 
+ctrl.state.S_ROUND 0 1 0 0 1 
+ctrl.state.S_FINALIZE 1 0 0 0 1 
+
+State Machine - |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_bitmanip:\neorv32_cpu_cp_bitmanip_inst_true:neorv32_cpu_cp_bitmanip_inst|ctrl_state
+Name ctrl_state.S_BUSY_SHIFT ctrl_state.S_START_SHIFT ctrl_state.S_IDLE 
+ctrl_state.S_IDLE 0 0 0 
+ctrl_state.S_START_SHIFT 0 1 1 
+ctrl_state.S_BUSY_SHIFT 1 0 1 
+
 State Machine - |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_muldiv:\neorv32_cpu_cp_muldiv_inst_true:neorv32_cpu_cp_muldiv_inst|state
 Name state.COMPLETED state.FINALIZE state.PROCESSING state.DIV_PREPROCESS state.IDLE 
 state.IDLE 0 0 0 0 0 
