@@ -15,3 +15,5 @@ poskušam še urediti, da delajo interupti.. ne dela, pač bom preživel brez te
 poskus odprave napake s tem, da disablam extentione, če je to problem
 ne, ni fore, pač je trma ali nekaj
 očitno dela?????
+
+poskus dodajanja vgrajenega rama na ploščici

@@ -1,0 +1,15 @@
+CAPI=2:
+
+name : ::wb_avalon_bridge:1.0
+description : Wishbone Avalon Bridge
+
+filesets:
+  rtl:
+    files:
+      - rtl/verilog/wb_to_avalon_bridge.v
+      - rtl/verilog/avalon_to_wb_bridge.v
+    file_type : verilogSource
+
+targets:
+  default:
+    filesets: [rtl]
