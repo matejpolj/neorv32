@@ -76,7 +76,7 @@ if {$make_assignments} {
 
     # urni pulzi, iz oscliatorja
   set_location_assignment PIN_R8 -to clk_i
-    # vgrajene ledice
+    # vgrajene ledice (uporabljene za debuging, sploh če ne implemetiram kakšne fansy rešitve)
   set_location_assignment PIN_L3 -to gpio_o[7]
   set_location_assignment PIN_B1 -to gpio_o[6]
   set_location_assignment PIN_F3 -to gpio_o[5]
@@ -90,24 +90,9 @@ if {$make_assignments} {
     # uart za komunikacijo z računalnikom
   set_location_assignment PIN_C3 -to uart0_txd_o
   set_location_assignment PIN_A3 -to uart0_rxd_i
-    # splošni gumbi brez debounca
-  set_location_assignment PIN_B4 -to gpio_i[0]
-  set_location_assignment PIN_B5 -to gpio_i[1]
-  set_location_assignment PIN_A2 -to gpio_i[2]
-  set_location_assignment PIN_B3 -to gpio_i[3]
-    # signali za komunikacijo s tipkovnico
-    # opomba: potrebna ročna knjižnica
-    # nastavimo stolpce za izhode, na katere pumpamo high pri branju
-    # vrstice pa skeniramo eno po eno in tako razberemo, katera tipka je pritisnena
-  set_location_assignment PIN_E6 -to gpio_o[8]
-  set_location_assignment PIN_D8 -to gpio_o[9]
-  set_location_assignment PIN_F8 -to gpio_o[10]
-  set_location_assignment PIN_E9 -to gpio_o[11]
-  set_location_assignment PIN_D5 -to gpio_i[4]
-  set_location_assignment PIN_A6 -to gpio_i[5]
-  set_location_assignment PIN_D6 -to gpio_i[6]
-  set_location_assignment PIN_C6 -to gpio_i[7]
-    # izbira matrike ali vga
+    # uart 2 za dodatno komunikacijo, če bomo uporabili
+  set_location_assignment PIN_
+  # izbira matrike ali vga
   set_location_assignment PIN_B16 -to gpio_o[12]
   set_location_assignment PIN_C14 -to gpio_o[13]
     # data za matriko ali vga
@@ -119,10 +104,6 @@ if {$make_assignments} {
   set_location_assignment PIN_F15 -to gpio_o[19]
   set_location_assignment PIN_F16 -to gpio_o[20]
   set_location_assignment PIN_F14 -to gpio_o[21]
-    # izhoda za buzzer v obliki pwm
-  set_location_assignment PIN_D9 -to pwm_o[0]
-  set_location_assignment PIN_E10 -to pwm_o[1]
-
 
   set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 
