@@ -88,11 +88,19 @@ if {$make_assignments} {
     # reset button procesorja
   set_location_assignment PIN_J15 -to rstn_i
     # uart za komunikacijo z računalnikom
-  set_location_assignment PIN_C3 -to uart0_txd_o
-  set_location_assignment PIN_A3 -to uart0_rxd_i
+  set_location_assignment PIN_D3 -to uart0_txd_o
+  set_location_assignment PIN_C3 -to uart0_rxd_i
     # uart 2 za dodatno komunikacijo, če bomo uporabili
-  set_location_assignment PIN_
-  # izbira matrike ali vga
+  set_location_assignment PIN_A3 -to uart1_txd_o
+  set_location_assignment PIN_B4 -to uart1_rxd_i
+    # gumb z debouncon direktno na fpga za debugging
+  set_location_assignment PIN_E1 -to gpio_i[0]
+    # dip swithci na ploščici
+  set_location_assignment PIN_M1 -to gpio_i[1]
+  set_location_assignment PIN_T8 -to gpio_i[2]
+  set_location_assignment PIN_B9 -to gpio_i[3]
+  set_location_assignment PIN_M15 -to gpio_i[4]
+    # izbirna izhoda matrike ali vga
   set_location_assignment PIN_B16 -to gpio_o[12]
   set_location_assignment PIN_C14 -to gpio_o[13]
     # data za matriko ali vga
@@ -104,7 +112,59 @@ if {$make_assignments} {
   set_location_assignment PIN_F15 -to gpio_o[19]
   set_location_assignment PIN_F16 -to gpio_o[20]
   set_location_assignment PIN_F14 -to gpio_o[21]
+    # zgornja polovica gpio vodila 0 dopoljena z PWM pini
+  set_location_assignment PIN_B5 -to pwm_0[0]
+  set_location_assignment PIN_D5 -to pwm_o[1]
+  set_location_assignment PIN_A6 -to pwm_0[2]
+  set_location_assignment PIN_D6 -to pwm_0[3]
+  set_location_assignment PIN_C6 -to pwm_0[4]
+  set_location_assignment PIN_E6 -to pwm_0[5]
+  set_location_assignment PIN_D8 -to pwm_0[6]
+  set_location_assignment PIN_F8 -to pwm_0[7]
+  set_location_assignment PIN_E9 -to pwm_0[8]
+  set_location_assignment PIN_D9 -to pwm_0[9]
+  set_location_assignment PIN_E10 -to pwm_0[10]
+  set_location_assignment PIN_B11 -to pwm_0[11]
+  set_location_assignment PIN_D11 -to pwm_0[12]
+  set_location_assignment PIN_B12 -to pwm_0[13]
+    # gpo vhodi na drugem vodilu na notranji strani
+  set_location_assignment PIN_F13 -to gpio_o[22]
+  set_location_assignment PIN_T15 -to gpio_o[23]
+  set_location_assignment PIN_T13 -to gpio_o[24]
+  set_location_assignment PIN_T12 -to gpio_o[25]
+  set_location_assignment PIN_T11 -to gpio_o[26]
+  set_location_assignment PIN_R11 -to gpio_o[27]
+  set_location_assignment PIN_R10 -to gpio_o[28]
+  set_location_assignment PIN_P9 -to gpio_o[29]
+  set_location_assignment PIN_N11 -to gpio_o[30]
+  set_location_assignment PIN_K16 -to gpio_o[31]
+  set_location_assignment PIN_L15 -to gpio_o[32]
+  set_location_assignment PIN_P16 -to gpio_o[33]
+  set_location_assignment PIN_N16 -to gpio_o[34]
+  set_location_assignment PIN_P14 -to gpio_o[35]
+  set_location_assignment PIN_N14 -to gpio_o[36]
+  set_location_assignment PIN_L13 -to gpio_o[37]
+  set_location_assignment PIN_K15 -to gpio_o[38]
+  set_location_assignment PIN_J14 -to gpio_o[39]
+    # gpi vhodi na drugem vodilu na zunanji strani
+  set_location_assignment PIN_T14 -to gpio_i[5]
+  set_location_assignment PIN_R13 -to gpio_i[6]
+  set_location_assignment PIN_R12 -to gpio_i[7]
+  set_location_assignment PIN_T10 -to gpio_i[8]
+  set_location_assignment PIN_P11 -to gpio_i[9]
+  set_location_assignment PIN_N12 -to gpio_i[10]
+  set_location_assignment PIN_N9 -to gpio_i[11]
+  set_location_assignment PIN_L16 -to gpio_i[12]
+  set_location_assignment PIN_R16 -to gpio_i[13]
+  set_location_assignment PIN_P15 -to gpio_i[14]
+  set_location_assignment PIN_R14 -to gpio_i[15]
+  set_location_assignment PIN_N15 -to gpio_i[16]
+  set_location_assignment PIN_L14 -to gpio_i[17]
+  set_location_assignment PIN_M10 -to gpio_i[18]
+  set_location_assignment PIN_J16 -to gpio_i[19]
+  set_location_assignment PIN_J13 -to gpio_i[20]
 
+  
   set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 
   # Commit assignments

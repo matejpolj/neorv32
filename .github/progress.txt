@@ -17,3 +17,6 @@ ne, ni fore, pač je trma ali nekaj
 očitno dela?????
 
 poskus dodajanja vgrajenega rama na ploščici
+
+
+dodajam celotno gpio ploščo na proc. za popno izkoriščenost
