@@ -24,3 +24,7 @@ dodajam celotno gpio ploščo na proc. za popno izkoriščenost
 
 
 gradnja pomožnih knjižnic
+
+
+
+ideja za preveriti: pogledamo, če dela tipka, pritrjena na ploščico
