@@ -8,13 +8,19 @@ uint32_t getButtonState(int button) {
      */
     // dobimo stanje na začetku
     uint32_t stanje1 = neorv32_gpio_pin_get(button);
+    neorv32_uart0_printf("Debugging 1: %u\n", stanje1);
 
-    neorv32_cpu_delay_ms(20);
+    neorv32_cpu_delay_ms(5);
 
     uint32_t stanje2 = neorv32_gpio_pin_get(button);
+    neorv32_uart0_printf("Debugging 2: %u\n", stanje2);
 
-    if ((stanje1) | (stanje2)) {
-        (stanje1 = 0) ? 0 : 1;
+    if ((stanje1 & stanje2) || ((stanje1 == 0) && (stanje2 == 0))) {
+        if (stanje1 == 0) {
+            return 0;
+         } else {
+            return 1;
+         }
     }
 
     // v primeru napake vrne nemogoče stanje
