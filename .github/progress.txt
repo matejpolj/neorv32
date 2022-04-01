@@ -28,3 +28,6 @@ gradnja pomožnih knjižnic
 
 
 ideja za preveriti: pogledamo, če dela tipka, pritrjena na ploščico
+očitno ne dela input nekje
+
+ok, nimam več ideje, kaj bi bil problem

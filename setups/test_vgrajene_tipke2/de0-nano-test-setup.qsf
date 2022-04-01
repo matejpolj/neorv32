@@ -42,7 +42,7 @@ set_global_assignment -name DEVICE EP4CE22F17C6
 set_global_assignment -name TOP_LEVEL_ENTITY neorv32_test_setup_bootloader
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:40:53  APRIL 10, 2021"
-set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -110,4 +110,35 @@ set_location_assignment PIN_M1 -to gpio_i[1]
 set_location_assignment PIN_T8 -to gpio_i[2]
 set_location_assignment PIN_B9 -to gpio_i[3]
 set_location_assignment PIN_M15 -to gpio_i[4]
+
+# nastavitev standardov, mogoce
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk_i
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rstn_i
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uart0_txd_o
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uart0_rxd_i
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[4]
+
+# nastavitev izhodnih tokov
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to gpio_o[7]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to gpio_o[6]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to gpio_o[5]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to gpio_o[4]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to gpio_o[3]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to gpio_o[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to gpio_o[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to gpio_o[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to uart0_txd_o
+
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
