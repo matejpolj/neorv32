@@ -34,3 +34,5 @@ ok, nimam več ideje, kaj bi bil problem
 
 
 dodajam sdram z že narejenim repositorijem
+dodajanje ne dela, amapk to rahlo ni več v moji domeni
+

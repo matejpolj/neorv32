@@ -1,0 +1,233 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "gpio_o[0]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[1]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[2]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[3]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[4]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[5]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[6]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[7]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[8]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[9]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[10]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[11]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[12]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[13]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[14]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[15]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[16]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[17]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[18]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[19]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[20]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[21]",
+					"strict" : false
+				},
+				{
+					"name" : "uart0_txd_o",
+					"strict" : false
+				},
+				{
+					"name" : "pwm_o[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pwm_o[1]",
+					"strict" : false
+				},
+				{
+					"name" : "TDO_o",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_CKE",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_CS_N",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_RAS_N",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_CAS_N",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_WE_N",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQML",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQMU",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_ADDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_ADDR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_ADDR[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[12]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[13]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[14]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[15]",
+					"strict" : false
+				},
+				{
+					"name" : "TDI_i",
+					"strict" : false
+				},
+				{
+					"name" : "clk_i",
+					"strict" : false
+				},
+				{
+					"name" : "rstn_i",
+					"strict" : false
+				},
+				{
+					"name" : "uart0_rxd_i",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

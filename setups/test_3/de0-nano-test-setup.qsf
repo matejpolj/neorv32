@@ -1,0 +1,345 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2020  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+# Date created = 14:23:49  April 03, 2022
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		de0-nano-test-setup_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE22F17C6
+set_global_assignment -name TOP_LEVEL_ENTITY neorv32_test_setup_bootloader
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:40:53  APRIL 10, 2021"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+
+set_global_assignment -name QIP_FILE pll/pll_sys.qip
+#set_global_assignment -name QIP_FILE neorv32.qip
+set_global_assignment -name VHDL_FILE wb_intercon/wb_intercon.vhd
+set_global_assignment -name VHDL_FILE wb_sdram_direct/wb_sdram.vhd
+set_global_assignment -name VHDL_FILE wb_sdram_direct/sdram.vhd
+#set_global_assignment -name VHDL_FILE top.vhd
+set_global_assignment -name CDF_FILE "erase-epcs.cdf"
+set_global_assignment -name SDC_FILE "de0n-neorv32-sdram-direct.sdc"
+set_global_assignment -name CDF_FILE "de0n-neorv32-sdram-direct.cdf"
+
+
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu_regfile.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_application_image.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_bootloader_image.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_boot_rom.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_busswitch.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_bus_keeper.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cfs.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu_alu.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu_bus.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu_control.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu_cp_bitmanip.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu_cp_fpu.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu_cp_muldiv.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu_cp_shifter.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu_decompressor.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_debug_dm.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_debug_dtm.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_dmem.entity.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_fifo.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_gpio.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_gptmr.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_icache.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_imem.entity.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_mtime.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_neoled.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_package.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_pwm.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_slink.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_spi.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_sysinfo.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_top.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_trng.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_twi.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_uart.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_wdt.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_wishbone.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_xirq.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/mem/neorv32_dmem.default.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/mem/neorv32_imem.default.vhd -library neorv32
+set_global_assignment -name VHDL_FILE neorv32_test_setup_bootloader.vhd
+
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+
+set_location_assignment PIN_R8 -to clk_i
+set_location_assignment PIN_L3 -to gpio_o[7]
+set_location_assignment PIN_B1 -to gpio_o[6]
+set_location_assignment PIN_F3 -to gpio_o[5]
+set_location_assignment PIN_D1 -to gpio_o[4]
+set_location_assignment PIN_A11 -to gpio_o[3]
+set_location_assignment PIN_B13 -to gpio_o[2]
+set_location_assignment PIN_A13 -to gpio_o[1]
+set_location_assignment PIN_A15 -to gpio_o[0]
+set_location_assignment PIN_J15 -to rstn_i
+set_location_assignment PIN_C3 -to uart0_txd_o
+set_location_assignment PIN_A3 -to uart0_rxd_i
+set_location_assignment PIN_B4 -to gpio_i[0]
+set_location_assignment PIN_B5 -to gpio_i[1]
+set_location_assignment PIN_A2 -to gpio_i[2]
+set_location_assignment PIN_B3 -to gpio_i[3]
+set_location_assignment PIN_E6 -to gpio_o[8]
+set_location_assignment PIN_D8 -to gpio_o[9]
+set_location_assignment PIN_F8 -to gpio_o[10]
+set_location_assignment PIN_E9 -to gpio_o[11]
+set_location_assignment PIN_D5 -to gpio_i[4]
+set_location_assignment PIN_A6 -to gpio_i[5]
+set_location_assignment PIN_D6 -to gpio_i[6]
+set_location_assignment PIN_C6 -to gpio_i[7]
+set_location_assignment PIN_B16 -to gpio_o[12]
+set_location_assignment PIN_C14 -to gpio_o[13]
+set_location_assignment PIN_C16 -to gpio_o[14]
+set_location_assignment PIN_C15 -to gpio_o[15]
+set_location_assignment PIN_D16 -to gpio_o[16]
+set_location_assignment PIN_D15 -to gpio_o[17]
+set_location_assignment PIN_D14 -to gpio_o[18]
+set_location_assignment PIN_F15 -to gpio_o[19]
+set_location_assignment PIN_F16 -to gpio_o[20]
+set_location_assignment PIN_F14 -to gpio_o[21]
+set_location_assignment PIN_D9 -to pwm_o[0]
+set_location_assignment PIN_E10 -to pwm_o[1]
+# nastavitev standardov, mogoce
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk_i
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[21]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[20]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[19]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[18]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[17]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[16]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rstn_i
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uart0_txd_o
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uart0_rxd_i
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pwm_o[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pwm_o[1]
+
+# nastavitev izhodnih tokov
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to gpio_o[7]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to gpio_o[6]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to gpio_o[5]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to gpio_o[4]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to gpio_o[3]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to gpio_o[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to gpio_o[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to gpio_o[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to uart0_txd_o
+
+#============================================================
+# SDRAM
+#============================================================
+set_location_assignment PIN_P2 -to SDRAM_ADDR[0]
+set_location_assignment PIN_N5 -to SDRAM_ADDR[1]
+set_location_assignment PIN_N6 -to SDRAM_ADDR[2]
+set_location_assignment PIN_M8 -to SDRAM_ADDR[3]
+set_location_assignment PIN_P8 -to SDRAM_ADDR[4]
+set_location_assignment PIN_T7 -to SDRAM_ADDR[5]
+set_location_assignment PIN_N8 -to SDRAM_ADDR[6]
+set_location_assignment PIN_T6 -to SDRAM_ADDR[7]
+set_location_assignment PIN_R1 -to SDRAM_ADDR[8]
+set_location_assignment PIN_P1 -to SDRAM_ADDR[9]
+set_location_assignment PIN_N2 -to SDRAM_ADDR[10]
+set_location_assignment PIN_N1 -to SDRAM_ADDR[11]
+set_location_assignment PIN_L4 -to SDRAM_ADDR[12]
+set_location_assignment PIN_M7 -to SDRAM_BA_0
+set_location_assignment PIN_M6 -to SDRAM_BA_1
+set_location_assignment PIN_L1 -to SDRAM_CAS_N
+set_location_assignment PIN_L7 -to SDRAM_CKE
+set_location_assignment PIN_R4 -to SDRAM_CLK
+set_location_assignment PIN_P6 -to SDRAM_CS_N
+set_location_assignment PIN_G2 -to SDRAM_DQ[0]
+set_location_assignment PIN_G1 -to SDRAM_DQ[1]
+set_location_assignment PIN_L8 -to SDRAM_DQ[2]
+set_location_assignment PIN_K5 -to SDRAM_DQ[3]
+set_location_assignment PIN_K2 -to SDRAM_DQ[4]
+set_location_assignment PIN_J2 -to SDRAM_DQ[5]
+set_location_assignment PIN_J1 -to SDRAM_DQ[6]
+set_location_assignment PIN_R7 -to SDRAM_DQ[7]
+set_location_assignment PIN_T4 -to SDRAM_DQ[8]
+set_location_assignment PIN_T2 -to SDRAM_DQ[9]
+set_location_assignment PIN_T3 -to SDRAM_DQ[10]
+set_location_assignment PIN_R3 -to SDRAM_DQ[11]
+set_location_assignment PIN_R5 -to SDRAM_DQ[12]
+set_location_assignment PIN_P3 -to SDRAM_DQ[13]
+set_location_assignment PIN_N3 -to SDRAM_DQ[14]
+set_location_assignment PIN_K1 -to SDRAM_DQ[15]
+set_location_assignment PIN_R6 -to SDRAM_DQML
+set_location_assignment PIN_L2 -to SDRAM_RAS_N
+set_location_assignment PIN_T5 -to SDRAM_DQMU
+set_location_assignment PIN_C2 -to SDRAM_WE_N
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_ADDR[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_BA_0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_BA_1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_CAS_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_CKE
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_CS_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQ[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQML
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_RAS_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_DQMU
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDRAM_WE_N
+
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_ADDR[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_ADDR[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_ADDR[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_ADDR[3]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_ADDR[4]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_ADDR[5]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_ADDR[6]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_ADDR[7]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_ADDR[8]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_ADDR[9]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_ADDR[10]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_ADDR[11]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_ADDR[12]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_BA_0
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_BA_1
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_CAS_N
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_CKE
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_CLK
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_CS_N
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[3]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[4]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[5]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[6]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[7]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[8]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[9]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[10]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[11]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[12]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[13]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[14]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQ[15]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQML
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_RAS_N
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_DQMU
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SDRAM_WE_N
+
+
+#============================================================
+# JTAG
+#============================================================
+set_location_assignment PIN_F13 -to nTRST_i
+set_location_assignment PIN_T9 -to TCK_i
+set_location_assignment PIN_T15 -to TDI_i
+set_location_assignment PIN_T13 -to TDO_o
+set_location_assignment PIN_T14 -to TMS_i
+#set_location_assignment PIN_R13 -to nRESET_i
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to nTRST_i
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TCK_i
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TDI_i
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TDO_o
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TMS_i
+#set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to nRESET_i
+
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to TDO_o
+
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name ENABLE_CONFIGURATION_PINS OFF
+set_global_assignment -name ENABLE_BOOT_SEL_PIN OFF
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
