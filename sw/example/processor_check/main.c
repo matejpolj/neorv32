@@ -56,7 +56,8 @@
 //** Unreachable word-aligned address */
 #define ADDR_UNREACHABLE    (IO_BASE_ADDRESS-4)
 //** external memory base address */
-#define EXT_MEM_BASE        (0xF0000000)
+//#define EXT_MEM_BASE        (0xF0000000) gleda na fakin napacni lokaciji!!!!!!!!!!!
+#define EXT_MEM_BASE        (0x90000000)
 /**@}*/
 
 
