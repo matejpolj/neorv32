@@ -421,7 +421,6 @@ int main() {
 
     // copy to external memory
     if (memcpy((void*)EXT_MEM_BASE, (void*)&dummy_ext_program, (size_t)sizeof(dummy_ext_program)) == NULL) {
-      PRINT_STANDARD("\n<< fail na 1. tocki >>\n");
       test_fail();
     }
     else {
@@ -435,12 +434,10 @@ int main() {
           test_ok();
         }
         else {
-          PRINT_STANDARD("\n<< fail na 2. tocki >>\n");
           test_fail();
         }
       }
       else {
-         PRINT_STANDARD("\n<< fail na 3. tocki >>\n");
         test_fail();
       }
     }
