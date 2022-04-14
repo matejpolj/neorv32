@@ -35,11 +35,17 @@ int main(void) {
         if (konec == 1) break; 
 
         neorv32_uart0_printf("Debugging: %u\n", neorv32_gpio_pin_get(0));
-        neorv32_uart0_printf("Debugging: %u\n", neorv32_gpio_pin_get(1));
-        neorv32_uart0_printf("Debugging: %u\n", neorv32_gpio_pin_get(2));
-        neorv32_uart0_printf("Debugging: %u\n", neorv32_gpio_pin_get(3));
+        //neorv32_uart0_printf("Debugging: %u\n", neorv32_gpio_pin_get(1));
+        //neorv32_uart0_printf("Debugging: %u\n", neorv32_gpio_pin_get(2));
+        //neorv32_uart0_printf("Debugging: %u\n", neorv32_gpio_pin_get(3));
 
-        neorv32_cpu_delay_ms(10000);
+        neorv32_cpu_delay_ms(1000);
+
+        unsigned int *tmp = 0xffffffc0;
+
+        neorv32_uart0_printf("Preverimo vrednost registra: %u\n", *tmp);
+
+        neorv32_cpu_delay_ms(1000);
     }
 
     neorv32_uart0_print("Koncali ste program, cestitke!\n");
