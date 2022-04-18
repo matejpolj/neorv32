@@ -35,6 +35,8 @@ uart0_txd_o <= neorv32_top:neorv32_top_inst.uart0_txd_o
 uart0_rxd_i => neorv32_top:neorv32_top_inst.uart0_rxd_i
 pwm_o[0] <= neorv32_top:neorv32_top_inst.pwm_o[0]
 pwm_o[1] <= neorv32_top:neorv32_top_inst.pwm_o[1]
+LED <= BUTTON.DB_MAX_OUTPUT_PORT_TYPE
+BUTTON => LED.DATAIN
 
 
 |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst

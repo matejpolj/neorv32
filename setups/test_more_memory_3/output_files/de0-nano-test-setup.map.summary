@@ -1,4 +1,4 @@
-Analysis & Synthesis Status : Successful - Sun Jan  2 11:58:43 2022
+Analysis & Synthesis Status : Successful - Mon Apr 18 14:09:23 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : de0-nano-test-setup
 Top-level Entity Name : neorv32_test_setup_bootloader
@@ -7,7 +7,7 @@ Total logic elements : 5,556
     Total combinational functions : 4,901
     Dedicated logic registers : 2,460
 Total registers : 2460
-Total pins : 36
+Total pins : 38
 Total virtual pins : 0
 Total memory bits : 427,008
 Embedded Multiplier 9-bit elements : 7

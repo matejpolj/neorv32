@@ -104,6 +104,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "LED",
+					"strict" : false
+				},
+				{
+					"name" : "BUTTON",
+					"strict" : false
+				},
+				{
 					"name" : "clk_i",
 					"strict" : false
 				},

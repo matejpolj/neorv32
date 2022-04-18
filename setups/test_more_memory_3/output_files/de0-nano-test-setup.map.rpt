@@ -1,5 +1,5 @@
 Analysis & Synthesis report for de0-nano-test-setup
-Sun Jan  2 11:58:43 2022
+Mon Apr 18 14:09:23 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -110,7 +110,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jan  2 11:58:43 2022       ;
+; Analysis & Synthesis Status        ; Successful - Mon Apr 18 14:09:23 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; de0-nano-test-setup                         ;
 ; Top-level Entity Name              ; neorv32_test_setup_bootloader               ;
@@ -119,7 +119,7 @@ https://fpgasoftware.intel.com/eula.
 ;     Total combinational functions  ; 4,901                                       ;
 ;     Dedicated logic registers      ; 2,460                                       ;
 ; Total registers                    ; 2460                                        ;
-; Total pins                         ; 36                                          ;
+; Total pins                         ; 38                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 427,008                                     ;
 ; Embedded Multiplier 9-bit elements ; 7                                           ;
@@ -226,7 +226,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.3%      ;
 ;     Processor 3            ;   0.1%      ;
 ;     Processor 4            ;   0.1%      ;
 +----------------------------+-------------+
@@ -308,14 +308,14 @@ https://fpgasoftware.intel.com/eula.
 ;     -- Dedicated logic registers            ; 2460        ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
-; I/O pins                                    ; 36          ;
+; I/O pins                                    ; 38          ;
 ; Total memory bits                           ; 427008      ;
 ;                                             ;             ;
 ; Embedded Multiplier 9-bit elements          ; 7           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clk_i~input ;
 ; Maximum fan-out                             ; 2588        ;
-; Total fan-out                               ; 26199       ;
+; Total fan-out                               ; 26202       ;
 ; Average fan-out                             ; 3.46        ;
 +---------------------------------------------+-------------+
 
@@ -325,7 +325,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                               ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                     ; Entity Name                   ; Library Name ;
 +----------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------+--------------+
-; |neorv32_test_setup_bootloader                                                                           ; 4901 (1)            ; 2460 (0)                  ; 427008      ; 7            ; 1       ; 3         ; 36   ; 0            ; |neorv32_test_setup_bootloader                                                                                                                                                                                                                                          ; neorv32_test_setup_bootloader ; work         ;
+; |neorv32_test_setup_bootloader                                                                           ; 4901 (1)            ; 2460 (0)                  ; 427008      ; 7            ; 1       ; 3         ; 38   ; 0            ; |neorv32_test_setup_bootloader                                                                                                                                                                                                                                          ; neorv32_test_setup_bootloader ; work         ;
 ;    |neorv32_top:neorv32_top_inst|                                                                        ; 4900 (141)          ; 2460 (39)                 ; 427008      ; 7            ; 1       ; 3         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst                                                                                                                                                                                                             ; neorv32_top                   ; neorv32      ;
 ;       |neorv32_boot_rom:\neorv32_boot_rom_inst_true:neorv32_boot_rom_inst|                               ; 2 (2)               ; 1 (1)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_boot_rom:\neorv32_boot_rom_inst_true:neorv32_boot_rom_inst                                                                                                                                          ; neorv32_boot_rom              ; neorv32      ;
 ;          |altsyncram:Mux26_rtl_0|                                                                        ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_boot_rom:\neorv32_boot_rom_inst_true:neorv32_boot_rom_inst|altsyncram:Mux26_rtl_0                                                                                                                   ; altsyncram                    ; work         ;
@@ -2185,7 +2185,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 36                          ;
+; boundary_port         ; 38                          ;
 ; cycloneiii_ff         ; 2460                        ;
 ;     CLR               ; 85                          ;
 ;     CLR SCLR          ; 9                           ;
@@ -2198,13 +2198,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SCLR              ; 81                          ;
 ;     SLD               ; 61                          ;
 ;     plain             ; 523                         ;
-; cycloneiii_lcell_comb ; 4901                        ;
+; cycloneiii_lcell_comb ; 4902                        ;
 ;     arith             ; 909                         ;
 ;         2 data inputs ; 399                         ;
 ;         3 data inputs ; 510                         ;
-;     normal            ; 3992                        ;
+;     normal            ; 3993                        ;
 ;         0 data inputs ; 8                           ;
-;         1 data inputs ; 64                          ;
+;         1 data inputs ; 65                          ;
 ;         2 data inputs ; 249                         ;
 ;         3 data inputs ; 1285                        ;
 ;         4 data inputs ; 2386                        ;
@@ -2222,7 +2222,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:13     ;
+; Top            ; 00:00:14     ;
 +----------------+--------------+
 
 
@@ -2232,7 +2232,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Jan  2 11:58:18 2022
+    Info: Processing started: Mon Apr 18 14:08:58 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off de0-nano-test-setup -c de0-nano-test-setup
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -2359,12 +2359,12 @@ Info (12021): Found 1 design units, including 0 entities, in source file /mnt/50
 Info (12021): Found 1 design units, including 0 entities, in source file /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/mem/neorv32_imem.default.vhd
     Info (12022): Found design unit 1: neorv32_imem-neorv32_imem_rtl File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/mem/neorv32_imem.default.vhd Line: 46
 Info (12021): Found 2 design units, including 1 entities, in source file neorv32_test_setup_bootloader.vhd
-    Info (12022): Found design unit 1: neorv32_test_setup_bootloader-neorv32_test_setup_bootloader_rtl File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/setups/test_more_memory_3/neorv32_test_setup_bootloader.vhd Line: 64
+    Info (12022): Found design unit 1: neorv32_test_setup_bootloader-neorv32_test_setup_bootloader_rtl File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/setups/test_more_memory_3/neorv32_test_setup_bootloader.vhd Line: 66
     Info (12023): Found entity 1: neorv32_test_setup_bootloader File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/setups/test_more_memory_3/neorv32_test_setup_bootloader.vhd Line: 42
 Info (12127): Elaborating entity "neorv32_test_setup_bootloader" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at neorv32_test_setup_bootloader.vhd(67): used implicit default value for signal "con_gpio_i" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/setups/test_more_memory_3/neorv32_test_setup_bootloader.vhd Line: 67
+Warning (10541): VHDL Signal Declaration warning at neorv32_test_setup_bootloader.vhd(69): used implicit default value for signal "con_gpio_i" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/setups/test_more_memory_3/neorv32_test_setup_bootloader.vhd Line: 69
 Warning (10445): VHDL Subtype or Type Declaration warning at neorv32_package.vhd(1045): subtype or type has null range File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_package.vhd Line: 1045
-Info (12128): Elaborating entity "neorv32_top" for hierarchy "neorv32_top:neorv32_top_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/setups/test_more_memory_3/neorv32_test_setup_bootloader.vhd Line: 74
+Info (12128): Elaborating entity "neorv32_top" for hierarchy "neorv32_top:neorv32_top_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/setups/test_more_memory_3/neorv32_test_setup_bootloader.vhd Line: 76
 Warning (10445): VHDL Subtype or Type Declaration warning at neorv32_top.vhd(219): subtype or type has null range File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_top.vhd Line: 219
 Warning (10036): Verilog HDL or VHDL warning at neorv32_top.vhd(296): object "dmi" assigned a value but never read File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_top.vhd Line: 296
 Info (10544): VHDL Assertion Statement at neorv32_top.vhd(343): assertion is false - report "NEORV32 PROCESSOR IO Configuration: GPIO MTIME UART0 PWM " (NOTE) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_top.vhd Line: 343
@@ -2687,16 +2687,16 @@ Warning (21074): Design contains 8 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "gpio_i[5]" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/setups/test_more_memory_3/neorv32_test_setup_bootloader.vhd Line: 55
     Warning (15610): No output dependent on input pin "gpio_i[6]" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/setups/test_more_memory_3/neorv32_test_setup_bootloader.vhd Line: 55
     Warning (15610): No output dependent on input pin "gpio_i[7]" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/setups/test_more_memory_3/neorv32_test_setup_bootloader.vhd Line: 55
-Info (21057): Implemented 5929 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 11 input pins
-    Info (21059): Implemented 25 output pins
+Info (21057): Implemented 5931 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 26 output pins
     Info (21061): Implemented 5758 logic cells
     Info (21064): Implemented 128 RAM segments
     Info (21062): Implemented 7 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 48 warnings
-    Info: Peak virtual memory: 499 megabytes
-    Info: Processing ended: Sun Jan  2 11:58:43 2022
+    Info: Peak virtual memory: 501 megabytes
+    Info: Processing ended: Mon Apr 18 14:09:23 2022
     Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:34
+    Info: Total CPU time (on all processors): 00:00:35
 
 
