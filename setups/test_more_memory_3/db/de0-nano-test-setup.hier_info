@@ -23,20 +23,21 @@ gpio_o[18] <= neorv32_top:neorv32_top_inst.gpio_o[18]
 gpio_o[19] <= neorv32_top:neorv32_top_inst.gpio_o[19]
 gpio_o[20] <= neorv32_top:neorv32_top_inst.gpio_o[20]
 gpio_o[21] <= neorv32_top:neorv32_top_inst.gpio_o[21]
-gpio_i[0] => ~NO_FANOUT~
-gpio_i[1] => ~NO_FANOUT~
-gpio_i[2] => ~NO_FANOUT~
-gpio_i[3] => ~NO_FANOUT~
-gpio_i[4] => ~NO_FANOUT~
-gpio_i[5] => ~NO_FANOUT~
-gpio_i[6] => ~NO_FANOUT~
-gpio_i[7] => ~NO_FANOUT~
+gpio_i[0] => neorv32_top:neorv32_top_inst.gpio_i[0]
+gpio_i[0] => LED.DATAIN
+gpio_i[1] => neorv32_top:neorv32_top_inst.gpio_i[1]
+gpio_i[2] => neorv32_top:neorv32_top_inst.gpio_i[2]
+gpio_i[3] => neorv32_top:neorv32_top_inst.gpio_i[3]
+gpio_i[4] => neorv32_top:neorv32_top_inst.gpio_i[4]
+gpio_i[5] => neorv32_top:neorv32_top_inst.gpio_i[5]
+gpio_i[6] => neorv32_top:neorv32_top_inst.gpio_i[6]
+gpio_i[7] => neorv32_top:neorv32_top_inst.gpio_i[7]
 uart0_txd_o <= neorv32_top:neorv32_top_inst.uart0_txd_o
 uart0_rxd_i => neorv32_top:neorv32_top_inst.uart0_rxd_i
 pwm_o[0] <= neorv32_top:neorv32_top_inst.pwm_o[0]
 pwm_o[1] <= neorv32_top:neorv32_top_inst.pwm_o[1]
-LED <= BUTTON.DB_MAX_OUTPUT_PORT_TYPE
-BUTTON => LED.DATAIN
+LED <= gpio_i[0].DB_MAX_OUTPUT_PORT_TYPE
+BUTTON => ~NO_FANOUT~
 
 
 |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst

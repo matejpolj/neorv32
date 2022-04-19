@@ -120,8 +120,10 @@ begin
   gpio_o <= con_gpio_o(21 downto 0);
   
   pwm_o  <= con_pwm_o(1 downto 0);
+  
+  con_gpio_i(7 downto 0) <= gpio_i(7 downto 0);
 
   --LED <= not BUTTON;
-  LED <= not BUTTON;
+  LED <= gpio_i(0);
 
 end architecture;
