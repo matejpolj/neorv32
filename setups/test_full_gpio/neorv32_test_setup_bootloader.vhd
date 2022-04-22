@@ -65,7 +65,9 @@ entity neorv32_test_setup_bootloader is
     spi_sck_o   : out std_ulogic; -- serial clock output
     spi_sdo_o   : out std_ulogic; -- serial data output
     spi_sdi_i   : in  std_ulogic; -- serial data input
-    spi_csn_o   : out std_ulogic_vector(7 downto 0) -- dedicated chip select
+    spi_csn_o   : out std_ulogic_vector(7 downto 0); -- dedicated chip select
+	 -- XIRQ --
+	 xirq_i		 : in	 std_ulogic_vector(1 downto 0) -- interrupt channels
   );
 end entity;
 
@@ -102,9 +104,9 @@ begin
     MEM_INT_DMEM_EN              => true,              -- implement processor-internal data memory
     MEM_INT_DMEM_SIZE            => MEM_INT_DMEM_SIZE, -- size of processor-internal data memory in bytes
     -- External Interrupts Controller (XIRQ) --
-    --XIRQ_NUM_CH                  => 22,                -- number of external IRQ channels (0..32)
-    --XIRQ_TRIGGER_TYPE            => x"ffffffff",       -- trigger type: 0=level, 1=edge
-    --XIRQ_TRIGGER_POLARITY        => x"ffffffff",       -- trigger polarity: 0=low-level/falling-edge, 1=high-level/rising-edge
+    XIRQ_NUM_CH                  => 2,                -- number of external IRQ channels (0..32)
+    XIRQ_TRIGGER_TYPE            => x"ffffffff",       -- trigger type: 0=level, 1=edge
+    XIRQ_TRIGGER_POLARITY        => x"ffffffff",       -- trigger polarity: 0=low-level/falling-edge, 1=high-level/rising-edge
 
     -- Processor peripherals --
     IO_GPIO_EN                   => true,              -- implement general purpose input/output port unit (GPIO)
@@ -134,8 +136,9 @@ begin
     spi_sdo_o   => spi_sdo_o,   -- controller data out, peripheral data in
     spi_sdi_i   => spi_sdi_i,   -- controller data in, peripheral data out
     spi_csn_o   => spi_csn_o,   -- chip-select
+    xirq_i      => xirq_i,      -- IRQ channels
     -- PWM output control --
-    pwm_o       => con_pwm_o -- PWM output
+    pwm_o       => con_pwm_o    -- PWM output
   );
 
   -- GPIO output --

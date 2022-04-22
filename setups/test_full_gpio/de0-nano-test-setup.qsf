@@ -42,11 +42,12 @@ set_global_assignment -name DEVICE EP4CE22F17C6
 set_global_assignment -name TOP_LEVEL_ENTITY neorv32_test_setup_bootloader
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:40:53  APRIL 10, 2021"
-set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+# vhdl files
 set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu_regfile.vhd -library neorv32
 set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_application_image.vhd -library neorv32
 set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_bootloader_image.vhd -library neorv32
@@ -93,7 +94,9 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+# clock signal
 set_location_assignment PIN_R8 -to clk_i
+# embedded LEDs
 set_location_assignment PIN_T14 -to gpio_o[7]
 set_location_assignment PIN_B1 -to gpio_o[6]
 set_location_assignment PIN_F3 -to gpio_o[5]
@@ -102,11 +105,15 @@ set_location_assignment PIN_A11 -to gpio_o[3]
 set_location_assignment PIN_B13 -to gpio_o[2]
 set_location_assignment PIN_A13 -to gpio_o[1]
 set_location_assignment PIN_A15 -to gpio_o[0]
+# reset button
 set_location_assignment PIN_J15 -to rstn_i
+# uart0
 set_location_assignment PIN_D3 -to uart0_txd_o
 set_location_assignment PIN_C3 -to uart0_rxd_i
+# uart1
 set_location_assignment PIN_A3 -to uart1_txd_o
 set_location_assignment PIN_B5 -to uart1_rxd_i
+# spi connections
 set_location_assignment PIN_A2 -to spi_sck_o
 set_location_assignment PIN_B3 -to spi_sdo_o
 set_location_assignment PIN_A4 -to spi_sdi_i
@@ -118,6 +125,7 @@ set_location_assignment PIN_C8 -to spi_csn_o]4]
 set_location_assignment PIN_E7 -to spi_csn_o[5]
 set_location_assignment PIN_E8 -to spi_csn_o[6]
 set_location_assignment PIN_F9 -to spi_csn_o[7]
+# gpi connections
 set_location_assignment PIN_E1 -to gpio_i[0]
 set_location_assignment PIN_M1 -to gpio_i[1]
 set_location_assignment PIN_T8 -to gpio_i[2]
@@ -140,7 +148,7 @@ set_location_assignment PIN_P14 -to gpio_i[18]
 set_location_assignment PIN_N14 -to gpio_i[19]
 set_location_assignment PIN_L13 -to gpio_i[20]
 set_location_assignment PIN_K15 -to gpio_i[21]
-set_location_assignment PIN_J14 -to gpio_i[22]
+# gpo connections
 set_location_assignment PIN_R13 -to gpio_o[8]
 set_location_assignment PIN_R12 -to gpio_o[9]
 set_location_assignment PIN_T10 -to gpio_o[10]
@@ -155,7 +163,19 @@ set_location_assignment PIN_N15 -to gpio_o[18]
 set_location_assignment PIN_L14 -to gpio_o[19]
 set_location_assignment PIN_M10 -to gpio_o[20]
 set_location_assignment PIN_J16 -to gpio_o[21]
-set_location_assignment PIN_J13 -to gpio_o[22]
+# dotherboard select connections
+set_location_assignment PIN_B16 -to gpio_o[22]
+set_location_assignment PIN_C14 -to gpio_o[23]
+# dotherboard data connections
+set_location_assignment PIN_C16 -to gpio_o[24]
+set_location_assignment PIN_C15 -to gpio_o[25]
+set_location_assignment PIN_D16 -to gpio_o[26]
+set_location_assignment PIN_D15 -to gpio_o[27]
+set_location_assignment PIN_D14 -to gpio_o[28]
+set_location_assignment PIN_F15 -to gpio_o[29]
+set_location_assignment PIN_F16 -to gpio_o[30]
+set_location_assignment PIN_F14 -to gpio_o[31]
+# pwm connections
 set_location_assignment PIN_C9 -to pwm_o[0]
 set_location_assignment PIN_D9 -to pwm_o[1]
 set_location_assignment PIN_E11 -to pwm_o[2]
@@ -166,4 +186,8 @@ set_location_assignment PIN_A12 -to pwm_o[6]
 set_location_assignment PIN_D11 -to pwm_o[7]
 set_location_assignment PIN_D12 -to pwm_o[8]
 set_location_assignment PIN_B12 -to pwm_o[9]
+# external interrupts
+set_location_assignment PIN_J13 -to xirq_i[0]
+set_location_assignment PIN_J14 -to xirq_i[1]
+# other
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

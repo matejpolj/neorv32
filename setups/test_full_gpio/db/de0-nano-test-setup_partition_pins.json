@@ -208,11 +208,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "gpio_i[9]",
+					"name" : "gpio_i[7]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio_i[7]",
+					"name" : "gpio_i[9]",
 					"strict" : false
 				},
 				{
@@ -256,19 +256,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "gpio_i[19]",
-					"strict" : false
-				},
-				{
 					"name" : "gpio_i[22]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio_i[17]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio_i[18]",
 					"strict" : false
 				},
 				{
@@ -276,11 +264,31 @@
 					"strict" : false
 				},
 				{
+					"name" : "gpio_i[20]",
+					"strict" : false
+				},
+				{
 					"name" : "gpio_i[4]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio_i[20]",
+					"name" : "gpio_i[19]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[18]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[17]",
+					"strict" : false
+				},
+				{
+					"name" : "xirq_i[0]",
+					"strict" : false
+				},
+				{
+					"name" : "xirq_i[1]",
 					"strict" : false
 				},
 				{
