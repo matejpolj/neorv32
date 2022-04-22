@@ -3,559 +3,551 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk_i'
-Slack : -8.706
-TNS   : -14945.661
+Slack : -8.298
+TNS   : -14927.944
 
-Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : -1.958
-TNS   : -1.958
+Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : -1.794
+TNS   : -1.794
 
-Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
-Slack : -1.743
-TNS   : -1.743
+Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
+Slack : -1.514
+TNS   : -1.514
 
-Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : -1.677
-TNS   : -1.677
-
-Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : -1.117
-TNS   : -1.117
-
-Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : -1.110
-TNS   : -1.110
-
-Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : -1.103
-TNS   : -1.103
-
-Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : -0.879
-TNS   : -0.879
-
-Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : -0.868
-TNS   : -0.868
-
-Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : -0.698
-TNS   : -0.698
-
-Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : -0.691
-TNS   : -0.691
-
-Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
-Slack : -0.688
-TNS   : -0.688
-
-Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : -0.650
-TNS   : -0.650
-
-Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : -0.644
-TNS   : -0.644
-
-Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : -0.570
-TNS   : -0.570
-
-Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : -0.569
-TNS   : -0.569
-
-Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[9]'
-Slack : -0.569
-TNS   : -0.569
-
-Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : -0.566
-TNS   : -0.566
-
-Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : -0.558
-TNS   : -0.558
+Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : -1.502
+TNS   : -1.502
 
 Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : -0.550
-TNS   : -0.550
+Slack : -1.488
+TNS   : -1.488
+
+Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
+Slack : -1.488
+TNS   : -1.488
+
+Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : -1.471
+TNS   : -1.471
+
+Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : -1.365
+TNS   : -1.365
+
+Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
+Slack : -1.269
+TNS   : -1.269
+
+Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : -1.156
+TNS   : -1.156
+
+Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
+Slack : -1.024
+TNS   : -1.024
+
+Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : -0.934
+TNS   : -0.934
 
 Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : -0.911
+TNS   : -0.911
+
+Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : -0.909
+TNS   : -0.909
+
+Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
+Slack : -0.757
+TNS   : -0.757
+
+Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : -0.732
+TNS   : -0.732
+
+Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : -0.715
+TNS   : -0.715
+
+Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : -0.695
+TNS   : -0.695
+
+Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : -0.577
+TNS   : -0.577
+
+Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : -0.569
+TNS   : -0.569
+
+Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[10]'
+Slack : -0.565
+TNS   : -0.565
+
+Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : -0.565
+TNS   : -0.565
+
+Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : -0.564
+TNS   : -0.564
+
+Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : -0.563
+TNS   : -0.563
+
+Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : -0.553
+TNS   : -0.553
+
+Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
 Slack : -0.549
 TNS   : -0.549
 
-Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : -0.502
-TNS   : -0.502
-
-Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : -0.498
-TNS   : -0.498
-
-Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : -0.394
-TNS   : -0.394
-
-Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : -0.372
-TNS   : -0.372
-
-Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : -0.360
-TNS   : -0.360
-
-Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : -0.358
-TNS   : -0.358
-
 Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : -0.358
-TNS   : -0.358
+Slack : -0.548
+TNS   : -0.548
 
-Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : -0.241
-TNS   : -0.241
+Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : -0.513
+TNS   : -0.513
 
-Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[10]'
-Slack : -0.157
-TNS   : -0.157
+Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : -0.510
+TNS   : -0.510
 
-Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
-Slack : -0.019
-TNS   : -0.019
-
-Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : 0.204
-TNS   : 0.000
+Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : -0.355
+TNS   : -0.355
 
 Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
-Slack : 0.312
-TNS   : 0.000
+Slack : -0.327
+TNS   : -0.327
 
-Type  : Slow 1200mV 85C Model Hold 'clk_i'
-Slack : -1.050
-TNS   : -1.050
+Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : -0.204
+TNS   : -0.204
 
-Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
-Slack : -0.404
-TNS   : -0.404
-
-Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : -0.259
-TNS   : -0.259
-
-Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : 0.207
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
-Slack : 0.277
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[10]'
-Slack : 0.305
-TNS   : 0.000
+Type  : Slow 1200mV 85C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[9]'
+Slack : -0.201
+TNS   : -0.201
 
 Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : 0.366
+Slack : 0.121
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : 0.386
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : 0.393
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : 0.395
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : 0.405
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : 0.408
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : 0.455
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : 0.457
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : 0.459
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : 0.461
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : 0.463
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : 0.464
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : 0.476
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : 0.476
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : 0.477
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : 0.477
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : 0.481
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : 0.483
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : 0.483
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : 0.483
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : 0.485
+Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
+Slack : 0.173
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[9]'
-Slack : 0.485
+Slack : 0.247
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : 0.493
+Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
+Slack : 0.302
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk_i'
+Slack : 0.341
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
-Slack : 0.698
+Slack : 0.454
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : 0.791
+Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : 0.455
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : 1.117
+Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : 0.457
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
-Slack : 1.623
+Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
+Slack : 0.457
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : -3.142
-TNS   : -3.142
-
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : -3.134
-TNS   : -3.134
-
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : -3.131
-TNS   : -3.131
-
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : -2.814
-TNS   : -2.814
-
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : -2.794
-TNS   : -2.794
-
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : -2.003
-TNS   : -2.003
-
-Type  : Slow 1200mV 85C Model Recovery 'clk_i'
-Slack : -1.794
-TNS   : -296.671
-
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : -1.590
-TNS   : -1.590
-
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : -1.508
-TNS   : -1.508
-
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : -1.466
-TNS   : -1.466
-
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : -1.443
-TNS   : -1.443
-
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : -1.385
-TNS   : -1.385
-
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : -1.107
-TNS   : -1.107
-
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : -1.099
-TNS   : -1.099
-
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : -1.015
-TNS   : -1.015
-
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : -1.014
-TNS   : -1.014
-
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : -0.993
-TNS   : -0.993
-
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[9]'
-Slack : -0.987
-TNS   : -0.987
-
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : -0.979
-TNS   : -0.979
-
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : -0.887
-TNS   : -0.887
-
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : -0.885
-TNS   : -0.885
-
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
-Slack : -0.882
-TNS   : -0.882
-
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : -0.877
-TNS   : -0.877
-
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : -0.852
-TNS   : -0.852
-
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
-Slack : -0.804
-TNS   : -0.804
-
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : -0.709
-TNS   : -0.709
-
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : -0.708
-TNS   : -0.708
-
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : -0.692
-TNS   : -0.692
-
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : -0.681
-TNS   : -0.681
-
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[10]'
-Slack : -0.671
-TNS   : -0.671
-
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
-Slack : -0.364
-TNS   : -0.364
-
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : 0.185
+Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : 0.459
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
-Slack : 0.686
+Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
+Slack : 0.459
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
-Slack : -1.225
-TNS   : -1.225
-
-Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : -0.696
-TNS   : -0.696
-
-Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
-Slack : 0.252
+Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : 0.460
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : 0.378
+Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : 0.460
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : 0.381
+Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : 0.463
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : 0.381
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[10]'
-Slack : 0.405
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
-Slack : 0.417
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : 0.419
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : 0.420
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : 0.421
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : 0.422
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : 0.422
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : 0.424
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : 0.425
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : 0.425
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : 0.425
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
-Slack : 0.427
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : 0.449
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : 0.450
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : 0.465
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : 0.468
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
 Slack : 0.471
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : 0.482
+Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : 0.472
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : 0.492
+Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : 0.472
 TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : 0.473
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : 0.474
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[10]'
+Slack : 0.475
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : 0.476
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : 0.476
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : 0.477
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : 0.478
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : 0.478
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : 0.480
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : 0.481
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : 0.495
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : 0.612
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
+Slack : 0.679
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : 0.745
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : 0.828
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
+Slack : 1.140
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : -4.280
+TNS   : -4.280
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : -3.465
+TNS   : -3.465
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : -3.145
+TNS   : -3.145
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : -3.111
+TNS   : -3.111
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : -2.633
+TNS   : -2.633
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
+Slack : -1.905
+TNS   : -1.905
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
+Slack : -1.846
+TNS   : -1.846
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : -1.844
+TNS   : -1.844
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : -1.836
+TNS   : -1.836
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : -1.821
+TNS   : -1.821
+
+Type  : Slow 1200mV 85C Model Recovery 'clk_i'
+Slack : -1.731
+TNS   : -292.976
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : -1.708
+TNS   : -1.708
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : -1.535
+TNS   : -1.535
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : -1.280
+TNS   : -1.280
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : -1.233
+TNS   : -1.233
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : -1.107
+TNS   : -1.107
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : -0.966
+TNS   : -0.966
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[10]'
+Slack : -0.944
+TNS   : -0.944
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : -0.942
+TNS   : -0.942
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : -0.941
+TNS   : -0.941
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
+Slack : -0.941
+TNS   : -0.941
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : -0.938
+TNS   : -0.938
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
+Slack : -0.938
+TNS   : -0.938
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : -0.923
+TNS   : -0.923
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : -0.914
+TNS   : -0.914
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
+Slack : -0.894
+TNS   : -0.894
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : -0.884
+TNS   : -0.884
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : -0.805
+TNS   : -0.805
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
+Slack : -0.802
+TNS   : -0.802
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : -0.666
+TNS   : -0.666
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : -0.662
+TNS   : -0.662
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[9]'
+Slack : -0.590
+TNS   : -0.590
+
+Type  : Slow 1200mV 85C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
+Slack : 0.341
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
+Slack : -0.791
+TNS   : -0.791
+
+Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
+Slack : -0.362
+TNS   : -0.362
 
 Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[9]'
-Slack : 0.494
+Slack : 0.271
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
+Slack : 0.296
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : 0.385
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : 0.409
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : 0.412
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : 0.421
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : 0.422
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : 0.424
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : 0.438
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : 0.448
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
+Slack : 0.449
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : 0.452
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : 0.604
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : 0.455
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : 0.456
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
+Slack : 0.479
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
+Slack : 0.479
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[10]'
+Slack : 0.480
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : 0.480
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : 0.484
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
+Slack : 0.484
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : 0.486
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : 0.487
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : 0.488
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'clk_i'
-Slack : 1.903
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : 2.605
+Slack : 1.821
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : 2.683
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : 2.974
+Slack : 2.448
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : 2.975
+Slack : 2.950
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : 2.952
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : 2.977
+Slack : 2.997
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : 2.999
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_i'
 Slack : -3.000
-TNS   : -3587.926
+TNS   : -3603.782
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : 0.413
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
+Slack : 0.415
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[9]'
 Slack : 0.423
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[10]'
-Slack : 0.431
-TNS   : 0.000
-
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : 0.432
+Slack : 0.433
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
-Slack : 0.438
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : 0.445
+Slack : 0.450
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
@@ -567,6 +559,10 @@ Slack : 0.494
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : 0.494
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
 Slack : 0.494
 TNS   : 0.000
 
@@ -630,6 +626,10 @@ Type  : Slow 1200mV 85C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|
 Slack : 0.494
 TNS   : 0.000
 
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[10]'
+Slack : 0.494
+TNS   : 0.000
+
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
 Slack : 0.494
 TNS   : 0.000
@@ -658,564 +658,556 @@ Type  : Slow 1200mV 85C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|
 Slack : 0.494
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[9]'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
 Slack : 0.494
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'clk_i'
-Slack : -7.691
-TNS   : -13135.451
+Slack : -7.304
+TNS   : -13111.630
 
-Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : -1.673
-TNS   : -1.673
+Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : -1.519
+TNS   : -1.519
 
-Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
-Slack : -1.435
-TNS   : -1.435
+Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
+Slack : -1.252
+TNS   : -1.252
+
+Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : -1.251
+TNS   : -1.251
+
+Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : -1.237
+TNS   : -1.237
 
 Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : -1.428
-TNS   : -1.428
-
-Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : -0.925
-TNS   : -0.925
+Slack : -1.225
+TNS   : -1.225
 
 Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : -0.900
-TNS   : -0.900
-
-Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : -0.899
-TNS   : -0.899
-
-Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : -0.675
-TNS   : -0.675
-
-Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : -0.664
-TNS   : -0.664
-
-Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : -0.529
-TNS   : -0.529
-
-Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
-Slack : -0.515
-TNS   : -0.515
-
-Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : -0.500
-TNS   : -0.500
-
-Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : -0.464
-TNS   : -0.464
-
-Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : -0.458
-TNS   : -0.458
-
-Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : -0.397
-TNS   : -0.397
-
-Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : -0.397
-TNS   : -0.397
-
-Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[9]'
-Slack : -0.397
-TNS   : -0.397
+Slack : -1.219
+TNS   : -1.219
 
 Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : -1.146
+TNS   : -1.146
+
+Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
+Slack : -1.018
+TNS   : -1.018
+
+Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : -0.942
+TNS   : -0.942
+
+Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
+Slack : -0.850
+TNS   : -0.850
+
+Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : -0.739
+TNS   : -0.739
+
+Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : -0.715
+TNS   : -0.715
+
+Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : -0.704
+TNS   : -0.704
+
+Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
+Slack : -0.571
+TNS   : -0.571
+
+Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : -0.548
+TNS   : -0.548
+
+Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : -0.524
+TNS   : -0.524
+
+Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : -0.520
+TNS   : -0.520
+
+Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : -0.402
+TNS   : -0.402
+
+Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : -0.397
+TNS   : -0.397
+
+Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
 Slack : -0.393
 TNS   : -0.393
 
-Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : -0.386
-TNS   : -0.386
+Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[10]'
+Slack : -0.392
+TNS   : -0.392
 
-Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : -0.377
-TNS   : -0.377
+Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : -0.392
+TNS   : -0.392
 
-Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : -0.377
-TNS   : -0.377
+Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : -0.390
+TNS   : -0.390
 
-Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : -0.333
-TNS   : -0.333
-
-Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : -0.331
-TNS   : -0.331
-
-Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : -0.248
-TNS   : -0.248
-
-Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : -0.229
-TNS   : -0.229
-
-Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : -0.218
-TNS   : -0.218
-
-Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : -0.215
-TNS   : -0.215
+Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : -0.382
+TNS   : -0.382
 
 Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : -0.214
-TNS   : -0.214
+Slack : -0.377
+TNS   : -0.377
 
-Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : -0.113
-TNS   : -0.113
+Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
+Slack : -0.376
+TNS   : -0.376
 
-Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[10]'
-Slack : -0.035
-TNS   : -0.035
+Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : -0.352
+TNS   : -0.352
 
-Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
-Slack : 0.086
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : 0.283
-TNS   : 0.000
+Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : -0.349
+TNS   : -0.349
 
 Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
-Slack : 0.353
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'clk_i'
-Slack : -0.914
-TNS   : -0.914
-
-Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
-Slack : -0.340
-TNS   : -0.340
-
-Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
 Slack : -0.219
 TNS   : -0.219
 
-Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : 0.184
-TNS   : 0.000
+Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : -0.212
+TNS   : -0.212
 
-Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
-Slack : 0.242
-TNS   : 0.000
+Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : -0.080
+TNS   : -0.080
 
-Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[10]'
-Slack : 0.269
-TNS   : 0.000
+Type  : Slow 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[9]'
+Slack : -0.066
+TNS   : -0.066
 
 Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : 0.350
+Slack : 0.133
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : 0.361
+Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
+Slack : 0.152
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : 0.367
+Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[9]'
+Slack : 0.219
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : 0.368
+Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
+Slack : 0.270
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : 0.371
+Type  : Slow 1200mV 0C Model Hold 'clk_i'
+Slack : 0.297
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : 0.377
+Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
+Slack : 0.411
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
 Slack : 0.412
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : 0.414
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : 0.415
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : 0.415
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : 0.417
+Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : 0.413
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : 0.419
+Slack : 0.413
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
+Slack : 0.414
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : 0.415
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : 0.416
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : 0.417
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : 0.418
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : 0.426
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : 0.426
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : 0.427
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : 0.427
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : 0.428
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[10]'
+Slack : 0.429
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
 Slack : 0.430
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
 Slack : 0.430
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
 Slack : 0.430
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : 0.431
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : 0.431
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : 0.433
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : 0.434
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : 0.434
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : 0.435
+Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : 0.430
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : 0.441
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[9]'
-Slack : 0.446
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
-Slack : 0.632
+Slack : 0.431
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : 0.712
+Slack : 0.432
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : 0.432
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : 0.443
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : 0.559
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
+Slack : 0.616
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : 0.664
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : 1.001
+Slack : 0.744
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
-Slack : 1.448
+Slack : 1.033
 TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : -2.777
-TNS   : -2.777
-
-Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : -2.773
-TNS   : -2.773
-
-Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : -2.767
-TNS   : -2.767
-
-Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : -2.497
-TNS   : -2.497
 
 Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : -2.481
-TNS   : -2.481
+Slack : -3.825
+TNS   : -3.825
 
-Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : -1.811
-TNS   : -1.811
+Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : -3.070
+TNS   : -3.070
 
-Type  : Slow 1200mV 0C Model Recovery 'clk_i'
-Slack : -1.483
-TNS   : -242.757
+Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : -2.786
+TNS   : -2.786
 
-Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : -1.430
-TNS   : -1.430
+Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : -2.752
+TNS   : -2.752
 
-Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : -1.324
-TNS   : -1.324
-
-Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : -1.322
-TNS   : -1.322
-
-Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : -1.283
-TNS   : -1.283
-
-Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : -1.235
-TNS   : -1.235
-
-Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : -0.937
-TNS   : -0.937
-
-Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : -0.931
-TNS   : -0.931
-
-Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : -0.881
-TNS   : -0.881
-
-Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : -0.877
-TNS   : -0.877
+Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : -2.344
+TNS   : -2.344
 
 Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : -0.853
-TNS   : -0.853
-
-Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[9]'
-Slack : -0.849
-TNS   : -0.849
-
-Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : -0.837
-TNS   : -0.837
-
-Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : -0.772
-TNS   : -0.772
-
-Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : -0.770
-TNS   : -0.770
-
-Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
-Slack : -0.765
-TNS   : -0.765
+Slack : -1.673
+TNS   : -1.673
 
 Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : -0.760
-TNS   : -0.760
+Slack : -1.651
+TNS   : -1.651
 
-Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : -0.734
-TNS   : -0.734
-
-Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
-Slack : -0.677
-TNS   : -0.677
-
-Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : -0.608
-TNS   : -0.608
-
-Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : -0.608
-TNS   : -0.608
+Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
+Slack : -1.626
+TNS   : -1.626
 
 Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : -0.581
-TNS   : -0.581
+Slack : -1.619
+TNS   : -1.619
 
-Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : -0.570
-TNS   : -0.570
+Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : -1.614
+TNS   : -1.614
+
+Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : -1.534
+TNS   : -1.534
+
+Type  : Slow 1200mV 0C Model Recovery 'clk_i'
+Slack : -1.415
+TNS   : -236.619
+
+Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : -1.358
+TNS   : -1.358
+
+Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : -1.129
+TNS   : -1.129
+
+Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : -1.089
+TNS   : -1.089
+
+Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : -0.952
+TNS   : -0.952
+
+Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : -0.823
+TNS   : -0.823
 
 Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[10]'
-Slack : -0.565
-TNS   : -0.565
+Slack : -0.808
+TNS   : -0.808
+
+Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : -0.808
+TNS   : -0.808
+
+Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
+Slack : -0.805
+TNS   : -0.805
+
+Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : -0.803
+TNS   : -0.803
+
+Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : -0.801
+TNS   : -0.801
 
 Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
-Slack : -0.300
-TNS   : -0.300
+Slack : -0.801
+TNS   : -0.801
+
+Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : -0.793
+TNS   : -0.793
 
 Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : 0.207
-TNS   : 0.000
+Slack : -0.790
+TNS   : -0.790
+
+Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : -0.784
+TNS   : -0.784
+
+Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : -0.762
+TNS   : -0.762
+
+Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : -0.683
+TNS   : -0.683
+
+Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
+Slack : -0.666
+TNS   : -0.666
+
+Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : -0.564
+TNS   : -0.564
+
+Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : -0.559
+TNS   : -0.559
+
+Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[9]'
+Slack : -0.486
+TNS   : -0.486
 
 Type  : Slow 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
-Slack : 0.647
+Slack : 0.353
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
-Slack : -1.086
-TNS   : -1.086
+Slack : -0.703
+TNS   : -0.703
 
 Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : -0.621
-TNS   : -0.621
+Slack : -0.326
+TNS   : -0.326
 
-Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
-Slack : 0.225
+Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[9]'
+Slack : 0.231
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : 0.337
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : 0.341
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : 0.341
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[10]'
-Slack : 0.364
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
-Slack : 0.372
+Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
+Slack : 0.264
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : 0.343
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : 0.365
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : 0.368
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
 Slack : 0.375
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : 0.376
+Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : 0.377
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
 Slack : 0.378
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : 0.380
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : 0.382
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : 0.383
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : 0.385
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : 0.386
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : 0.387
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
+Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
 Slack : 0.389
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : 0.397
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
 Slack : 0.398
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : 0.420
+Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
+Slack : 0.399
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : 0.423
+Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : 0.402
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : 0.427
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : 0.434
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : 0.442
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[9]'
-Slack : 0.447
+Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : 0.403
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : 0.539
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : 0.405
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : 0.406
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : 0.425
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
+Slack : 0.425
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
+Slack : 0.425
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[10]'
+Slack : 0.426
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : 0.429
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
+Slack : 0.430
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : 0.432
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : 0.432
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : 0.433
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'clk_i'
-Slack : 1.700
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : 2.415
+Slack : 1.619
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : 2.488
+Slack : 2.282
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : 2.762
+Slack : 2.743
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : 2.762
+Slack : 2.745
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : 2.764
+Slack : 2.766
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : 2.767
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_i'
 Slack : -3.000
-TNS   : -3587.692
+TNS   : -3603.692
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
 Slack : 0.427
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[9]'
 Slack : 0.433
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[10]'
-Slack : 0.442
-TNS   : 0.000
-
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : 0.460
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : 0.477
+Slack : 0.471
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
-Slack : 0.481
+Slack : 0.487
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
@@ -1227,6 +1219,10 @@ Slack : 0.489
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : 0.489
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
 Slack : 0.489
 TNS   : 0.000
 
@@ -1290,6 +1286,10 @@ Type  : Slow 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|n
 Slack : 0.489
 TNS   : 0.000
 
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[10]'
+Slack : 0.489
+TNS   : 0.000
+
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
 Slack : 0.489
 TNS   : 0.000
@@ -1318,564 +1318,556 @@ Type  : Slow 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|n
 Slack : 0.489
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[9]'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
 Slack : 0.489
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'clk_i'
-Slack : -4.346
-TNS   : -7259.368
-
-Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : -0.705
-TNS   : -0.705
-
-Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
-Slack : -0.586
-TNS   : -0.586
-
-Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : -0.570
-TNS   : -0.570
-
-Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : -0.212
-TNS   : -0.212
-
-Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : -0.205
-TNS   : -0.205
-
-Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : -0.197
-TNS   : -0.197
-
-Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : -0.060
-TNS   : -0.060
-
-Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : -0.049
-TNS   : -0.049
-
-Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : 0.041
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : 0.044
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
-Slack : 0.061
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : 0.074
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : 0.075
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : 0.121
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : 0.123
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : 0.124
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : 0.126
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[9]'
-Slack : 0.126
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : 0.129
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : 0.131
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : 0.159
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : 0.161
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : 0.211
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : 0.236
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : 0.242
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : 0.244
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : 0.246
-TNS   : 0.000
+Slack : -4.088
+TNS   : -7190.769
 
 Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : 0.315
-TNS   : 0.000
+Slack : -0.633
+TNS   : -0.633
 
-Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[10]'
-Slack : 0.362
+Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
+Slack : -0.483
+TNS   : -0.483
+
+Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : -0.464
+TNS   : -0.464
+
+Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
+Slack : -0.457
+TNS   : -0.457
+
+Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : -0.456
+TNS   : -0.456
+
+Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : -0.452
+TNS   : -0.452
+
+Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : -0.342
+TNS   : -0.342
+
+Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
+Slack : -0.310
+TNS   : -0.310
+
+Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : -0.229
+TNS   : -0.229
+
+Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
+Slack : -0.157
+TNS   : -0.157
+
+Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : -0.097
+TNS   : -0.097
+
+Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : -0.085
+TNS   : -0.085
+
+Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : -0.083
+TNS   : -0.083
+
+Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : 0.022
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
-Slack : 0.431
+Slack : 0.023
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : 0.571
+Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : 0.033
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
-Slack : 0.650
+Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : 0.060
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'clk_i'
-Slack : -0.406
-TNS   : -0.406
-
-Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
-Slack : -0.303
-TNS   : -0.303
-
-Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : -0.174
-TNS   : -0.174
-
-Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : 0.113
+Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : 0.117
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
-Slack : 0.149
+Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : 0.119
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[10]'
-Slack : 0.161
+Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[10]'
+Slack : 0.123
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : 0.183
+Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : 0.123
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : 0.200
+Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : 0.124
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : 0.204
+Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : 0.126
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : 0.205
+Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
+Slack : 0.130
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : 0.211
+Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : 0.132
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : 0.212
+Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : 0.132
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : 0.240
+Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : 0.150
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : 0.243
+Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : 0.150
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : 0.243
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : 0.244
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
 Slack : 0.245
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : 0.247
+Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
+Slack : 0.270
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : 0.252
+Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[9]'
+Slack : 0.319
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : 0.252
+Type  : Fast 1200mV 0C Model Setup 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : 0.321
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : 0.253
+Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : 0.034
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : 0.253
+Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
+Slack : 0.083
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : 0.255
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : 0.256
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : 0.256
+Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
+Slack : 0.088
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[9]'
-Slack : 0.256
+Slack : 0.133
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : 0.257
+Type  : Fast 1200mV 0C Model Hold 'clk_i'
+Slack : 0.178
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : 0.259
+Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : 0.241
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : 0.263
+Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : 0.242
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
+Slack : 0.242
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
-Slack : 0.373
+Slack : 0.242
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : 0.243
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
+Slack : 0.243
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : 0.245
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : 0.245
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : 0.245
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : 0.250
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : 0.250
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : 0.250
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : 0.251
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : 0.252
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[10]'
+Slack : 0.252
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : 0.253
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : 0.253
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : 0.253
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : 0.429
+Slack : 0.255
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : 0.255
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : 0.257
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : 0.258
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : 0.265
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : 0.311
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
+Slack : 0.360
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : 0.422
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : 0.624
+Slack : 0.449
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
-Slack : 0.942
+Slack : 0.667
 TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : -2.253
+TNS   : -2.253
+
+Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : -1.752
+TNS   : -1.752
 
 Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
 Slack : -1.554
 TNS   : -1.554
 
-Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : -1.547
-TNS   : -1.547
-
 Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : -1.546
-TNS   : -1.546
+Slack : -1.540
+TNS   : -1.540
 
 Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : -1.361
-TNS   : -1.361
-
-Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : -1.343
-TNS   : -1.343
-
-Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : -0.944
-TNS   : -0.944
-
-Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : -0.676
-TNS   : -0.676
-
-Type  : Fast 1200mV 0C Model Recovery 'clk_i'
-Slack : -0.652
-TNS   : -99.775
-
-Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : -0.617
-TNS   : -0.617
-
-Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : -0.608
-TNS   : -0.608
-
-Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : -0.582
-TNS   : -0.582
-
-Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : -0.544
-TNS   : -0.544
-
-Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : -0.383
-TNS   : -0.383
-
-Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : -0.379
-TNS   : -0.379
-
-Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : -0.334
-TNS   : -0.334
-
-Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : -0.329
-TNS   : -0.329
+Slack : -1.259
+TNS   : -1.259
 
 Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : -0.320
-TNS   : -0.320
+Slack : -0.884
+TNS   : -0.884
 
-Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[9]'
-Slack : -0.320
-TNS   : -0.320
+Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
+Slack : -0.844
+TNS   : -0.844
 
-Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : -0.310
-TNS   : -0.310
-
-Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : -0.252
-TNS   : -0.252
-
-Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
-Slack : -0.252
-TNS   : -0.252
-
-Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : -0.250
-TNS   : -0.250
+Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : -0.842
+TNS   : -0.842
 
 Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : -0.245
-TNS   : -0.245
-
-Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : -0.224
-TNS   : -0.224
-
-Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
-Slack : -0.209
-TNS   : -0.209
-
-Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : -0.155
-TNS   : -0.155
-
-Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : -0.152
-TNS   : -0.152
-
-Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[10]'
-Slack : -0.147
-TNS   : -0.147
+Slack : -0.841
+TNS   : -0.841
 
 Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : -0.141
-TNS   : -0.141
+Slack : -0.835
+TNS   : -0.835
 
-Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : -0.134
-TNS   : -0.134
+Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : -0.717
+TNS   : -0.717
 
-Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
-Slack : 0.038
-TNS   : 0.000
+Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : -0.627
+TNS   : -0.627
+
+Type  : Fast 1200mV 0C Model Recovery 'clk_i'
+Slack : -0.616
+TNS   : -97.022
+
+Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : -0.477
+TNS   : -0.477
+
+Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : -0.448
+TNS   : -0.448
+
+Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : -0.374
+TNS   : -0.374
+
+Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : -0.301
+TNS   : -0.301
 
 Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : 0.349
-TNS   : 0.000
+Slack : -0.294
+TNS   : -0.294
+
+Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[10]'
+Slack : -0.277
+TNS   : -0.277
+
+Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : -0.275
+TNS   : -0.275
+
+Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
+Slack : -0.274
+TNS   : -0.274
+
+Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : -0.270
+TNS   : -0.270
+
+Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : -0.270
+TNS   : -0.270
+
+Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
+Slack : -0.268
+TNS   : -0.268
+
+Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : -0.267
+TNS   : -0.267
+
+Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : -0.260
+TNS   : -0.260
+
+Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : -0.238
+TNS   : -0.238
+
+Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
+Slack : -0.214
+TNS   : -0.214
+
+Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : -0.210
+TNS   : -0.210
+
+Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : -0.125
+TNS   : -0.125
+
+Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : -0.123
+TNS   : -0.123
+
+Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[9]'
+Slack : -0.079
+TNS   : -0.079
 
 Type  : Fast 1200mV 0C Model Recovery 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
-Slack : 0.660
+Slack : 0.458
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
-Slack : -0.733
-TNS   : -0.733
+Slack : -0.489
+TNS   : -0.489
 
 Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : -0.403
-TNS   : -0.403
-
-Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
-Slack : 0.157
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : 0.220
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : 0.221
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : 0.222
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
-Slack : 0.235
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : 0.238
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : 0.240
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[10]'
-Slack : 0.240
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : 0.241
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : 0.248
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : 0.249
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : 0.250
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : 0.251
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : 0.254
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : 0.256
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : 0.256
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : 0.256
-TNS   : 0.000
+Slack : -0.201
+TNS   : -0.201
 
 Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
-Slack : 0.258
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : 0.266
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : 0.270
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : 0.276
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
-Slack : 0.276
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : 0.282
+Slack : 0.163
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[9]'
-Slack : 0.287
+Slack : 0.167
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : 0.217
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : 0.232
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : 0.233
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : 0.244
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : 0.245
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : 0.246
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
+Slack : 0.251
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : 0.258
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
+Slack : 0.259
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : 0.261
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : 0.262
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : 0.263
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : 0.347
+Slack : 0.264
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : 0.265
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
+Slack : 0.276
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
+Slack : 0.278
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
+Slack : 0.278
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : 0.280
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[5]'
+Slack : 0.281
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[7]'
+Slack : 0.282
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
+Slack : 0.284
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[10]'
+Slack : 0.285
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : 0.286
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'clk_i'
-Slack : 1.110
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : 1.665
+Slack : 1.075
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : 1.706
+Slack : 1.566
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
-Slack : 1.860
+Slack : 1.851
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
-Slack : 1.860
+Slack : 1.852
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
-Slack : 1.863
+Slack : 1.887
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
+Slack : 1.888
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_i'
 Slack : -3.000
-TNS   : -3443.757
+TNS   : -3459.879
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:2:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
-Slack : 0.395
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
-Slack : 0.433
+Slack : 0.414
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[4]'
-Slack : 0.446
+Slack : 0.425
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
-Slack : 0.448
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:1:neorv32_trng_ring_osc_inst_i|enable_sreg[6]'
+Slack : 0.450
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[9]'
 Slack : 0.456
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[10]'
-Slack : 0.463
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[0]'
@@ -1887,6 +1879,10 @@ Slack : 0.495
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[2]'
+Slack : 0.495
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:0:neorv32_trng_ring_osc_inst_i|enable_sreg[3]'
 Slack : 0.495
 TNS   : 0.000
 
@@ -1950,6 +1946,10 @@ Type  : Fast 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|n
 Slack : 0.495
 TNS   : 0.000
 
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[10]'
+Slack : 0.495
+TNS   : 0.000
+
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[1]'
 Slack : 0.495
 TNS   : 0.000
@@ -1978,7 +1978,7 @@ Type  : Fast 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|n
 Slack : 0.495
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[9]'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neorv32_trng_ring_osc:\neorv32_trng_ring_osc_inst:3:neorv32_trng_ring_osc_inst_i|enable_sreg[8]'
 Slack : 0.495
 TNS   : 0.000
 
