@@ -11,7 +11,7 @@
 -- # ********************************************************************************************* #
 -- # BSD 3-Clause License                                                                          #
 -- #                                                                                               #
--- # Copyright (c) 2021, Stephan Nolting. All rights reserved.                                     #
+-- # Copyright (c) 2022, Stephan Nolting. All rights reserved.                                     #
 -- #                                                                                               #
 -- # Redistribution and use in source and binary forms, with or without modification, are          #
 -- # permitted provided that the following conditions are met:                                     #
@@ -63,32 +63,37 @@ entity neorv32_wishbone is
   );
   port (
     -- global control --
-    clk_i     : in  std_ulogic; -- global clock line
-    rstn_i    : in  std_ulogic; -- global reset line, low-active
+    clk_i      : in  std_ulogic; -- global clock line
+    rstn_i     : in  std_ulogic; -- global reset line, low-active
     -- host access --
-    src_i     : in  std_ulogic; -- access type (0: data, 1:instruction)
-    addr_i    : in  std_ulogic_vector(31 downto 0); -- address
-    rden_i    : in  std_ulogic; -- read enable
-    wren_i    : in  std_ulogic; -- write enable
-    ben_i     : in  std_ulogic_vector(03 downto 0); -- byte write enable
-    data_i    : in  std_ulogic_vector(31 downto 0); -- data in
-    data_o    : out std_ulogic_vector(31 downto 0); -- data out
-    lock_i    : in  std_ulogic; -- exclusive access request
-    ack_o     : out std_ulogic; -- transfer acknowledge
-    err_o     : out std_ulogic; -- transfer error
-    priv_i    : in  std_ulogic_vector(01 downto 0); -- current CPU privilege level
+    src_i      : in  std_ulogic; -- access type (0: data, 1:instruction)
+    addr_i     : in  std_ulogic_vector(31 downto 0); -- address
+    rden_i     : in  std_ulogic; -- read enable
+    wren_i     : in  std_ulogic; -- write enable
+    ben_i      : in  std_ulogic_vector(03 downto 0); -- byte write enable
+    data_i     : in  std_ulogic_vector(31 downto 0); -- data in
+    data_o     : out std_ulogic_vector(31 downto 0); -- data out
+    lock_i     : in  std_ulogic; -- exclusive access request
+    ack_o      : out std_ulogic; -- transfer acknowledge
+    err_o      : out std_ulogic; -- transfer error
+    tmo_o      : out std_ulogic; -- transfer timeout
+    priv_i     : in  std_ulogic; -- current CPU privilege level
+    ext_o      : out std_ulogic; -- active external access
+    -- xip configuration --
+    xip_en_i   : in  std_ulogic; -- XIP module enabled
+    xip_page_i : in  std_ulogic_vector(03 downto 0); -- XIP memory page
     -- wishbone interface --
-    wb_tag_o  : out std_ulogic_vector(02 downto 0); -- request tag
-    wb_adr_o  : out std_ulogic_vector(31 downto 0); -- address
-    wb_dat_i  : in  std_ulogic_vector(31 downto 0); -- read data
-    wb_dat_o  : out std_ulogic_vector(31 downto 0); -- write data
-    wb_we_o   : out std_ulogic; -- read/write
-    wb_sel_o  : out std_ulogic_vector(03 downto 0); -- byte enable
-    wb_stb_o  : out std_ulogic; -- strobe
-    wb_cyc_o  : out std_ulogic; -- valid cycle
-    wb_lock_o : out std_ulogic; -- exclusive access request
-    wb_ack_i  : in  std_ulogic; -- transfer acknowledge
-    wb_err_i  : in  std_ulogic  -- transfer error
+    wb_tag_o   : out std_ulogic_vector(02 downto 0); -- request tag
+    wb_adr_o   : out std_ulogic_vector(31 downto 0); -- address
+    wb_dat_i   : in  std_ulogic_vector(31 downto 0); -- read data
+    wb_dat_o   : out std_ulogic_vector(31 downto 0); -- write data
+    wb_we_o    : out std_ulogic; -- read/write
+    wb_sel_o   : out std_ulogic_vector(03 downto 0); -- byte enable
+    wb_stb_o   : out std_ulogic; -- strobe
+    wb_cyc_o   : out std_ulogic; -- valid cycle
+    wb_lock_o  : out std_ulogic; -- exclusive access request
+    wb_ack_i   : in  std_ulogic; -- transfer acknowledge
+    wb_err_i   : in  std_ulogic  -- transfer error
   );
 end neorv32_wishbone;
 
@@ -101,6 +106,7 @@ architecture neorv32_wishbone_rtl of neorv32_wishbone is
   signal int_imem_acc : std_ulogic;
   signal int_dmem_acc : std_ulogic;
   signal int_boot_acc : std_ulogic;
+  signal xip_acc      : std_ulogic;
   signal xbus_access  : std_ulogic;
 
   -- bus arbiter
@@ -115,10 +121,11 @@ architecture neorv32_wishbone_rtl of neorv32_wishbone is
     sel      : std_ulogic_vector(03 downto 0);
     ack      : std_ulogic;
     err      : std_ulogic;
-    timeout  : std_ulogic_vector(index_size_f(BUS_TIMEOUT)-1 downto 0);
+    tmo      : std_ulogic;
+    timeout  : std_ulogic_vector(index_size_f(BUS_TIMEOUT) downto 0);
     src      : std_ulogic;
     lock     : std_ulogic;
-    priv     : std_ulogic_vector(01 downto 0);
+    priv     : std_ulogic;
   end record;
   signal ctrl    : ctrl_t;
   signal stb_int : std_ulogic;
@@ -139,7 +146,7 @@ begin
 
   -- bus timeout --
   assert not (BUS_TIMEOUT /= 0) report "NEORV32 PROCESSOR CONFIG NOTE: External Bus Interface - Implementing auto-timeout (" & integer'image(BUS_TIMEOUT) & " cycles)." severity note;
-  assert not (BUS_TIMEOUT  = 0) report "NEORV32 PROCESSOR CONFIG NOTE: External Bus Interface - Implementing no auto-timeout (can cause permanent CPU stall!)." severity note;
+  assert not (BUS_TIMEOUT  = 0) report "NEORV32 PROCESSOR CONFIG WARNING: External Bus Interface - Implementing NO auto-timeout (can cause permanent CPU stall!)." severity warning;
 
   -- endianness --
   assert not (BIG_ENDIAN = false) report "NEORV32 PROCESSOR CONFIG NOTE: External Bus Interface - Implementing LITTLE-endian byte order." severity note;
@@ -157,8 +164,10 @@ begin
   int_dmem_acc <= '1' when (addr_i(31 downto index_size_f(MEM_INT_DMEM_SIZE)) = dmem_base_c(31 downto index_size_f(MEM_INT_DMEM_SIZE))) and (MEM_INT_DMEM_EN = true) else '0';
   -- access to processor-internal BOOTROM or IO devices? --
   int_boot_acc <= '1' when (addr_i(31 downto 16) = boot_rom_base_c(31 downto 16)) else '0'; -- hacky!
+  -- XIP access? --
+  xip_acc      <= '1' when (xip_en_i = '1') and (addr_i(31 downto 28) = xip_page_i) else '0';
   -- actual external bus access? --
-  xbus_access <= (not int_imem_acc) and (not int_dmem_acc) and (not int_boot_acc);
+  xbus_access  <= (not int_imem_acc) and (not int_dmem_acc) and (not int_boot_acc) and (not xip_acc);
 
 
   -- Bus Arbiter -----------------------------------------------------------------------------
@@ -176,16 +185,18 @@ begin
       ctrl.timeout  <= (others => def_rst_val_c);
       ctrl.ack      <= def_rst_val_c;
       ctrl.err      <= def_rst_val_c;
+      ctrl.tmo      <= def_rst_val_c;
       ctrl.src      <= def_rst_val_c;
       ctrl.lock     <= def_rst_val_c;
-      ctrl.priv     <= (others => def_rst_val_c);
+      ctrl.priv     <= def_rst_val_c;
     elsif rising_edge(clk_i) then
       -- defaults --
       ctrl.state_ff <= ctrl.state;
       ctrl.rdat     <= (others => '0'); -- required for internal output gating
       ctrl.ack      <= '0';
       ctrl.err      <= '0';
-      ctrl.timeout  <= std_ulogic_vector(to_unsigned(BUS_TIMEOUT, index_size_f(BUS_TIMEOUT)));
+      ctrl.tmo      <= '0';
+      ctrl.timeout  <= std_ulogic_vector(to_unsigned(BUS_TIMEOUT, index_size_f(BUS_TIMEOUT)+1));
 
       -- state machine --
       case ctrl.state is
@@ -213,9 +224,11 @@ begin
         when BUSY => -- transfer in progress
         -- ------------------------------------------------------------
           ctrl.rdat <= wb_dat_i;
-          if (wb_err_i = '1') or -- abnormal bus termination
-             ((timeout_en_c = true) and (or_reduce_f(ctrl.timeout) = '0')) then -- valid timeout
+          if (wb_err_i = '1') then -- abnormal bus termination
             ctrl.err   <= '1';
+            ctrl.state <= IDLE;
+          elsif (timeout_en_c = true) and (or_reduce_f(ctrl.timeout) = '0') then -- enabled timeout
+            ctrl.tmo   <= '1';
             ctrl.state <= IDLE;
           elsif (wb_ack_i = '1') then -- normal bus termination
             ctrl.ack   <= '1';
@@ -239,9 +252,12 @@ begin
   rdata_gated <= wb_dat_i when (ctrl.state = BUSY) else (others => '0'); -- CPU read data gate for "async" RX
   rdata       <= ctrl.rdat when (ASYNC_RX = false) else rdata_gated;
 
+  ext_o  <= '1' when (ctrl.state = BUSY) else '0'; -- active external access
+
   data_o <= rdata when (BIG_ENDIAN = false) else bswap32_f(rdata); -- endianness conversion
   ack_o  <= ctrl.ack when (ASYNC_RX = false) else ack_gated;
   err_o  <= ctrl.err;
+  tmo_o  <= ctrl.tmo;
 
   -- wishbone interface --
   wb_tag_o(0) <= '0' when (ctrl.priv = priv_mode_u_c) else '1'; -- unprivileged access when in user mode

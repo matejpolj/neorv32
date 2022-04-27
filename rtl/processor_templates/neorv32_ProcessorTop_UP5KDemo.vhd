@@ -3,7 +3,7 @@
 -- # ********************************************************************************************* #
 -- # BSD 3-Clause License                                                                          #
 -- #                                                                                               #
--- # Copyright (c) 2021, Stephan Nolting. All rights reserved.                                     #
+-- # Copyright (c) 2022, Stephan Nolting. All rights reserved.                                     #
 -- #                                                                                               #
 -- # Redistribution and use in source and binary forms, with or without modification, are          #
 -- # permitted provided that the following conditions are met:                                     #
@@ -62,8 +62,8 @@ entity neorv32_ProcessorTop_UP5KDemo is
     CPU_CNT_WIDTH                : natural := 34;     -- total width of CPU cycle and instret counters (0..64)
 
     -- Physical Memory Protection (PMP) --
-    PMP_NUM_REGIONS              : natural := 0;       -- number of regions (0..64)
-    PMP_MIN_GRANULARITY          : natural := 64*1024; -- minimal region granularity in bytes, has to be a power of 2, min 8 bytes
+    PMP_NUM_REGIONS              : natural := 0;       -- number of regions (0..16)
+    PMP_MIN_GRANULARITY          : natural := 4;       -- minimal region granularity in bytes, has to be a power of 2, min 4 bytes
 
     -- Hardware Performance Monitors (HPM) --
     HPM_NUM_CNTS                 : natural := 0;       -- number of implemented HPM counters (0..29)
@@ -132,6 +132,7 @@ architecture neorv32_ProcessorTop_UP5KDemo_rtl of neorv32_ProcessorTop_UP5KDemo 
   -- internal IO connection --
   signal con_gpio_o   : std_ulogic_vector(63 downto 0);
   signal con_gpio_i   : std_ulogic_vector(63 downto 0);
+  signal con_pwm_o    : std_ulogic_vector(59 downto 0);
   signal con_spi_sck  : std_ulogic;
   signal con_spi_sdi  : std_ulogic;
   signal con_spi_sdo  : std_ulogic;
@@ -158,6 +159,10 @@ begin
   gpio_o <= con_gpio_o(3 downto 0);
   con_gpio_i(03 downto 0) <= gpio_i;
   con_gpio_i(63 downto 4) <= (others => '0');
+
+  -- PWM --
+  pwm_o <= con_pwm_o(IO_PWM_NUM_CH-1 downto 0);
+
 
   -- The core of the problem ----------------------------------------------------------------
   -- -------------------------------------------------------------------------------------------
@@ -188,7 +193,7 @@ begin
     CPU_CNT_WIDTH                => CPU_CNT_WIDTH,  -- total width of CPU cycle and instret counters (0..64)
 
     -- Physical Memory Protection (PMP) --
-    PMP_NUM_REGIONS              => PMP_NUM_REGIONS,       -- number of regions (0..64)
+    PMP_NUM_REGIONS              => PMP_NUM_REGIONS,       -- number of regions (0..16)
     PMP_MIN_GRANULARITY          => PMP_MIN_GRANULARITY,   -- minimal region granularity in bytes, has to be a power of 2, min 8 bytes
 
     -- Hardware Performance Monitors (HPM) --
@@ -285,7 +290,7 @@ begin
     twi_scl_io  => twi_scl_io,                   -- twi serial clock line
 
     -- PWM (available if IO_PWM_NUM_CH > 0) --
-    pwm_o       => pwm_o,                        -- pwm channels
+    pwm_o       => con_pwm_o,                    -- pwm channels
 
     -- Custom Functions Subsystem IO --
     cfs_in_i    => (others => '0'),              -- custom CFS inputs conduit

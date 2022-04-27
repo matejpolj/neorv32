@@ -192,47 +192,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "gpio_i[13]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio_i[3]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio_i[15]",
-					"strict" : false
-				},
-				{
 					"name" : "gpio_i[8]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio_i[7]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio_i[9]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio_i[11]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio_i[10]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio_i[12]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio_i[6]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio_i[14]",
+					"name" : "gpio_i[16]",
 					"strict" : false
 				},
 				{
@@ -244,15 +208,43 @@
 					"strict" : false
 				},
 				{
+					"name" : "gpio_i[17]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[11]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[19]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[3]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[10]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[18]",
+					"strict" : false
+				},
+				{
 					"name" : "gpio_i[2]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio_i[5]",
+					"name" : "gpio_i[9]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio_i[16]",
+					"name" : "gpio_i[14]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[15]",
 					"strict" : false
 				},
 				{
@@ -260,7 +252,27 @@
 					"strict" : false
 				},
 				{
+					"name" : "gpio_i[6]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[13]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[12]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[7]",
+					"strict" : false
+				},
+				{
 					"name" : "gpio_i[21]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[5]",
 					"strict" : false
 				},
 				{
@@ -272,15 +284,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "gpio_i[19]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio_i[18]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio_i[17]",
+					"name" : "spi_sdi_i",
 					"strict" : false
 				},
 				{
@@ -289,10 +293,6 @@
 				},
 				{
 					"name" : "xirq_i[1]",
-					"strict" : false
-				},
-				{
-					"name" : "spi_sdi_i",
 					"strict" : false
 				},
 				{

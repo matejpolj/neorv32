@@ -8,7 +8,7 @@
 -- # ********************************************************************************************* #
 -- # BSD 3-Clause License                                                                          #
 -- #                                                                                               #
--- # Copyright (c) 2021, Stephan Nolting. All rights reserved.                                     #
+-- # Copyright (c) 2022, Stephan Nolting. All rights reserved.                                     #
 -- #                                                                                               #
 -- # Redistribution and use in source and binary forms, with or without modification, are          #
 -- # permitted provided that the following conditions are met:                                     #
@@ -126,6 +126,8 @@ architecture neorv32_slink_rtl of neorv32_slink is
   signal ack_write : std_ulogic;
   signal acc_en    : std_ulogic;
   signal addr      : std_ulogic_vector(31 downto 0);
+  signal wren      : std_ulogic; -- word write enable
+  signal rden      : std_ulogic; -- read enable
 
   -- control register --
   signal enable : std_ulogic; -- global enable
@@ -148,6 +150,15 @@ architecture neorv32_slink_rtl of neorv32_slink is
   signal rx_fifo_half  : std_ulogic_vector(7 downto 0);
   signal tx_fifo_half  : std_ulogic_vector(7 downto 0);
 
+  -- interrupt generator --
+  type detect_t is array (0 to 7) of std_ulogic_vector(1 downto 0);
+  type irq_t is record
+    detect  : detect_t; -- rising-edge detector
+    trigger : std_ulogic_vector(7 downto 0);
+    set     : std_ulogic_vector(7 downto 0);
+  end record;
+  signal rx_irq, tx_irq : irq_t;
+
 begin
 
   -- Sanity Checks --------------------------------------------------------------------------
@@ -169,6 +180,8 @@ begin
   -- -------------------------------------------------------------------------------------------
   acc_en <= '1' when (addr_i(hi_abb_c downto lo_abb_c) = slink_base_c(hi_abb_c downto lo_abb_c)) else '0';
   addr   <= slink_base_c(31 downto lo_abb_c) & addr_i(lo_abb_c-1 downto 2) & "00"; -- word aligned
+  wren   <= acc_en and wren_i;
+  rden   <= acc_en and rden_i;
 
 
   -- Read/Write Access ----------------------------------------------------------------------
@@ -178,7 +191,7 @@ begin
     if rising_edge(clk_i) then
       -- write access --
       ack_write <= '0';
-      if (acc_en = '1') and (wren_i = '1') then
+      if (wren = '1') then
         if (addr(5) = '0') then -- control/status/irq
           if (addr(4 downto 3) = "00") then -- control register
             enable <= data_i(ctrl_en_c);
@@ -195,14 +208,16 @@ begin
           end if;
           ack_write <= '1';
         else -- TX links
-          ack_write <= or_reduce_f(link_sel and tx_fifo_free);
+          if (or_reduce_f(link_sel and tx_fifo_free) = '1') then
+            ack_write <= '1';
+          end if;
         end if;
       end if;
 
       -- read access --
       data_o   <= (others => '0');
       ack_read <= '0';
-      if (acc_en = '1') and (rden_i = '1') then
+      if (rden = '1') then
         if (addr(5) = '0') then -- control/status registers
           ack_read <= '1';
           case addr(4 downto 3) is
@@ -230,8 +245,10 @@ begin
               data_o <= (others => '0');
           end case;
         else -- RX links
-          data_o   <= rx_fifo_rdata(to_integer(unsigned(addr(4 downto 2))));
-          ack_read <= or_reduce_f(link_sel and rx_fifo_avail);
+          data_o <= rx_fifo_rdata(to_integer(unsigned(addr(4 downto 2))));
+          if (or_reduce_f(link_sel and rx_fifo_avail) = '1') then
+            ack_read <= '1';
+          end if;
         end if;
       end if;
     end if;
@@ -246,48 +263,85 @@ begin
 
   -- Interrupt Generator --------------------------------------------------------------------
   -- -------------------------------------------------------------------------------------------
-  irq_arbiter: process(clk_i)
-    variable rx_tmp_v : std_ulogic_vector(SLINK_NUM_RX-1 downto 0);
-    variable tx_tmp_v : std_ulogic_vector(SLINK_NUM_TX-1 downto 0);
+  -- interrupt trigger type / condition --
+  irq_type: process(irq_rx_mode, rx_fifo_avail, rx_fifo_half, irq_tx_mode, tx_fifo_free, tx_fifo_half, tx_fifo_we)
+  begin
+    -- RX interrupt --
+    rx_irq.trigger <= (others => '0');
+    for i in 0 to SLINK_NUM_RX-1 loop
+      if (SLINK_RX_FIFO = 1) or (irq_rx_mode(i) = '0') then
+        rx_irq.trigger(i) <= rx_fifo_avail(i); -- fire if any RX_FIFO is not empty (= data available)
+      else
+        rx_irq.trigger(i) <= rx_fifo_half(i);
+      end if;
+    end loop;
+    -- TX interrupt --
+    tx_irq.trigger <= (others => '0');
+    for i in 0 to SLINK_NUM_TX-1 loop
+      if (SLINK_TX_FIFO = 1) or (irq_tx_mode(i) = '0') then
+        tx_irq.trigger(i) <= tx_fifo_free(i) and tx_fifo_we(i); -- fire if any TX_FIFO is not full (= free buffer space available)
+      else
+        tx_irq.trigger(i) <= not tx_fifo_half(i);
+      end if;
+    end loop;
+  end process irq_type;
+
+  -- edge detector - sync --
+  irq_edge_detect_sync: process(clk_i)
   begin
     if rising_edge(clk_i) then
-      if (enable = '0') then -- no interrupts if unit is disabled
-        irq_rx_o <= '0';
-        irq_tx_o <= '0';
-      else
-
-        -- RX interrupt --
-        if (SLINK_RX_FIFO = 1) then
-          irq_rx_o <= or_reduce_f(irq_rx_en and rx_fifo_avail); -- fire if any RX_FIFO is not empty
+      -- RX --
+      for i in 0 to SLINK_NUM_RX-1 loop
+        if (enable = '1') and (irq_rx_en(i) = '1') then
+          rx_irq.detect(i) <= rx_irq.detect(i)(0) & rx_irq.trigger(i);
         else
-          rx_tmp_v := (others => '0');
-          for i in 0 to SLINK_NUM_RX-1 loop
-            if (irq_rx_mode(i) = '0') then -- fire if any RX_FIFO is at least half-full
-              rx_tmp_v(i) := rx_fifo_half(i);
-            else -- fire if any RX_FIFO is not empty (= data available)
-              rx_tmp_v(i) := rx_fifo_avail(i);
-            end if;
-          end loop;
-          irq_rx_o <= or_reduce_f(irq_rx_en and rx_tmp_v);
+          rx_irq.detect(i) <= "00";
         end if;
-
-        -- TX interrupt --
-        if (SLINK_TX_FIFO = 1) then
-          irq_tx_o <= or_reduce_f(irq_tx_en and tx_fifo_free); -- fire if any TX_FIFO is not full
+      end loop;
+      -- TX --
+      for i in 0 to SLINK_NUM_TX-1 loop
+        if (enable = '1') and (irq_tx_en(i) = '1') then
+          tx_irq.detect(i) <= tx_irq.detect(i)(0) & tx_irq.trigger(i);
         else
-          tx_tmp_v := (others => '0');
-          for i in 0 to SLINK_NUM_TX-1 loop
-            if (irq_tx_mode(i) = '0') then -- fire if any RX_FIFO is less than half-full
-              tx_tmp_v(i) := not rx_fifo_half(i);
-            else -- fire if any RX_FIFO is not full (= free buffer space available)
-              tx_tmp_v(i) := tx_fifo_free(i);
-            end if;
-          end loop;
-          irq_tx_o <= or_reduce_f(irq_tx_en and tx_tmp_v);
+          tx_irq.detect(i) <= "00";
         end if;
+      end loop;
+    end if;
+  end process irq_edge_detect_sync;
+
+  -- edge detector - sync --
+  irq_edge_detect_comb: process(rx_irq, irq_rx_en, tx_irq, irq_tx_en)
+  begin
+    -- RX --
+    rx_irq.set <= (others => '0');
+    for i in 0 to SLINK_NUM_RX-1 loop
+      if (rx_irq.detect(i) = "01") then -- rising-edge
+        rx_irq.set(i) <= '1';
+      end if;
+    end loop;
+    -- TX --
+    tx_irq.set <= (others => '0');
+    for i in 0 to SLINK_NUM_TX-1 loop
+      if (tx_irq.detect(i) = "01") then -- rising-edge
+        tx_irq.set(i) <= '1';
+      end if;
+    end loop;
+  end process irq_edge_detect_comb;
+
+  -- interrupt arbiter --
+  irq_generator: process(clk_i)
+  begin
+    if rising_edge(clk_i) then
+      irq_rx_o <= '0';
+      irq_tx_o <= '0';
+      if (or_reduce_f(rx_irq.set) = '1') then
+        irq_rx_o <= '1';
+      end if;
+      if (or_reduce_f(tx_irq.set) = '1') then
+        irq_tx_o <= '1';
       end if;
     end if;
-  end process irq_arbiter;
+  end process irq_generator;
 
 
   -- Link Select ----------------------------------------------------------------------------
@@ -309,8 +363,8 @@ begin
 
   fifo_access_gen:
   for i in 0 to 7 generate
-    tx_fifo_we(i) <= link_sel(i) and acc_en and wren_i;
-    rx_fifo_re(i) <= link_sel(i) and acc_en and rden_i;
+    tx_fifo_we(i) <= link_sel(i) and wren;
+    rx_fifo_re(i) <= link_sel(i) and rden;
   end generate;
 
 

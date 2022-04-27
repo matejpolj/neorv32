@@ -6,7 +6,7 @@
 -- # ********************************************************************************************* #
 -- # BSD 3-Clause License                                                                          #
 -- #                                                                                               #
--- # Copyright (c) 2021, Stephan Nolting. All rights reserved.                                     #
+-- # Copyright (c) 2022, Stephan Nolting. All rights reserved.                                     #
 -- #                                                                                               #
 -- # Redistribution and use in source and binary forms, with or without modification, are          #
 -- # permitted provided that the following conditions are met:                                     #
@@ -65,6 +65,7 @@ entity neorv32_top_avalonmm is
     CPU_EXTENSION_RISCV_Zihpm    : boolean := false;  -- implement hardware performance monitors?
     CPU_EXTENSION_RISCV_Zifencei : boolean := false;  -- implement instruction stream sync.?
     CPU_EXTENSION_RISCV_Zmmul    : boolean := false;  -- implement multiply-only M sub-extension?
+    CPU_EXTENSION_RISCV_Zxcfu    : boolean := false;  -- implement custom (instr.) functions unit?
 
     -- Extension Options --
     FAST_MUL_EN                  : boolean := false;  -- use DSPs for M extension's multiplier
@@ -73,8 +74,8 @@ entity neorv32_top_avalonmm is
     CPU_IPB_ENTRIES              : natural := 2;      -- entries is instruction prefetch buffer, has to be a power of 2
 
     -- Physical Memory Protection (PMP) --
-    PMP_NUM_REGIONS              : natural := 0;      -- number of regions (0..64)
-    PMP_MIN_GRANULARITY          : natural := 64*1024; -- minimal region granularity in bytes, has to be a power of 2, min 8 bytes
+    PMP_NUM_REGIONS              : natural := 0;      -- number of regions (0..16)
+    PMP_MIN_GRANULARITY          : natural := 4;      -- minimal region granularity in bytes, has to be a power of 2, min 4 bytes
 
     -- Hardware Performance Monitors (HPM) --
     HPM_NUM_CNTS                 : natural := 0;      -- number of implemented HPM counters (0..29)
@@ -125,7 +126,8 @@ entity neorv32_top_avalonmm is
     IO_CFS_OUT_SIZE              : positive := 32;    -- size of CFS output conduit in bits
     IO_NEOLED_EN                 : boolean := false;  -- implement NeoPixel-compatible smart LED interface (NEOLED)?
     IO_NEOLED_TX_FIFO            : natural := 1;      -- NEOLED TX FIFO depth, 1..32k, has to be a power of two
-    IO_GPTMR_EN                  : boolean := false   -- implement general purpose timer (GPTMR)?
+    IO_GPTMR_EN                  : boolean := false;  -- implement general purpose timer (GPTMR)?
+    IO_XIP_EN                    : boolean := false   -- implement execute in place module (XIP)?
   );
   port (
     -- Global control --
@@ -142,15 +144,21 @@ entity neorv32_top_avalonmm is
     -- AvalonMM interface
     read_o         : out std_logic;
     write_o        : out std_logic;
-    waitrequest_i  : in std_logic := '0';
+    waitrequest_i  : in  std_logic := '0';
     byteenable_o   : out std_logic_vector(3 downto 0);
     address_o      : out std_logic_vector(31 downto 0);
     writedata_o    : out std_logic_vector(31 downto 0);
-    readdata_i     : in std_logic_vector(31 downto 0) := (others => '0');
+    readdata_i     : in  std_logic_vector(31 downto 0) := (others => '0');
 
     -- Advanced memory control signals (available if MEM_EXT_EN = true) --
     fence_o        : out std_ulogic; -- indicates an executed FENCE operation
     fencei_o       : out std_ulogic; -- indicates an executed FENCEI operation
+
+    -- XIP (execute in place via SPI) signals (available if IO_XIP_EN = true) --
+    xip_csn_o      : out std_ulogic; -- chip-select, low-active
+    xip_clk_o      : out std_ulogic; -- serial clock
+    xip_sdi_i      : in  std_ulogic := 'L'; -- device data input
+    xip_sdo_o      : out std_ulogic; -- controller data output
 
     -- TX stream interfaces (available if SLINK_NUM_TX > 0) --
     slink_tx_dat_o : out sdata_8x32_t; -- output data
@@ -189,7 +197,7 @@ entity neorv32_top_avalonmm is
     twi_scl_io     : inout std_logic := 'U'; -- twi serial clock line
 
     -- PWM (available if IO_PWM_NUM_CH > 0) --
-    pwm_o          : out std_ulogic_vector(IO_PWM_NUM_CH-1 downto 0); -- pwm channels
+    pwm_o          : out std_ulogic_vector(59 downto 0); -- pwm channels
 
     -- Custom Functions Subsystem IO (available if IO_CFS_EN = true) --
     cfs_in_i       : in  std_ulogic_vector(IO_CFS_IN_SIZE-1  downto 0) := (others => 'U'); -- custom CFS inputs conduit
@@ -203,7 +211,7 @@ entity neorv32_top_avalonmm is
     mtime_o        : out std_ulogic_vector(63 downto 0); -- current system time from int. MTIME (if IO_MTIME_EN = true)
 
     -- External platform interrupts (available if XIRQ_NUM_CH > 0) --
-    xirq_i         : in  std_ulogic_vector(XIRQ_NUM_CH-1 downto 0) := (others => 'L'); -- IRQ channels
+    xirq_i         : in  std_ulogic_vector(31 downto 0) := (others => 'L'); -- IRQ channels
 
     -- CPU interrupts --
     mtime_irq_i    : in  std_ulogic := 'L'; -- machine timer interrupt, available if IO_MTIME_EN = false
@@ -252,6 +260,7 @@ begin
     CPU_EXTENSION_RISCV_Zihpm => CPU_EXTENSION_RISCV_Zihpm,
     CPU_EXTENSION_RISCV_Zifencei => CPU_EXTENSION_RISCV_Zifencei,
     CPU_EXTENSION_RISCV_Zmmul => CPU_EXTENSION_RISCV_Zmmul,
+    CPU_EXTENSION_RISCV_Zxcfu => CPU_EXTENSION_RISCV_Zxcfu,
 
     -- Extension Options --
     FAST_MUL_EN => FAST_MUL_EN,
@@ -319,7 +328,8 @@ begin
     IO_CFS_OUT_SIZE => IO_CFS_OUT_SIZE,
     IO_NEOLED_EN => IO_NEOLED_EN,
     IO_NEOLED_TX_FIFO => IO_NEOLED_TX_FIFO,
-    IO_GPTMR_EN => IO_GPTMR_EN
+    IO_GPTMR_EN => IO_GPTMR_EN,
+    IO_XIP_EN => IO_XIP_EN
     )
   port map (
     -- Global control --
@@ -349,6 +359,12 @@ begin
     -- Advanced memory control signals (available if MEM_EXT_EN = true) --
     fence_o => fence_o,
     fencei_o => fencei_o,
+
+    -- XIP (execute in place via SPI) signals (available if IO_XIP_EN = true) --
+    xip_csn_o => xip_csn_o,
+    xip_clk_o => xip_clk_o,
+    xip_sdi_i => xip_sdi_i,
+    xip_sdo_o => xip_sdo_o,
 
     -- TX stream interfaces (available if SLINK_NUM_TX > 0) --
     slink_tx_dat_o => slink_tx_dat_o,

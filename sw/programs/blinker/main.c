@@ -25,30 +25,29 @@ int main(void) {
     {
         neorv32_uart0_print("Pritisni na tipko 1 (torej cisto levo)\n");
         uint32_t stanje2 = getButtonState(0);
-        //if (stanje != stanje2) {
+        if (stanje != stanje2) {
             neorv32_uart0_printf("Stanje tipke je: %u\n", stanje);
             stanje = stanje2;
-        //}
+        }
 
-        neorv32_uart0_print("Ce zelis prekiniti in koncati program pritisni tipko 4 (torej cisto desno)\n");
-        uint32_t konec = getButtonState(3);
-        if (konec == 1) break; 
+        
 
-        neorv32_uart0_printf("Debugging: %u\n", neorv32_gpio_pin_get(0));
-        //neorv32_uart0_printf("Debugging: %u\n", neorv32_gpio_pin_get(1));
-        //neorv32_uart0_printf("Debugging: %u\n", neorv32_gpio_pin_get(2));
-        //neorv32_uart0_printf("Debugging: %u\n", neorv32_gpio_pin_get(3));
+        neorv32_uart0_printf(" %u ", neorv32_gpio_pin_get(0));
+        neorv32_uart0_printf(" %u ", neorv32_gpio_pin_get(1));
+        neorv32_uart0_printf(" %u ", neorv32_gpio_pin_get(2));
+        neorv32_uart0_printf(" %u ", neorv32_gpio_pin_get(3));
+        neorv32_uart0_printf(" %u ", neorv32_gpio_pin_get(4));
+        neorv32_uart0_printf(" %u ", neorv32_gpio_pin_get(5));
+        neorv32_uart0_printf(" %u ", neorv32_gpio_pin_get(6));
+        neorv32_uart0_printf(" %u ", neorv32_gpio_pin_get(7));
+        neorv32_uart0_printf(" %u ", neorv32_gpio_pin_get(8));
+        neorv32_uart0_printf(" %u ", neorv32_gpio_pin_get(9));
+        neorv32_uart0_printf(" %u ", neorv32_gpio_pin_get(10));
+        neorv32_uart0_printf(" %u ", neorv32_gpio_pin_get(11));
 
-        neorv32_cpu_delay_ms(1000);
 
-        unsigned int *tmp = 0xffffffc0;
-
-        neorv32_uart0_printf("Preverimo vrednost registra: %u\n", *tmp);
-
-        neorv32_cpu_delay_ms(1000);
+        neorv32_cpu_delay_ms(2000);
     }
-
-    neorv32_uart0_print("Koncali ste program, cestitke!\n");
 
     return 0;
 }

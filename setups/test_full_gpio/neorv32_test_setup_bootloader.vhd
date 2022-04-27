@@ -75,7 +75,8 @@ architecture neorv32_test_setup_bootloader_rtl of neorv32_test_setup_bootloader 
 
   signal con_gpio_o : std_ulogic_vector(63 downto 0);
   signal con_gpio_i : std_ulogic_vector(63 downto 0);
-  signal con_pwm_o  : std_ulogic_vector(9 downto 0);
+  signal con_pwm_o  : std_ulogic_vector(59 downto 0);
+  signal con_xirq_i : std_ulogic_vector(31 downto 0);
 
 begin
 
@@ -136,7 +137,7 @@ begin
     spi_sdo_o   => spi_sdo_o,   -- controller data out, peripheral data in
     spi_sdi_i   => spi_sdi_i,   -- controller data in, peripheral data out
     spi_csn_o   => spi_csn_o,   -- chip-select
-    xirq_i      => xirq_i,      -- IRQ channels
+    xirq_i      => con_xirq_i,      -- IRQ channels
     -- PWM output control --
     pwm_o       => con_pwm_o    -- PWM output
   );
@@ -145,5 +146,6 @@ begin
   gpio_o <= con_gpio_o(22 downto 0);
   con_gpio_i(22 downto 0) <= gpio_i(22 downto 0);
   pwm_o  <= con_pwm_o(9 downto 0);
+  con_xirq_i(1 downto 0) <= xirq_i;
 
 end architecture;

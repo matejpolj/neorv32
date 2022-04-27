@@ -16,12 +16,12 @@ tx_engine.state.S_TX_TRANSMIT 0 1 0 0 1
 tx_engine.state.S_TX_SIM 1 0 0 0 1 
 
 State Machine - |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_busswitch:neorv32_busswitch_inst|arbiter.state
-Name arbiter.state.RETIRE_SWITCHED arbiter.state.BUSY_SWITCHED arbiter.state.RETIRE arbiter.state.BUSY arbiter.state.IDLE 
+Name arbiter.state.B_RETIRE arbiter.state.B_BUSY arbiter.state.A_RETIRE arbiter.state.A_BUSY arbiter.state.IDLE 
 arbiter.state.IDLE 0 0 0 0 0 
-arbiter.state.BUSY 0 0 0 1 1 
-arbiter.state.RETIRE 0 0 1 0 1 
-arbiter.state.BUSY_SWITCHED 0 1 0 0 1 
-arbiter.state.RETIRE_SWITCHED 1 0 0 0 1 
+arbiter.state.A_BUSY 0 0 0 1 1 
+arbiter.state.A_RETIRE 0 0 1 0 1 
+arbiter.state.B_BUSY 0 1 0 0 1 
+arbiter.state.B_RETIRE 1 0 0 0 1 
 
 State Machine - |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_fpu:\neorv32_cpu_cp_fpu_inst_true:neorv32_cpu_cp_fpu_inst|neorv32_cpu_cp_fpu_normalizer:neorv32_cpu_cp_fpu_normalizer_inst|ctrl.state
 Name ctrl.state.S_FINALIZE ctrl.state.S_CHECK ctrl.state.S_ROUND ctrl.state.S_NORMALIZE_BUSY ctrl.state.S_PREPARE_SHIFT ctrl.state.S_PREPARE_NORM ctrl.state.S_CHECK_I2F ctrl.state.S_PREPARE_I2F ctrl.state.S_IDLE 
@@ -44,54 +44,59 @@ ctrl.state.S_ROUND 0 1 0 0 1
 ctrl.state.S_FINALIZE 1 0 0 0 1 
 
 State Machine - |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_bitmanip:\neorv32_cpu_cp_bitmanip_inst_true:neorv32_cpu_cp_bitmanip_inst|ctrl_state
-Name ctrl_state.S_BUSY_SHIFT ctrl_state.S_START_SHIFT ctrl_state.S_IDLE 
-ctrl_state.S_IDLE 0 0 0 
-ctrl_state.S_START_SHIFT 0 1 1 
-ctrl_state.S_BUSY_SHIFT 1 0 1 
+Name ctrl_state.S_BUSY_CLMUL ctrl_state.S_START_CLMUL ctrl_state.S_BUSY_SHIFT ctrl_state.S_START_SHIFT ctrl_state.S_IDLE 
+ctrl_state.S_IDLE 0 0 0 0 0 
+ctrl_state.S_START_SHIFT 0 0 0 1 1 
+ctrl_state.S_BUSY_SHIFT 0 0 1 0 1 
+ctrl_state.S_START_CLMUL 0 1 0 0 1 
+ctrl_state.S_BUSY_CLMUL 1 0 0 0 1 
 
-State Machine - |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_muldiv:\neorv32_cpu_cp_muldiv_inst_true:neorv32_cpu_cp_muldiv_inst|state
-Name state.COMPLETED state.FINALIZE state.PROCESSING state.DIV_PREPROCESS state.IDLE 
-state.IDLE 0 0 0 0 0 
-state.DIV_PREPROCESS 0 0 0 1 1 
-state.PROCESSING 0 0 1 0 1 
-state.FINALIZE 0 1 0 0 1 
-state.COMPLETED 1 0 0 0 1 
-
-State Machine - |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|debug_ctrl.state
-Name debug_ctrl.state.DEBUG_EXIT debug_ctrl.state.DEBUG_ONLINE debug_ctrl.state.DEBUG_PENDING debug_ctrl.state.DEBUG_OFFLINE 
-debug_ctrl.state.DEBUG_OFFLINE 0 0 0 0 
-debug_ctrl.state.DEBUG_PENDING 0 0 1 1 
-debug_ctrl.state.DEBUG_ONLINE 0 1 0 1 
-debug_ctrl.state.DEBUG_EXIT 1 0 0 1 
+State Machine - |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_muldiv:\neorv32_cpu_cp_muldiv_inst_true:neorv32_cpu_cp_muldiv_inst|ctrl.state
+Name ctrl.state.S_DONE ctrl.state.S_BUSY ctrl.state.S_IDLE 
+ctrl.state.S_IDLE 0 0 0 
+ctrl.state.S_BUSY 0 1 1 
+ctrl.state.S_DONE 1 0 1 
 
 State Machine - |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.state_prev
-Name execute_engine.state_prev.CSR_ACCESS execute_engine.state_prev.SYS_ENV execute_engine.state_prev.LOADSTORE_2 execute_engine.state_prev.LOADSTORE_1 execute_engine.state_prev.LOADSTORE_0 execute_engine.state_prev.BRANCH execute_engine.state_prev.ALU_WAIT execute_engine.state_prev.EXECUTE execute_engine.state_prev.TRAP_EXECUTE execute_engine.state_prev.TRAP_EXIT execute_engine.state_prev.TRAP_ENTER execute_engine.state_prev.DISPATCH execute_engine.state_prev.SYS_WAIT 
-execute_engine.state_prev.SYS_WAIT 0 0 0 0 0 0 0 0 0 0 0 0 0 
-execute_engine.state_prev.DISPATCH 0 0 0 0 0 0 0 0 0 0 0 1 1 
-execute_engine.state_prev.TRAP_ENTER 0 0 0 0 0 0 0 0 0 0 1 0 1 
-execute_engine.state_prev.TRAP_EXIT 0 0 0 0 0 0 0 0 0 1 0 0 1 
-execute_engine.state_prev.TRAP_EXECUTE 0 0 0 0 0 0 0 0 1 0 0 0 1 
-execute_engine.state_prev.EXECUTE 0 0 0 0 0 0 0 1 0 0 0 0 1 
-execute_engine.state_prev.ALU_WAIT 0 0 0 0 0 0 1 0 0 0 0 0 1 
-execute_engine.state_prev.BRANCH 0 0 0 0 0 1 0 0 0 0 0 0 1 
-execute_engine.state_prev.LOADSTORE_0 0 0 0 0 1 0 0 0 0 0 0 0 1 
-execute_engine.state_prev.LOADSTORE_1 0 0 0 1 0 0 0 0 0 0 0 0 1 
-execute_engine.state_prev.LOADSTORE_2 0 0 1 0 0 0 0 0 0 0 0 0 1 
-execute_engine.state_prev.SYS_ENV 0 1 0 0 0 0 0 0 0 0 0 0 1 
-execute_engine.state_prev.CSR_ACCESS 1 0 0 0 0 0 0 0 0 0 0 0 1 
+Name execute_engine.state_prev.SYSTEM execute_engine.state_prev.LOADSTORE_2 execute_engine.state_prev.LOADSTORE_1 execute_engine.state_prev.LOADSTORE_0 execute_engine.state_prev.DISPATCH execute_engine.state_prev.BRANCH execute_engine.state_prev.ALU_WAIT execute_engine.state_prev.EXECUTE execute_engine.state_prev.TRAP_EXECUTE execute_engine.state_prev.TRAP_EXIT execute_engine.state_prev.TRAP_ENTER execute_engine.state_prev.BRANCHED 
+execute_engine.state_prev.BRANCHED 0 0 0 0 0 0 0 0 0 0 0 0 
+execute_engine.state_prev.TRAP_ENTER 0 0 0 0 0 0 0 0 0 0 1 1 
+execute_engine.state_prev.TRAP_EXIT 0 0 0 0 0 0 0 0 0 1 0 1 
+execute_engine.state_prev.TRAP_EXECUTE 0 0 0 0 0 0 0 0 1 0 0 1 
+execute_engine.state_prev.EXECUTE 0 0 0 0 0 0 0 1 0 0 0 1 
+execute_engine.state_prev.ALU_WAIT 0 0 0 0 0 0 1 0 0 0 0 1 
+execute_engine.state_prev.BRANCH 0 0 0 0 0 1 0 0 0 0 0 1 
+execute_engine.state_prev.DISPATCH 0 0 0 0 1 0 0 0 0 0 0 1 
+execute_engine.state_prev.LOADSTORE_0 0 0 0 1 0 0 0 0 0 0 0 1 
+execute_engine.state_prev.LOADSTORE_1 0 0 1 0 0 0 0 0 0 0 0 1 
+execute_engine.state_prev.LOADSTORE_2 0 1 0 0 0 0 0 0 0 0 0 1 
+execute_engine.state_prev.SYSTEM 1 0 0 0 0 0 0 0 0 0 0 1 
 
 State Machine - |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.state
-Name execute_engine.state.CSR_ACCESS execute_engine.state.SYS_ENV execute_engine.state.LOADSTORE_2 execute_engine.state.LOADSTORE_1 execute_engine.state.LOADSTORE_0 execute_engine.state.BRANCH execute_engine.state.ALU_WAIT execute_engine.state.EXECUTE execute_engine.state.TRAP_EXECUTE execute_engine.state.TRAP_EXIT execute_engine.state.TRAP_ENTER execute_engine.state.DISPATCH execute_engine.state.SYS_WAIT 
-execute_engine.state.SYS_WAIT 0 0 0 0 0 0 0 0 0 0 0 0 0 
-execute_engine.state.DISPATCH 0 0 0 0 0 0 0 0 0 0 0 1 1 
-execute_engine.state.TRAP_ENTER 0 0 0 0 0 0 0 0 0 0 1 0 1 
-execute_engine.state.TRAP_EXIT 0 0 0 0 0 0 0 0 0 1 0 0 1 
-execute_engine.state.TRAP_EXECUTE 0 0 0 0 0 0 0 0 1 0 0 0 1 
-execute_engine.state.EXECUTE 0 0 0 0 0 0 0 1 0 0 0 0 1 
-execute_engine.state.ALU_WAIT 0 0 0 0 0 0 1 0 0 0 0 0 1 
-execute_engine.state.BRANCH 0 0 0 0 0 1 0 0 0 0 0 0 1 
-execute_engine.state.LOADSTORE_0 0 0 0 0 1 0 0 0 0 0 0 0 1 
-execute_engine.state.LOADSTORE_1 0 0 0 1 0 0 0 0 0 0 0 0 1 
-execute_engine.state.LOADSTORE_2 0 0 1 0 0 0 0 0 0 0 0 0 1 
-execute_engine.state.SYS_ENV 0 1 0 0 0 0 0 0 0 0 0 0 1 
-execute_engine.state.CSR_ACCESS 1 0 0 0 0 0 0 0 0 0 0 0 1 
+Name execute_engine.state.SYSTEM execute_engine.state.LOADSTORE_2 execute_engine.state.LOADSTORE_1 execute_engine.state.LOADSTORE_0 execute_engine.state.DISPATCH execute_engine.state.BRANCH execute_engine.state.ALU_WAIT execute_engine.state.EXECUTE execute_engine.state.TRAP_EXECUTE execute_engine.state.TRAP_EXIT execute_engine.state.TRAP_ENTER execute_engine.state.BRANCHED 
+execute_engine.state.BRANCHED 0 0 0 0 0 0 0 0 0 0 0 0 
+execute_engine.state.TRAP_ENTER 0 0 0 0 0 0 0 0 0 0 1 1 
+execute_engine.state.TRAP_EXIT 0 0 0 0 0 0 0 0 0 1 0 1 
+execute_engine.state.TRAP_EXECUTE 0 0 0 0 0 0 0 0 1 0 0 1 
+execute_engine.state.EXECUTE 0 0 0 0 0 0 0 1 0 0 0 1 
+execute_engine.state.ALU_WAIT 0 0 0 0 0 0 1 0 0 0 0 1 
+execute_engine.state.BRANCH 0 0 0 0 0 1 0 0 0 0 0 1 
+execute_engine.state.DISPATCH 0 0 0 0 1 0 0 0 0 0 0 1 
+execute_engine.state.LOADSTORE_0 0 0 0 1 0 0 0 0 0 0 0 1 
+execute_engine.state.LOADSTORE_1 0 0 1 0 0 0 0 0 0 0 0 1 
+execute_engine.state.LOADSTORE_2 0 1 0 0 0 0 0 0 0 0 0 1 
+execute_engine.state.SYSTEM 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|fetch_engine.state_prev
+Name fetch_engine.state_prev.S_WAIT fetch_engine.state_prev.S_PENDING fetch_engine.state_prev.S_REQUEST fetch_engine.state_prev.S_RESTART 
+fetch_engine.state_prev.S_RESTART 0 0 0 0 
+fetch_engine.state_prev.S_REQUEST 0 0 1 1 
+fetch_engine.state_prev.S_PENDING 0 1 0 1 
+fetch_engine.state_prev.S_WAIT 1 0 0 1 
+
+State Machine - |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|fetch_engine.state
+Name fetch_engine.state.S_WAIT fetch_engine.state.S_PENDING fetch_engine.state.S_REQUEST fetch_engine.state.S_RESTART 
+fetch_engine.state.S_RESTART 0 0 0 0 
+fetch_engine.state.S_REQUEST 0 0 1 1 
+fetch_engine.state.S_PENDING 0 1 0 1 
+fetch_engine.state.S_WAIT 1 0 0 1 
