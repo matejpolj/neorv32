@@ -3,4 +3,4 @@
 #define rows 7
 #define cols 5
 
-uint32_t displaySymbol(uint32_t data[cols][rows], uint16_t pins[rows]);
+void displaySymbol(uint8_t data[rows][cols], uint8_t pins[rows]);

@@ -145,7 +145,9 @@ int main() {
   // handler function (installed via neorv32_xirq_install();).
   // Non-prioritized handling of interrupts (or custom prioritization) can be implemented by manually reading the
   // XIRQ controller's "pending" register. Then it is up to the software to define which pending IRQ should be served first.
-  while(1);
+  while(1) {
+    neorv32_uart0_printf("in main chennes\n");
+  };
   
   // just as an example: to disable certain XIRQ interrupt channels, we can
   // un-install the according handler. this will also clear a pending interrupt for that channel
@@ -177,7 +179,7 @@ int main() {
  **************************************************************************/
 void xirq_handler_ch0(void) {
 
-  neorv32_uart0_printf("XIRQ interrupt from channel %i\n", 0);
+  neorv32_uart0_printf("XIRQ interrupt from channel %i: %i\n", 0, NEORV32_XIRQ.IPR);
 }
 
 /**********************************************************************//**
@@ -187,7 +189,7 @@ void xirq_handler_ch0(void) {
  **************************************************************************/
 void xirq_handler_ch1(void) {
 
-  neorv32_uart0_printf("XIRQ interrupt from channel %i\n", 1);
+  neorv32_uart0_printf("XIRQ interrupt from channel %i: %i\n", 1, NEORV32_XIRQ.IPR);
 }
 
 /**********************************************************************//**

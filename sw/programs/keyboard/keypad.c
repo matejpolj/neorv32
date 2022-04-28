@@ -2,22 +2,25 @@
 #include "keypad.h"
 #include "buttons.h"
 
-uint32_t getKeyPress(uint32_t rows[], uint32_t cols[]) {
-    uint32_t activeCol, state;
+uint16_t getKeyPress(uint16_t rows[], uint16_t cols[]) {
+    uint32_t state;
 
     if (neorv32_gpio_available() == 0) {
         return 1;
     }
 
-    for (int i=0; i<numCol; i++) {
+    for (int i=4; i>0; i--) {
         neorv32_gpio_pin_set(cols[i]);
-
-        for (int j=0; j<numRow; j++) {
-            uint32_t state = getButtonState(rows[j]);
-            if (state == 1) return (i*4 + j);
+        neorv32_cpu_delay_ms(200);
+        neorv32_uart0_printf("rewr: %i\n", cols[i]);
+        for (int j=0; j<4; j++) {
+            state = getButtonState(rows[j]);
+            neorv32_uart0_printf("rtzrtrt: %i\n", state);
+            if (state == 0) return (i*4 + j);
         }
 
         neorv32_gpio_pin_clr(cols[i]);
+        neorv32_cpu_delay_ms(200);
     }
 
     return 31;

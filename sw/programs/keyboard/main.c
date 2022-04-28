@@ -1,5 +1,6 @@
 # include <neorv32.h>
 #include "buttons.h"
+#include "keypad.h"
 
 # define BAUD_RATE 19200
 
@@ -21,22 +22,19 @@ int main(void) {
 
     neorv32_uart0_print("Pritisni na tipko 1 (torej cisto levo)\n");
 
-    uint32_t stanje = 0;
+    uint32_t stanje;
+
+    uint16_t rows[] = {5, 6, 7, 8};
+    uint16_t cols[] = {7, 8, 9, 10};
 
     while (1)
     {
-        uint32_t stanje2 = getButtonState(0);
-        if (stanje != stanje2) {
-            neorv32_uart0_printf("Stanje tipke je: %i\n", stanje);
-            stanje = stanje2;
-        }
+        stanje = getKeyPress(rows, cols);
 
-        neorv32_uart0_print("Ce zelis prekiniti in koncati program pritisni tipko 4 (torej cisto desno)\n");
-        uint32_t konec = getButtonState(3);
-        if (konec == 1) break; 
+        neorv32_uart0_printf("Pritisnjena tipka je: %i\n", stanje);
+        
+        neorv32_cpu_delay_ms(500);
     }
-
-    neorv32_uart0_print("Koncali ste program, cestitke!\n");
 
     return 0;
 }

@@ -21,10 +21,13 @@ int main(void) {
 
     uint32_t stanje = 0;
 
+    neorv32_gpio_pin_set(11);
+    neorv32_gpio_pin_clr(12);
+
     while (1)
     {
-        neorv32_uart0_print("Pritisni na tipko 1 (torej cisto levo)\n");
-        uint32_t stanje2 = getButtonState(0);
+        neorv32_uart0_print("Pritisni\n");
+        uint32_t stanje2 = getButtonState(9);
         if (stanje != stanje2) {
             neorv32_uart0_printf("Stanje tipke je: %u\n", stanje);
             stanje = stanje2;
@@ -32,21 +35,11 @@ int main(void) {
 
         
 
-        neorv32_uart0_printf(" %u ", neorv32_gpio_pin_get(0));
-        neorv32_uart0_printf(" %u ", neorv32_gpio_pin_get(1));
-        neorv32_uart0_printf(" %u ", neorv32_gpio_pin_get(2));
-        neorv32_uart0_printf(" %u ", neorv32_gpio_pin_get(3));
-        neorv32_uart0_printf(" %u ", neorv32_gpio_pin_get(4));
-        neorv32_uart0_printf(" %u ", neorv32_gpio_pin_get(5));
-        neorv32_uart0_printf(" %u ", neorv32_gpio_pin_get(6));
-        neorv32_uart0_printf(" %u ", neorv32_gpio_pin_get(7));
-        neorv32_uart0_printf(" %u ", neorv32_gpio_pin_get(8));
-        neorv32_uart0_printf(" %u ", neorv32_gpio_pin_get(9));
-        neorv32_uart0_printf(" %u ", neorv32_gpio_pin_get(10));
-        neorv32_uart0_printf(" %u ", neorv32_gpio_pin_get(11));
+        neorv32_gpio_pin_toggle(11);
+        neorv32_gpio_pin_toggle(12);
 
 
-        neorv32_cpu_delay_ms(2000);
+        neorv32_cpu_delay_ms(500);
     }
 
     return 0;

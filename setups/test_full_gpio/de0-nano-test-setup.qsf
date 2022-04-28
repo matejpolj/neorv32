@@ -189,5 +189,101 @@ set_location_assignment PIN_B12 -to pwm_o[9]
 # external interrupts
 set_location_assignment PIN_J13 -to xirq_i[0]
 set_location_assignment PIN_J14 -to xirq_i[1]
+## logic levels
+# clock signal
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk_i
+# embedded LEDs
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[0]
+# reset button
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rstn_i
+# uart0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uart0_txd_o
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uart0_rxd_i
+# uart1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uart1_txd_o
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uart1_rxd_i
+# spi connections
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_sck_o
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_sdo_o
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_sdi_i
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_csn_o[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_csn_o[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_csn_o[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_csn_o[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_csn_o]4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_csn_o[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_csn_o[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_csn_o[7]
+# gpi connections
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[16]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[17]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[18]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[19]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[20]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_i[21]
+# gpo connections
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[16]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[17]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[18]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[19]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[20]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[21]
+# dotherboard select connections
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[22]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[23]
+# dotherboard data connections
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[24]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[25]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[26]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[27]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[28]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[29]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[30]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[31]
+# pwm connections
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pwm_o[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pwm_o[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pwm_o[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pwm_o[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pwm_o[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pwm_o[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pwm_o[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pwm_o[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pwm_o[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pwm_o[9]
+# external interrupts
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to xirq_i[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to xirq_i[1]
 # other
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

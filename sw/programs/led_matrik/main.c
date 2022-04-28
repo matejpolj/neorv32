@@ -1,5 +1,6 @@
 # include <neorv32.h>
 #include "buttons.h"
+#include "led_matrix.h"
 
 # define BAUD_RATE 19200
 
@@ -17,15 +18,34 @@ int main(void) {
     // varnostni mehanizem
     neorv32_rte_setup();
 
-    neorv32_uart0_print("Blinker test skupaj s tipkami!\n");
+    neorv32_uart0_print("LED matrika test:\n");
 
-    neorv32_uart0_print("Pritisni na tipko 1 (torej cisto levo)\n");
+    // predpripravljena števila
 
-    uint32_t stanje = 0;
+    uint8_t nic[rows][cols] = {{1, 1, 1, 1, 1},
+                            {1, 0, 0, 0, 1},
+                            {1, 0, 0, 0, 1},
+                            {1, 0, 0, 0, 1},
+                            {1, 0, 0, 0, 1},
+                            {1, 0, 0, 0, 1},
+                            {1, 1, 1, 1, 1}};
+    
+    uint8_t pins[cols + 3] = {24, 25, 26, 27, 28, 29, 30, 31};
 
+    uint8_t tmp[cols + 3] = {0, 1, 0, 0, 1, 1, 1, 0};
+
+    neorv32_gpio_pin_clr(22);
+    neorv32_gpio_pin_set(23);
     while (1)
     {
-        
+        displaySymbol(nic, pins);
+        //neorv32_cpu_delay_ms(500);
+        /*
+        for (uint8_t i=0; i<8; i++) {
+            tmp[i] ? neorv32_gpio_pin_set(pins[i]) : neorv32_gpio_pin_clr(pins[i]);
+            neorv32_uart0_printf("%i", tmp[i]);
+        }
+        neorv32_uart0_printf("\n");*/
     }
 
     return 0;

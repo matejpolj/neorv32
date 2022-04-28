@@ -15,9 +15,9 @@ uint32_t getButtonState(int button) {
 
     if ((stanje1 & stanje2) || ((stanje1 == 0) && (stanje2 == 0))) {
         if (stanje1 == 0) {
-            return 0;
-         } else {
             return 1;
+         } else {
+            return 0;
          }
     }
 
