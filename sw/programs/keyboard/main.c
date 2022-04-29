@@ -25,7 +25,7 @@ int main(void) {
     uint32_t stanje;
 
     uint16_t rows[] = {5, 6, 7, 8};
-    uint16_t cols[] = {7, 8, 9, 10};
+    uint16_t cols[] = {8, 9, 10, 11};
 
     while (1)
     {
@@ -33,7 +33,7 @@ int main(void) {
 
         neorv32_uart0_printf("Pritisnjena tipka je: %i\n", stanje);
         
-        neorv32_cpu_delay_ms(500);
+        neorv32_cpu_delay_ms(2000);
     }
 
     return 0;
