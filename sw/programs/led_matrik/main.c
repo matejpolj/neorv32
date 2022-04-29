@@ -22,24 +22,24 @@ int main(void) {
 
     // predpripravljena števila
 
-    uint8_t nic[rows][cols] = {{1, 1, 1, 1, 1},
-                            {1, 1, 1, 1, 1},
-                            {1, 1, 1, 1, 1},
-                            {1, 1, 1, 1, 1},
-                            {1, 1, 1, 1, 1},
-                            {1, 1, 1, 1, 1},
-                            {1, 1, 1, 1, 1}};
+    uint8_t nic[rows][cols] = {{1, 0, 0, 0, 1},
+                            {0, 1, 0, 0, 1},
+                            {1, 1, 0, 0, 1},
+                            {0, 0, 1, 0, 1},
+                            {1, 0, 1, 0, 1},
+                            {0, 1, 1, 0, 1},
+                            {1, 1, 1, 0, 1}};
     
     uint8_t pins[cols + 3] = {24, 25, 26, 27, 28, 29, 30, 31};
 
-    uint8_t tmp[cols + 3] = {0, 1, 0, 0, 1, 1, 1, 0};
+    //uint8_t tmp[cols + 3] = {0, 1, 0, 0, 1, 1, 1, 0};
 
-    neorv32_gpio_pin_clr(22);
-    neorv32_gpio_pin_set(23);
+    neorv32_gpio_pin_clr(sel1);
+    neorv32_gpio_pin_set(sel2);
     while (1)
     {
         displaySymbol(nic, pins);
-        //neorv32_cpu_delay_ms(500);
+        //neorv32_cpu_delay_ms(10);
         /*
         for (uint8_t i=0; i<8; i++) {
             tmp[i] ? neorv32_gpio_pin_set(pins[i]) : neorv32_gpio_pin_clr(pins[i]);

@@ -96,6 +96,7 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 # clock signal
 set_location_assignment PIN_R8 -to clk_i
+set_location_assignment PIN_A14 -to clk_o
 # embedded LEDs
 set_location_assignment PIN_T14 -to gpio_o[7]
 set_location_assignment PIN_B1 -to gpio_o[6]
@@ -192,6 +193,7 @@ set_location_assignment PIN_J14 -to xirq_i[1]
 ## logic levels
 # clock signal
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk_i
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk_o
 # embedded LEDs
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[7]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[6]

@@ -67,7 +67,8 @@ entity neorv32_test_setup_bootloader is
     spi_sdi_i   : in  std_ulogic; -- serial data input
     spi_csn_o   : out std_ulogic_vector(7 downto 0); -- dedicated chip select
 	 -- XIRQ --
-	 xirq_i		 : in	 std_ulogic_vector(1 downto 0) -- interrupt channels
+	 xirq_i		 : in	 std_ulogic_vector(1 downto 0); -- interrupt channels
+	 clk_o		 : out std_ulogic -- clk out
   );
 end entity;
 
@@ -142,10 +143,14 @@ begin
     pwm_o       => con_pwm_o    -- PWM output
   );
 
-  -- GPIO output --
+  -- GPIO --
   gpio_o <= con_gpio_o(22 downto 0);
   con_gpio_i(22 downto 0) <= gpio_i(22 downto 0);
+  -- PWM --
   pwm_o  <= con_pwm_o(9 downto 0);
+  -- XIRQ --
   con_xirq_i(1 downto 0) <= xirq_i;
+  -- CLK --
+  clk_o <= clk_i;
 
 end architecture;
