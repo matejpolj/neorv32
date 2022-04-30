@@ -3,7 +3,7 @@
 // # ********************************************************************************************* #
 // # BSD 3-Clause License                                                                          #
 // #                                                                                               #
-// # Copyright (c) 2021, Stephan Nolting. All rights reserved.                                     #
+// # Copyright (c) 2022, Stephan Nolting. All rights reserved.                                     #
 // #                                                                                               #
 // # Redistribution and use in source and binary forms, with or without modification, are          #
 // # permitted provided that the following conditions are met:                                     #
@@ -35,7 +35,6 @@
 
 /**********************************************************************//**
  * @file neorv32_uart.c
- * @author Stephan Nolting
  * @brief Universal asynchronous receiver/transmitter (UART0/UART1) HW driver source file.
  *
  * @warning UART0 (primary UART) is used as default user console interface for all NEORV32 software framework/library functions.
@@ -52,167 +51,36 @@
 // Private functions
 static void __neorv32_uart_itoa(uint32_t x, char *res) __attribute__((unused)); // GCC: do not output a warning when this variable is unused
 static void __neorv32_uart_tohex(uint32_t x, char *res) __attribute__((unused)); // GCC: do not output a warning when this variable is unused
+static void __neorv32_uart_touppercase(uint32_t len, char *ptr) __attribute__((unused)); // GCC: do not output a warning when this variable is unused
 /// \endcond
 
 
-
 // #################################################################################################
-// Compatibility wrappers mapping to UART0 (primary UART)
+// Override default STDIO functions
 // #################################################################################################
 
 /**********************************************************************//**
- * Check if UART0 unit was synthesized.
+ * Send char via UART0
  *
- * @warning This functions maps to UART0 (primary UART).
- *
- * @return 0 if UART0 was not synthesized, 1 if UART0 is available.
+ * @param[in] Char to be send.
+ * @return Char that has been sent.
  **************************************************************************/
-int neorv32_uart_available(void) { return neorv32_uart0_available(); }
+int putchar(int ch) {
+
+  neorv32_uart0_putc((char)ch);
+  return ch;
+}
 
 
 /**********************************************************************//**
- * Enable and configure primary UART (UART0).
+ * Read char from UART0.
  *
- * @warning This functions maps to UART0 (primary UART).
- *
- * @note The 'UART0_SIM_MODE' compiler flag will configure UART0 for simulation mode: all UART0 TX data will be redirected to simulation output. Use this for simulations only!
- * @note To enable simulation mode add <USER_FLAGS+=-DUART0_SIM_MODE> when compiling.
- *
- * @warning The baud rate is computed using INTEGER operations (truncation errors might occur).
- *
- * @param[in] baudrate Targeted BAUD rate (e.g. 9600).
- * @param[in] parity Parity configuration (00=off, 10=even, 11=odd), see #NEORV32_UART_PARITY_enum.
- * @param[in] flow_con Hardware flow control configuration (00=off, 01=RTS, 10=CTS, 11=RTS/CTS), see #NEORV32_UART_FLOW_CONTROL_enum.
+ * @return Read char.
  **************************************************************************/
-void neorv32_uart_setup(uint32_t baudrate, uint8_t parity, uint8_t flow_con) { neorv32_uart0_setup(baudrate, parity, flow_con); }
+int getchar(void) {
 
-
-/**********************************************************************//**
- * Disable UART0.
- * @warning This functions maps to UART0 (primary UART).
- **************************************************************************/
-void neorv32_uart_disable(void) { neorv32_uart0_disable(); }
-
-
-/**********************************************************************//**
- * Enable UART0.
- * @warning This functions maps to UART0 (primary UART).
- **************************************************************************/
-void neorv32_uart_enable(void) { neorv32_uart0_enable(); }
-
-
-/**********************************************************************//**
- * Send single char via UART0.
- *
- * @warning This functions maps to UART0 (primary UART).
- * @note This function is blocking.
- *
- * @param[in] c Char to be send.
- **************************************************************************/
-void neorv32_uart_putc(char c) { neorv32_uart0_putc(c); }
-
-
-/**********************************************************************//**
- * Check if UART0 TX is busy.
- *
- * @warning This functions maps to UART0 (primary UART).
- * @note This function is blocking.
- *
- * @return 0 if idle, 1 if busy
- **************************************************************************/
-int neorv32_uart_tx_busy(void) { return neorv32_uart0_tx_busy(); }
-
-
-/**********************************************************************//**
- * Get char from UART0.
- *
- * @warning This functions maps to UART0 (primary UART).
- * @note This function is blocking and does not check for UART frame/parity errors.
- *
- * @return Received char.
- **************************************************************************/
-char neorv32_uart_getc(void) { return neorv32_uart0_getc(); }
-
-
-/**********************************************************************//**
- * Check if UART0 has received a char.
- *
- * @warning This functions maps to UART0 (primary UART).
- * @note This function is non-blocking.
- * @note Use neorv32_uart0_char_received_get(void) to get the char.
- *
- * @return =!0 when a char has been received.
- **************************************************************************/
-int neorv32_uart_char_received(void) { return neorv32_uart0_char_received(); }
-
-
-/**********************************************************************//**
- * Get char from UART0 (and check errors).
- *
- * @warning This functions maps to UART0 (primary UART).
- * @note This function is non-blocking and checks for frame and parity errors.
- *
- * @param[in,out] data Received char.
- * @return Status code (0=nothing received, 1: char received without errors; -1: char received with frame error; -2: char received with parity error; -3 char received with frame & parity error).
- **************************************************************************/
-int neorv32_uart_getc_safe(char *data) { return neorv32_uart0_getc_safe(data); }
-
-
-/**********************************************************************//**
- * Get a received char from UART0.
- *
- * @warning This functions maps to UART0 (primary UART).
- * @note This function is non-blocking.
- * @note Should only be used in combination with neorv32_uart_char_received(void).
- *
- * @return Received char.
- **************************************************************************/
-char neorv32_uart_char_received_get(void) { return neorv32_uart0_char_received_get(); }
-
-
-/**********************************************************************//**
- * Print string (zero-terminated) via UART0. Print full line break "\r\n" for every '\n'.
- *
- * @warning This functions maps to UART0 (primary UART).
- * @note This function is blocking.
- *
- * @param[in] s Pointer to string.
- **************************************************************************/
-void neorv32_uart_print(const char *s) { neorv32_uart0_print(s); }
-
-
-/**********************************************************************//**
- * Custom version of 'printf' function using UART0.
- *
- * @warning This functions maps to UART0 (primary UART).
- * @note This function is blocking.
- *
- * @param[in] format Pointer to format string.
- *
- * <TABLE>
- * <TR><TD>%s</TD><TD>String (array of chars, zero-terminated)</TD></TR>
- * <TR><TD>%c</TD><TD>Single char</TD></TR>
- * <TR><TD>%i</TD><TD>32-bit signed number, printed as decimal</TD></TR>
- * <TR><TD>%u</TD><TD>32-bit unsigned number, printed as decimal</TD></TR>
- * <TR><TD>%x</TD><TD>32-bit number, printed as 8-char hexadecimal</TD></TR>
- * </TABLE>
- **************************************************************************/
-void neorv32_uart_printf(const char *format, ...) { neorv32_uart0_printf(format); }
-
-
-/**********************************************************************//**
- * Simplified custom version of 'scanf' function for UART0.
- *
- * @warning This functions maps to UART0 (primary UART).
- * @note This function is blocking.
- *
- * @param[in,out] buffer Pointer to array of chars to store string.
- * @param[in] max_size Maximum number of chars to sample.
- * @param[in] echo Echo UART input when 1.
- * @return Number of chars read.
- **************************************************************************/
-int neorv32_uart_scan(char *buffer, int max_size, int echo) { return neorv32_uart0_scan(buffer, max_size, echo); }
-
+  return (int)neorv32_uart0_getc();
+}
 
 
 // #################################################################################################
@@ -257,6 +125,7 @@ void neorv32_uart0_setup(uint32_t baudrate, uint8_t parity, uint8_t flow_con) {
 
   // raw clock prescaler
 #ifndef make_bootloader
+  // use div instructions
   i = (uint16_t)(clock / (2*baudrate));
 #else
   // division via repeated subtraction (minimal size, only for bootloader)
@@ -321,7 +190,7 @@ void neorv32_uart0_disable(void) {
  **************************************************************************/
 void neorv32_uart0_enable(void) {
 
-  NEORV32_UART0.CTRL = ((uint32_t)(1 << UART_CTRL_EN));
+  NEORV32_UART0.CTRL |= ((uint32_t)(1 << UART_CTRL_EN));
 }
 
 
@@ -484,9 +353,11 @@ void neorv32_uart0_print(const char *s) {
  * <TABLE>
  * <TR><TD>%s</TD><TD>String (array of chars, zero-terminated)</TD></TR>
  * <TR><TD>%c</TD><TD>Single char</TD></TR>
- * <TR><TD>%i</TD><TD>32-bit signed number, printed as decimal</TD></TR>
+ * <TR><TD>%d/%i</TD><TD>32-bit signed number, printed as decimal</TD></TR>
  * <TR><TD>%u</TD><TD>32-bit unsigned number, printed as decimal</TD></TR>
- * <TR><TD>%x</TD><TD>32-bit number, printed as 8-char hexadecimal</TD></TR>
+ * <TR><TD>%x</TD><TD>32-bit number, printed as 8-char hexadecimal - lower-case</TD></TR>
+ * <TR><TD>%X</TD><TD>32-bit number, printed as 8-char hexadecimal - upper-case</TD></TR>
+ * <TR><TD>%p</TD><TD>32-bit pointer, printed as 8-char hexadecimal - lower-case</TD></TR>
  * </TABLE>
  **************************************************************************/
 void neorv32_uart0_printf(const char *format, ...) {
@@ -508,6 +379,7 @@ void neorv32_uart0_printf(const char *format, ...) {
           neorv32_uart0_putc((char)va_arg(a, int));
           break;
         case 'i': // 32-bit signed
+        case 'd':
           n = (int32_t)va_arg(a, int32_t);
           if (n < 0) {
             n = -n;
@@ -521,7 +393,12 @@ void neorv32_uart0_printf(const char *format, ...) {
           neorv32_uart0_print(string_buf);
           break;
         case 'x': // 32-bit hexadecimal
+        case 'p':
+        case 'X':
           __neorv32_uart_tohex(va_arg(a, uint32_t), string_buf);
+          if (c == 'X') {
+            __neorv32_uart_touppercase(11, string_buf);
+          }
           neorv32_uart0_print(string_buf);
           break;
         default: // unsupported format
@@ -625,7 +502,7 @@ void neorv32_uart1_setup(uint32_t baudrate, uint8_t parity, uint8_t flow_con) {
   uint8_t p = 0; // initial prsc = CLK/2
 
   // raw clock prescaler
-#ifdef make_bootloader
+#ifndef make_bootloader
   // use div instructions
   i = (uint16_t)(clock / (2*baudrate));
 #else
@@ -851,9 +728,11 @@ void neorv32_uart1_print(const char *s) {
  * <TABLE>
  * <TR><TD>%s</TD><TD>String (array of chars, zero-terminated)</TD></TR>
  * <TR><TD>%c</TD><TD>Single char</TD></TR>
- * <TR><TD>%i</TD><TD>32-bit signed number, printed as decimal</TD></TR>
+ * <TR><TD>%d/%i</TD><TD>32-bit signed number, printed as decimal</TD></TR>
  * <TR><TD>%u</TD><TD>32-bit unsigned number, printed as decimal</TD></TR>
- * <TR><TD>%x</TD><TD>32-bit number, printed as 8-char hexadecimal</TD></TR>
+ * <TR><TD>%x</TD><TD>32-bit number, printed as 8-char hexadecimal - lower-case</TD></TR>
+ * <TR><TD>%X</TD><TD>32-bit number, printed as 8-char hexadecimal - upper-case</TD></TR>
+ * <TR><TD>%p</TD><TD>32-bit pointer, printed as 8-char hexadecimal - lower-case</TD></TR>
  * </TABLE>
  **************************************************************************/
 void neorv32_uart1_printf(const char *format, ...) {
@@ -875,6 +754,7 @@ void neorv32_uart1_printf(const char *format, ...) {
           neorv32_uart1_putc((char)va_arg(a, int));
           break;
         case 'i': // 32-bit signed
+        case 'd':
           n = (int32_t)va_arg(a, int32_t);
           if (n < 0) {
             n = -n;
@@ -888,7 +768,12 @@ void neorv32_uart1_printf(const char *format, ...) {
           neorv32_uart1_print(string_buf);
           break;
         case 'x': // 32-bit hexadecimal
+        case 'p':
+        case 'X':
           __neorv32_uart_tohex(va_arg(a, uint32_t), string_buf);
+          if (c == 'X') {
+            __neorv32_uart_touppercase(11, string_buf);
+          }
           neorv32_uart1_print(string_buf);
           break;
         default: // unsupported format
@@ -1012,4 +897,25 @@ static void __neorv32_uart_tohex(uint32_t x, char *res) {
   }
 
   res[8] = '\0'; // terminate result string
+}
+
+
+/**********************************************************************//**
+ * Private function to cast a string to UPPERCASE.
+ *
+ * @param[in] len Total length of input string.
+ * @param[in,out] ptr Pointer for input/output string.
+ **************************************************************************/
+static void __neorv32_uart_touppercase(uint32_t len, char *ptr) {
+
+  char tmp;
+
+  while (len > 0) {
+    tmp = *ptr;
+    if ((tmp >= 'a') && (tmp <= 'z')) {
+      *ptr = tmp - 32;
+    }
+    ptr++;
+    len--;
+  }
 }

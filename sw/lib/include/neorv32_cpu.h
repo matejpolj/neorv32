@@ -3,7 +3,7 @@
 // # ********************************************************************************************* #
 // # BSD 3-Clause License                                                                          #
 // #                                                                                               #
-// # Copyright (c) 2021, Stephan Nolting. All rights reserved.                                     #
+// # Copyright (c) 2022, Stephan Nolting. All rights reserved.                                     #
 // #                                                                                               #
 // # Redistribution and use in source and binary forms, with or without modification, are          #
 // # permitted provided that the following conditions are met:                                     #
@@ -35,7 +35,6 @@
 
 /**********************************************************************//**
  * @file neorv32_cpu.h
- * @author Stephan Nolting
  * @brief CPU Core Functions HW driver header file.
  **************************************************************************/
 
@@ -43,29 +42,28 @@
 #define neorv32_cpu_h
 
 // prototypes
-int neorv32_cpu_irq_enable(uint8_t irq_sel);
-int neorv32_cpu_irq_disable(uint8_t irq_sel);
+int      neorv32_cpu_irq_enable(uint8_t irq_sel);
+int      neorv32_cpu_irq_disable(uint8_t irq_sel);
 uint64_t neorv32_cpu_get_cycle(void);
-void neorv32_cpu_set_mcycle(uint64_t value);
+void     neorv32_cpu_set_mcycle(uint64_t value);
 uint64_t neorv32_cpu_get_instret(void);
-void neorv32_cpu_set_minstret(uint64_t value);
+void     neorv32_cpu_set_minstret(uint64_t value);
 uint64_t neorv32_cpu_get_systime(void);
-void neorv32_cpu_delay_ms(uint32_t time_ms);
-void __attribute__((naked)) neorv32_cpu_goto_user_mode(void);
+void     neorv32_cpu_delay_ms(uint32_t time_ms);
 uint32_t neorv32_cpu_pmp_get_num_regions(void);
 uint32_t neorv32_cpu_pmp_get_granularity(void);
-int neorv32_cpu_pmp_configure_region(uint32_t index, uint32_t base, uint32_t size, uint8_t config);
+int      neorv32_cpu_pmp_configure_region(uint32_t index, uint32_t base, uint8_t config);
 uint32_t neorv32_cpu_hpm_get_counters(void);
 uint32_t neorv32_cpu_hpm_get_size(void);
+uint32_t neorv32_cpu_cnt_get_size(void);
 
 
 /**********************************************************************//**
  * Prototype for "after-main handler". This function is called if main() returns.
  *
  * @param[in] return_code Return value of main() function.
- * @return Return value is irrelevant (there is no one left to check for it...).
  **************************************************************************/
-extern int __neorv32_crt0_after_main(int32_t return_code) __attribute__ ((weak));
+extern void __attribute__ ((weak)) __neorv32_crt0_after_main(int32_t return_code);
 
 
 /**********************************************************************//**
@@ -161,9 +159,8 @@ inline uint32_t __attribute__ ((always_inline)) neorv32_cpu_load_reservate_word(
   asm volatile ("lw %[da], 0(%[ad])" : [da] "=r" (reg_data) : [ad] "r" (reg_addr));
 #endif
 
-  return (uint32_t)reg_data;
+  return reg_data;
 }
-
 
 
 /**********************************************************************//**
@@ -181,7 +178,7 @@ inline uint32_t __attribute__ ((always_inline)) neorv32_cpu_load_unsigned_word(u
 
   asm volatile ("lw %[da], 0(%[ad])" : [da] "=r" (reg_data) : [ad] "r" (reg_addr));
 
-  return (uint32_t)reg_data;
+  return reg_data;
 }
 
 
@@ -196,11 +193,30 @@ inline uint32_t __attribute__ ((always_inline)) neorv32_cpu_load_unsigned_word(u
 inline uint16_t __attribute__ ((always_inline)) neorv32_cpu_load_unsigned_half(uint32_t addr) {
 
   register uint32_t reg_addr = addr;
-  register uint32_t reg_data;
+  register uint16_t reg_data;
 
   asm volatile ("lhu %[da], 0(%[ad])" : [da] "=r" (reg_data) : [ad] "r" (reg_addr));
 
-  return (uint16_t)reg_data;
+  return reg_data;
+}
+
+
+/**********************************************************************//**
+ * Load signed half-word from address space.
+ *
+ * @note An unaligned access address will raise an alignment exception.
+ *
+ * @param[in] addr Address (32-bit).
+ * @return Read data half-word (16-bit).
+ **************************************************************************/
+inline int16_t __attribute__ ((always_inline)) neorv32_cpu_load_signed_half(uint32_t addr) {
+
+  register uint32_t reg_addr = addr;
+  register int16_t reg_data;
+
+  asm volatile ("lh %[da], 0(%[ad])" : [da] "=r" (reg_data) : [ad] "r" (reg_addr));
+
+  return reg_data;
 }
 
 
@@ -213,11 +229,28 @@ inline uint16_t __attribute__ ((always_inline)) neorv32_cpu_load_unsigned_half(u
 inline uint8_t __attribute__ ((always_inline)) neorv32_cpu_load_unsigned_byte(uint32_t addr) {
 
   register uint32_t reg_addr = addr;
-  register uint32_t reg_data;
+  register uint8_t reg_data;
 
   asm volatile ("lbu %[da], 0(%[ad])" : [da] "=r" (reg_data) : [ad] "r" (reg_addr));
 
-  return (uint8_t)reg_data;
+  return reg_data;
+}
+
+
+/**********************************************************************//**
+ * Load signed byte from address space.
+ *
+ * @param[in] addr Address (32-bit).
+ * @return Read data byte (8-bit).
+ **************************************************************************/
+inline int8_t __attribute__ ((always_inline)) neorv32_cpu_load_signed_byte(uint32_t addr) {
+
+  register uint32_t reg_addr = addr;
+  register int8_t reg_data;
+
+  asm volatile ("lb %[da], 0(%[ad])" : [da] "=r" (reg_data) : [ad] "r" (reg_addr));
+
+  return reg_data;
 }
 
 
@@ -273,8 +306,6 @@ inline void __attribute__ ((always_inline)) neorv32_cpu_sleep(void) {
 inline void __attribute__ ((always_inline)) neorv32_cpu_eint(void) {
 
   asm volatile ("csrrsi zero, mstatus, %0" : : "i" (1 << CSR_MSTATUS_MIE));
-  asm volatile ("nop");
-  asm volatile ("nop");
 }
 
 
@@ -284,8 +315,6 @@ inline void __attribute__ ((always_inline)) neorv32_cpu_eint(void) {
 inline void __attribute__ ((always_inline)) neorv32_cpu_dint(void) {
 
   asm volatile ("csrrci zero, mstatus, %0" : : "i" (1 << CSR_MSTATUS_MIE));
-  asm volatile ("nop");
-  asm volatile ("nop");
 }
 
 

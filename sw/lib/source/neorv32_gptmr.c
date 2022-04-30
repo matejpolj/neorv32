@@ -34,8 +34,7 @@
 
 
 /**********************************************************************//**
- * @file neorv32_spi.c
- * @author Stephan Nolting
+ * @file neorv32_gptmr.c
  * @brief General purpose timer (GPTMR) HW driver source file.
  *
  * @note These functions should only be used if the GPTMR unit was synthesized (IO_GPTMR_EN = true).
@@ -113,13 +112,4 @@ void neorv32_gptmr_enable(void) {
 void neorv32_gptmr_restart(void) {
 
   NEORV32_GPTMR.COUNT = 0;
-}
-
-
-/**********************************************************************//**
- * Acknowledge interrupt / clear pending alarm.
- **************************************************************************/
-void neorv32_gptmr_ack_irq(void) {
-
-  NEORV32_GPTMR.CTRL &= ~((uint32_t)(1 << GPTMR_CTRL_ALARM));
 }

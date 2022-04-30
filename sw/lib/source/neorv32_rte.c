@@ -3,7 +3,7 @@
 // # ********************************************************************************************* #
 // # BSD 3-Clause License                                                                          #
 // #                                                                                               #
-// # Copyright (c) 2021, Stephan Nolting. All rights reserved.                                     #
+// # Copyright (c) 2022, Stephan Nolting. All rights reserved.                                     #
 // #                                                                                               #
 // # Redistribution and use in source and binary forms, with or without modification, are          #
 // # permitted provided that the following conditions are met:                                     #
@@ -35,7 +35,6 @@
 
 /**********************************************************************//**
  * @file neorv32_rte.c
- * @author Stephan Nolting
  * @brief NEORV32 Runtime Environment.
  **************************************************************************/
 
@@ -48,7 +47,7 @@
 static uint32_t __neorv32_rte_vector_lut[NEORV32_RTE_NUM_TRAPS] __attribute__((unused)); // trap handler vector table
 
 // private functions
-static void __attribute__((__interrupt__)) __neorv32_rte_core(void) __attribute__((aligned(16)));
+static void __attribute__((__interrupt__)) __neorv32_rte_core(void) __attribute__((aligned(4)));
 static void __neorv32_rte_debug_exc_handler(void);
 static void __neorv32_rte_print_true_false(int state);
 static void __neorv32_rte_print_checkbox(int state);
@@ -65,8 +64,16 @@ static void __neorv32_rte_print_hex_word(uint32_t num);
 void neorv32_rte_setup(void) {
 
   // configure trap handler base address
-  uint32_t mtvec_base = (uint32_t)(&__neorv32_rte_core);
-  neorv32_cpu_csr_write(CSR_MTVEC, mtvec_base);
+  neorv32_cpu_csr_write(CSR_MTVEC, (uint32_t)(&__neorv32_rte_core));
+
+  // disable all IRQ channels
+  neorv32_cpu_csr_write(CSR_MIE, 0);
+
+  // clear all pending IRQs
+  neorv32_cpu_csr_write(CSR_MIP, 0);
+
+  // clear BUSKEEPER error flags
+  NEORV32_BUSKEEPER.CTRL = 0;
 
   // install debug handler for all sources
   uint8_t id;
@@ -111,7 +118,7 @@ int neorv32_rte_exception_uninstall(uint8_t id) {
 
   // id valid?
   if ((id >= RTE_TRAP_I_MISALIGNED) && (id <= CSR_MIE_FIRQ15E)) {
-    __neorv32_rte_vector_lut[id] = (uint32_t)(&__neorv32_rte_debug_exc_handler); // use dummy handler in case the exception is accidently triggered
+    __neorv32_rte_vector_lut[id] = (uint32_t)(&__neorv32_rte_debug_exc_handler); // use dummy handler in case the exception is accidentally triggered
     return 0;
   }
   return 1; 
@@ -126,24 +133,23 @@ int neorv32_rte_exception_uninstall(uint8_t id) {
  *
  * @warning When using the the RTE, this function is the ONLY function that can use the 'interrupt' attribute!
  **************************************************************************/
-static void __attribute__((__interrupt__)) __attribute__((aligned(16)))  __neorv32_rte_core(void) {
+static void __attribute__((__interrupt__)) __attribute__((aligned(4))) __neorv32_rte_core(void) {
 
   register uint32_t rte_mepc = neorv32_cpu_csr_read(CSR_MEPC);
-  neorv32_cpu_csr_write(CSR_MSCRATCH, rte_mepc); // store for later
+  neorv32_cpu_csr_write(CSR_MSCRATCH, rte_mepc); // backup for later
   register uint32_t rte_mcause = neorv32_cpu_csr_read(CSR_MCAUSE);
 
   // compute return address
-  if (((int32_t)rte_mcause) >= 0) { // modify pc only if exception (MSB cleared)
+  if (((int32_t)rte_mcause) >= 0) { // modify pc only if not interrupt (MSB cleared)
 
     // get low half word of faulting instruction
-    register uint32_t rte_trap_inst;
-    asm volatile ("lh %[result], 0(%[input_i])" : [result] "=r" (rte_trap_inst) : [input_i] "r" (rte_mepc));
+    register uint32_t rte_trap_inst = neorv32_cpu_load_unsigned_half(rte_mepc);
 
-    if ((rte_trap_inst & 3) == 3) { // faulting instruction is uncompressed instruction
-      rte_mepc += 4;
-    }
-    else { // faulting instruction is compressed instruction
-      rte_mepc += 2;
+    rte_mepc += 4; // default: faulting instruction is uncompressed
+    if (neorv32_cpu_csr_read(CSR_MISA) & (1 << CSR_MISA_C)) { // C extension implemented?
+      if ((rte_trap_inst & 3) != 3) { // faulting instruction is compressed instruction
+        rte_mepc -= 2;
+      }
     }
 
     // store new return address
@@ -151,7 +157,7 @@ static void __attribute__((__interrupt__)) __attribute__((aligned(16)))  __neorv
   }
 
   // find according trap handler
-  register uint32_t rte_handler = (uint32_t)(&__neorv32_rte_debug_exc_handler);
+  register uint32_t rte_handler;
   switch (rte_mcause) {
     case TRAP_CODE_I_MISALIGNED: rte_handler = __neorv32_rte_vector_lut[RTE_TRAP_I_MISALIGNED]; break;
     case TRAP_CODE_I_ACCESS:     rte_handler = __neorv32_rte_vector_lut[RTE_TRAP_I_ACCESS]; break;
@@ -182,7 +188,7 @@ static void __attribute__((__interrupt__)) __attribute__((aligned(16)))  __neorv
     case TRAP_CODE_FIRQ_13:      rte_handler = __neorv32_rte_vector_lut[RTE_TRAP_FIRQ_13]; break;
     case TRAP_CODE_FIRQ_14:      rte_handler = __neorv32_rte_vector_lut[RTE_TRAP_FIRQ_14]; break;
     case TRAP_CODE_FIRQ_15:      rte_handler = __neorv32_rte_vector_lut[RTE_TRAP_FIRQ_15]; break;
-    default: break;
+    default:                     rte_handler = (uint32_t)(&__neorv32_rte_debug_exc_handler); break;
   }
 
   // execute handler
@@ -270,7 +276,7 @@ static void __neorv32_rte_debug_exc_handler(void) {
   // additional info
   neorv32_uart0_print(", MTVAL=");
   __neorv32_rte_print_hex_word(neorv32_cpu_csr_read(CSR_MTVAL));
-  neorv32_uart0_print(" </RTE>");
+  neorv32_uart0_print(" </RTE>\n");
 }
 
 
@@ -287,10 +293,10 @@ void neorv32_rte_print_hw_config(void) {
   int i;
   char c;
 
-  neorv32_uart0_printf("\n\n<<< Processor Configuration Overview >>>\n");
+  neorv32_uart0_printf("\n\n<< Processor Configuration >>\n");
 
   // CPU configuration
-  neorv32_uart0_printf("\n=== << CPU >> ===\n");
+  neorv32_uart0_printf("\n---<< CPU >>---\n");
 
   // general
   neorv32_uart0_printf("Clock speed:       %u Hz\n", NEORV32_SYSINFO.CLK);
@@ -321,7 +327,7 @@ void neorv32_rte_print_hw_config(void) {
   else {
     neorv32_uart0_printf("unknown");
   }
-  
+
   // CPU extensions
   neorv32_uart0_printf("\nISA extensions:    ");
   tmp = neorv32_cpu_csr_read(CSR_MISA);
@@ -334,54 +340,79 @@ void neorv32_rte_print_hw_config(void) {
   }
   
   // Z* CPU extensions
-  tmp = NEORV32_SYSINFO.CPU;
-  if (tmp & (1<<SYSINFO_CPU_ZICSR)) {
+  tmp = neorv32_cpu_csr_read(CSR_MXISA);
+  if (tmp & (1<<CSR_MXISA_ZICSR)) {
     neorv32_uart0_printf("Zicsr ");
   }
-  if (tmp & (1<<SYSINFO_CPU_ZICNTR)) {
+  if (tmp & (1<<CSR_MXISA_ZICNTR)) {
     neorv32_uart0_printf("Zicntr ");
   }
-  if (tmp & (1<<SYSINFO_CPU_ZIHPM)) {
+  if (tmp & (1<<CSR_MXISA_ZIHPM)) {
     neorv32_uart0_printf("Zihpm ");
   }
-  if (tmp & (1<<SYSINFO_CPU_ZIFENCEI)) {
+  if (tmp & (1<<CSR_MXISA_ZIFENCEI)) {
     neorv32_uart0_printf("Zifencei ");
   }
-  if (tmp & (1<<SYSINFO_CPU_ZMMUL)) {
+  if (tmp & (1<<CSR_MXISA_ZMMUL)) {
     neorv32_uart0_printf("Zmmul ");
   }
-  if (tmp & (1<<SYSINFO_CPU_ZFINX)) {
+  if (tmp & (1<<CSR_MXISA_ZFINX)) {
     neorv32_uart0_printf("Zfinx ");
   }
-  if (tmp & (1<<SYSINFO_CPU_ZXSCNT)) {
+  if (tmp & (1<<CSR_MXISA_ZXCFU)) {
+    neorv32_uart0_printf("Zxcfu ");
+  }
+  if (tmp & (1<<CSR_MXISA_ZXSCNT)) {
     neorv32_uart0_printf("Zxscnt(!) ");
   }
-
-  if (tmp & (1<<SYSINFO_CPU_DEBUGMODE)) {
-    neorv32_uart0_printf("Debug ");
+  if (tmp & (1<<CSR_MXISA_DEBUGMODE)) {
+    neorv32_uart0_printf("DebugMode ");
   }
-  if (tmp & (1<<SYSINFO_CPU_FASTMUL)) {
+
+  // CPU extension options
+  neorv32_uart0_printf("\nExtension options: ");
+  if (tmp & (1<<CSR_MXISA_FASTMUL)) {
     neorv32_uart0_printf("FAST_MUL ");
   }
-  if (tmp & (1<<SYSINFO_CPU_FASTSHIFT)) {
+  if (tmp & (1<<CSR_MXISA_FASTSHIFT)) {
     neorv32_uart0_printf("FAST_SHIFT ");
   }
 
   // check physical memory protection
-  neorv32_uart0_printf("\nPMP:               ");
+  neorv32_uart0_printf("\nPhys. Mem. Prot.:  ");
   uint32_t pmp_num_regions = neorv32_cpu_pmp_get_num_regions();
   if (pmp_num_regions != 0)  {
-    neorv32_uart0_printf("%u regions, %u bytes minimal granularity\n", pmp_num_regions, neorv32_cpu_pmp_get_granularity());
+    neorv32_uart0_printf("%u region(s), %u bytes minimal granularity, OFF/TOR mode only", pmp_num_regions, neorv32_cpu_pmp_get_granularity());
   }
   else {
-    neorv32_uart0_printf("not implemented\n");
+    neorv32_uart0_printf("not implemented");
+  }
+
+  // check hardware performance monitors
+  neorv32_uart0_printf("\nHW Perf. Monitors: ");
+  uint32_t hpm_num = neorv32_cpu_hpm_get_counters();
+  if (hpm_num != 0) {
+    neorv32_uart0_printf("%u counter(s), %u bit", hpm_num, neorv32_cpu_hpm_get_size());
+  }
+  else {
+    neorv32_uart0_printf("not implemented");
+  }
+
+  // check RISC-V CPU counters
+  neorv32_uart0_printf("\nBase counters:     ");
+  uint32_t cnt_size = neorv32_cpu_cnt_get_size();
+  if (hpm_num != 0) {
+    neorv32_uart0_printf("%u bit", cnt_size);
+  }
+  else {
+    neorv32_uart0_printf("not implemented");
   }
 
 
   // Memory configuration
-  neorv32_uart0_printf("\n=== << Memory System >> ===\n");
+  neorv32_uart0_printf("\n\n---<< Memory System >>---\n");
 
-  neorv32_uart0_printf("Boot Config.:        Boot ");
+  neorv32_uart0_printf("Boot configuration:  Boot ");
   if (NEORV32_SYSINFO.SOC & (1 << SYSINFO_SOC_BOOTLOADER)) {
     neorv32_uart0_printf("via Bootloader\n");
   }
@@ -451,7 +482,7 @@ void neorv32_rte_print_hw_config(void) {
 
   neorv32_uart0_printf("Ext. bus interface:  ");
   __neorv32_rte_print_true_false(NEORV32_SYSINFO.SOC & (1 << SYSINFO_SOC_MEM_EXT));
-  neorv32_uart0_printf("Ext. bus Endianness: ");
+  neorv32_uart0_printf("Ext. bus endianness: ");
   if (NEORV32_SYSINFO.SOC & (1 << SYSINFO_SOC_MEM_EXT_ENDIAN)) {
     neorv32_uart0_printf("big\n");
   }
@@ -460,7 +491,7 @@ void neorv32_rte_print_hw_config(void) {
   }
 
   // peripherals
-  neorv32_uart0_printf("\n=== << Peripherals >> ===\n");
+  neorv32_uart0_printf("\n---<< Peripherals >>---\n");
 
   tmp = NEORV32_SYSINFO.SOC;
   __neorv32_rte_print_checkbox(tmp & (1 << SYSINFO_SOC_IO_GPIO));   neorv32_uart0_printf(" GPIO\n");
@@ -477,6 +508,7 @@ void neorv32_rte_print_hw_config(void) {
   __neorv32_rte_print_checkbox(tmp & (1 << SYSINFO_SOC_IO_NEOLED)); neorv32_uart0_printf(" NEOLED\n");
   __neorv32_rte_print_checkbox(tmp & (1 << SYSINFO_SOC_IO_XIRQ));   neorv32_uart0_printf(" XIRQ\n");
   __neorv32_rte_print_checkbox(tmp & (1 << SYSINFO_SOC_IO_GPTMR));  neorv32_uart0_printf(" GPTMR\n");
+  __neorv32_rte_print_checkbox(tmp & (1 << SYSINFO_SOC_IO_XIP));    neorv32_uart0_printf(" XIP\n");
 }
 
 
@@ -579,10 +611,8 @@ void neorv32_rte_print_credits(void) {
     return; // cannot output anything if UART0 is not implemented
   }
 
-  neorv32_uart0_print("The NEORV32 RISC-V Processor\n"
-                      "(c) 2021, Stephan Nolting\n"
-                      "BSD 3-Clause License\n"
-                      "https://github.com/stnolting/neorv32\n\n");
+  neorv32_uart0_print("The NEORV32 RISC-V Processor, https://github.com/stnolting/neorv32\n"
+                      "(c) 2022 by Dipl.-Ing. Stephan Nolting, BSD 3-Clause License\n\n");
 }
 
 
@@ -645,7 +675,7 @@ void neorv32_rte_print_license(void) {
   "\n"
   "BSD 3-Clause License\n"
   "\n"
-  "Copyright (c) 2021, Stephan Nolting. All rights reserved.\n"
+  "Copyright (c) 2022, Stephan Nolting. All rights reserved.\n"
   "\n"
   "Redistribution and use in source and binary forms, with or without modification, are\n"
   "permitted provided that the following conditions are met:\n"
@@ -730,7 +760,7 @@ uint32_t neorv32_rte_get_compiler_isa(void) {
 /**********************************************************************//**
  * NEORV32 runtime environment: Check required ISA extensions (via compiler flags) against available ISA extensions (via MISA csr).
  *
- * @param[in] silent Show error message (via neorv32.uart) if isa_sw > isa_hw when != 0.
+ * @param[in] silent Show error message (via neorv32.uart) if isa_sw > isa_hw when = 0.
  * @return MISA content according to compiler configuration.
  **************************************************************************/
 int neorv32_rte_check_isa(int silent) {
@@ -741,12 +771,11 @@ int neorv32_rte_check_isa(int silent) {
   // mask hardware features that are not used by software
   uint32_t check = misa_hw & misa_sw;
 
-  //
   if (check == misa_sw) {
     return 0;
   }
   else {
-    if ((silent == 0) || (neorv32_uart0_available() == 0)) {
+    if ((silent == 0) && (neorv32_uart0_available() != 0)) {
       neorv32_uart0_printf("\nWARNING! SW_ISA (features required) vs HW_ISA (features available) mismatch!\n"
                           "SW_ISA = 0x%x (compiler flags)\n"
                           "HW_ISA = 0x%x (misa csr)\n\n", misa_sw, misa_hw);

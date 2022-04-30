@@ -1,5 +1,5 @@
 Analysis & Synthesis report for de0-nano-test-setup
-Fri Apr 29 12:52:49 2022
+Sat Apr 30 16:40:33 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -126,15 +126,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 29 12:52:49 2022       ;
+; Analysis & Synthesis Status        ; Successful - Sat Apr 30 16:40:32 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; de0-nano-test-setup                         ;
 ; Top-level Entity Name              ; neorv32_test_setup_bootloader               ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 6,556                                       ;
-;     Total combinational functions  ; 5,662                                       ;
-;     Dedicated logic registers      ; 3,012                                       ;
-; Total registers                    ; 3012                                        ;
+; Total logic elements               ; 6,545                                       ;
+;     Total combinational functions  ; 5,651                                       ;
+;     Dedicated logic registers      ; 3,016                                       ;
+; Total registers                    ; 3016                                        ;
 ; Total pins                         ; 76                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 427,008                                     ;
@@ -242,9 +242,9 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.2%      ;
-;     Processor 3            ;   0.2%      ;
-;     Processor 4            ;   0.2%      ;
+;     Processor 2            ;   0.3%      ;
+;     Processor 3            ;   0.3%      ;
+;     Processor 4            ;   0.3%      ;
 +----------------------------+-------------+
 
 
@@ -312,20 +312,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 6,556       ;
+; Estimated Total logic elements              ; 6,545       ;
 ;                                             ;             ;
-; Total combinational functions               ; 5662        ;
+; Total combinational functions               ; 5651        ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 2838        ;
-;     -- 3 input functions                    ; 1959        ;
-;     -- <=2 input functions                  ; 865         ;
+;     -- 4 input functions                    ; 2831        ;
+;     -- 3 input functions                    ; 1950        ;
+;     -- <=2 input functions                  ; 870         ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 4631        ;
+;     -- normal mode                          ; 4620        ;
 ;     -- arithmetic mode                      ; 1031        ;
 ;                                             ;             ;
-; Total registers                             ; 3012        ;
-;     -- Dedicated logic registers            ; 3012        ;
+; Total registers                             ; 3016        ;
+;     -- Dedicated logic registers            ; 3016        ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
 ; I/O pins                                    ; 76          ;
@@ -334,8 +334,8 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 7           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clk_i~input ;
-; Maximum fan-out                             ; 3141        ;
-; Total fan-out                               ; 30675       ;
+; Maximum fan-out                             ; 3144        ;
+; Total fan-out                               ; 30637       ;
 ; Average fan-out                             ; 3.42        ;
 +---------------------------------------------+-------------+
 
@@ -345,17 +345,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                               ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                     ; Entity Name                   ; Library Name ;
 +----------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------+--------------+
-; |neorv32_test_setup_bootloader                                                                           ; 5662 (1)            ; 3012 (0)                  ; 427008      ; 7            ; 1       ; 3         ; 76   ; 0            ; |neorv32_test_setup_bootloader                                                                                                                                                                                                                                          ; neorv32_test_setup_bootloader ; work         ;
-;    |neorv32_top:neorv32_top_inst|                                                                        ; 5661 (202)          ; 3012 (27)                 ; 427008      ; 7            ; 1       ; 3         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst                                                                                                                                                                                                             ; neorv32_top                   ; neorv32      ;
+; |neorv32_test_setup_bootloader                                                                           ; 5651 (5)            ; 3016 (4)                  ; 427008      ; 7            ; 1       ; 3         ; 76   ; 0            ; |neorv32_test_setup_bootloader                                                                                                                                                                                                                                          ; neorv32_test_setup_bootloader ; work         ;
+;    |neorv32_top:neorv32_top_inst|                                                                        ; 5646 (201)          ; 3012 (27)                 ; 427008      ; 7            ; 1       ; 3         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst                                                                                                                                                                                                             ; neorv32_top                   ; neorv32      ;
 ;       |neorv32_boot_rom:\neorv32_boot_rom_inst_true:neorv32_boot_rom_inst|                               ; 3 (3)               ; 2 (2)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_boot_rom:\neorv32_boot_rom_inst_true:neorv32_boot_rom_inst                                                                                                                                          ; neorv32_boot_rom              ; neorv32      ;
 ;          |altsyncram:Mux26_rtl_0|                                                                        ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_boot_rom:\neorv32_boot_rom_inst_true:neorv32_boot_rom_inst|altsyncram:Mux26_rtl_0                                                                                                                   ; altsyncram                    ; work         ;
 ;             |altsyncram_bp31:auto_generated|                                                             ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_boot_rom:\neorv32_boot_rom_inst_true:neorv32_boot_rom_inst|altsyncram:Mux26_rtl_0|altsyncram_bp31:auto_generated                                                                                    ; altsyncram_bp31               ; work         ;
 ;       |neorv32_bus_keeper:neorv32_bus_keeper_inst|                                                       ; 20 (20)             ; 13 (13)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_bus_keeper:neorv32_bus_keeper_inst                                                                                                                                                                  ; neorv32_bus_keeper            ; neorv32      ;
 ;       |neorv32_busswitch:neorv32_busswitch_inst|                                                         ; 46 (46)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_busswitch:neorv32_busswitch_inst                                                                                                                                                                    ; neorv32_busswitch             ; neorv32      ;
-;       |neorv32_cpu:neorv32_cpu_inst|                                                                     ; 4241 (0)            ; 1947 (0)                  ; 1024        ; 7            ; 1       ; 3         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst                                                                                                                                                                                ; neorv32_cpu                   ; neorv32      ;
-;          |neorv32_cpu_alu:neorv32_cpu_alu_inst|                                                          ; 2615 (255)          ; 1145 (0)                  ; 0           ; 7            ; 1       ; 3         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst                                                                                                                                           ; neorv32_cpu_alu               ; neorv32      ;
-;             |neorv32_cpu_cp_bitmanip:\neorv32_cpu_cp_bitmanip_inst_true:neorv32_cpu_cp_bitmanip_inst|    ; 724 (724)           ; 254 (254)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_bitmanip:\neorv32_cpu_cp_bitmanip_inst_true:neorv32_cpu_cp_bitmanip_inst                                                   ; neorv32_cpu_cp_bitmanip       ; neorv32      ;
-;             |neorv32_cpu_cp_fpu:\neorv32_cpu_cp_fpu_inst_true:neorv32_cpu_cp_fpu_inst|                   ; 1170 (604)          ; 679 (408)                 ; 0           ; 7            ; 1       ; 3         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_fpu:\neorv32_cpu_cp_fpu_inst_true:neorv32_cpu_cp_fpu_inst                                                                  ; neorv32_cpu_cp_fpu            ; neorv32      ;
+;       |neorv32_cpu:neorv32_cpu_inst|                                                                     ; 4227 (0)            ; 1947 (0)                  ; 1024        ; 7            ; 1       ; 3         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst                                                                                                                                                                                ; neorv32_cpu                   ; neorv32      ;
+;          |neorv32_cpu_alu:neorv32_cpu_alu_inst|                                                          ; 2605 (255)          ; 1145 (0)                  ; 0           ; 7            ; 1       ; 3         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst                                                                                                                                           ; neorv32_cpu_alu               ; neorv32      ;
+;             |neorv32_cpu_cp_bitmanip:\neorv32_cpu_cp_bitmanip_inst_true:neorv32_cpu_cp_bitmanip_inst|    ; 715 (715)           ; 254 (254)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_bitmanip:\neorv32_cpu_cp_bitmanip_inst_true:neorv32_cpu_cp_bitmanip_inst                                                   ; neorv32_cpu_cp_bitmanip       ; neorv32      ;
+;             |neorv32_cpu_cp_fpu:\neorv32_cpu_cp_fpu_inst_true:neorv32_cpu_cp_fpu_inst|                   ; 1169 (603)          ; 679 (408)                 ; 0           ; 7            ; 1       ; 3         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_fpu:\neorv32_cpu_cp_fpu_inst_true:neorv32_cpu_cp_fpu_inst                                                                  ; neorv32_cpu_cp_fpu            ; neorv32      ;
 ;                |lpm_mult:Mult0|                                                                          ; 25 (0)              ; 0 (0)                     ; 0           ; 7            ; 1       ; 3         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_fpu:\neorv32_cpu_cp_fpu_inst_true:neorv32_cpu_cp_fpu_inst|lpm_mult:Mult0                                                   ; lpm_mult                      ; work         ;
 ;                   |mult_bdt:auto_generated|                                                              ; 25 (25)             ; 0 (0)                     ; 0           ; 7            ; 1       ; 3         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_fpu:\neorv32_cpu_cp_fpu_inst_true:neorv32_cpu_cp_fpu_inst|lpm_mult:Mult0|mult_bdt:auto_generated                           ; mult_bdt                      ; work         ;
 ;                |neorv32_cpu_cp_fpu_f2i:neorv32_cpu_cp_fpu_f2i_inst|                                      ; 264 (264)           ; 145 (145)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_fpu:\neorv32_cpu_cp_fpu_inst_true:neorv32_cpu_cp_fpu_inst|neorv32_cpu_cp_fpu_f2i:neorv32_cpu_cp_fpu_f2i_inst               ; neorv32_cpu_cp_fpu_f2i        ; neorv32      ;
@@ -363,8 +363,8 @@ https://fpgasoftware.intel.com/eula.
 ;             |neorv32_cpu_cp_muldiv:\neorv32_cpu_cp_muldiv_inst_true:neorv32_cpu_cp_muldiv_inst|          ; 425 (425)           ; 173 (173)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_muldiv:\neorv32_cpu_cp_muldiv_inst_true:neorv32_cpu_cp_muldiv_inst                                                         ; neorv32_cpu_cp_muldiv         ; neorv32      ;
 ;             |neorv32_cpu_cp_shifter:neorv32_cpu_cp_shifter_inst|                                         ; 41 (41)             ; 39 (39)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_shifter:neorv32_cpu_cp_shifter_inst                                                                                        ; neorv32_cpu_cp_shifter        ; neorv32      ;
 ;          |neorv32_cpu_bus:neorv32_cpu_bus_inst|                                                          ; 81 (81)             ; 105 (105)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_bus:neorv32_cpu_bus_inst                                                                                                                                           ; neorv32_cpu_bus               ; neorv32      ;
-;          |neorv32_cpu_control:neorv32_cpu_control_inst|                                                  ; 1346 (1136)         ; 697 (621)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst                                                                                                                                   ; neorv32_cpu_control           ; neorv32      ;
-;             |neorv32_cpu_decompressor:\neorv32_cpu_decompressor_inst_true:neorv32_cpu_decompressor_inst| ; 159 (159)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|neorv32_cpu_decompressor:\neorv32_cpu_decompressor_inst_true:neorv32_cpu_decompressor_inst                                        ; neorv32_cpu_decompressor      ; neorv32      ;
+;          |neorv32_cpu_control:neorv32_cpu_control_inst|                                                  ; 1342 (1136)         ; 697 (621)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst                                                                                                                                   ; neorv32_cpu_control           ; neorv32      ;
+;             |neorv32_cpu_decompressor:\neorv32_cpu_decompressor_inst_true:neorv32_cpu_decompressor_inst| ; 155 (155)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|neorv32_cpu_decompressor:\neorv32_cpu_decompressor_inst_true:neorv32_cpu_decompressor_inst                                        ; neorv32_cpu_decompressor      ; neorv32      ;
 ;             |neorv32_fifo:\prefetch_buffer:0:prefetch_buffer_inst|                                       ; 25 (25)             ; 38 (38)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|neorv32_fifo:\prefetch_buffer:0:prefetch_buffer_inst                                                                              ; neorv32_fifo                  ; neorv32      ;
 ;             |neorv32_fifo:\prefetch_buffer:1:prefetch_buffer_inst|                                       ; 26 (26)             ; 38 (38)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|neorv32_fifo:\prefetch_buffer:1:prefetch_buffer_inst                                                                              ; neorv32_fifo                  ; neorv32      ;
 ;          |neorv32_cpu_regfile:neorv32_cpu_regfile_inst|                                                  ; 199 (199)           ; 0 (0)                     ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_regfile:neorv32_cpu_regfile_inst                                                                                                                                   ; neorv32_cpu_regfile           ; neorv32      ;
@@ -380,8 +380,8 @@ https://fpgasoftware.intel.com/eula.
 ;          |altsyncram:mem_ram_b3_rtl_0|                                                                   ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_dmem:\neorv32_int_dmem_inst_true:neorv32_int_dmem_inst|altsyncram:mem_ram_b3_rtl_0                                                                                                                  ; altsyncram                    ; work         ;
 ;             |altsyncram_20e1:auto_generated|                                                             ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_dmem:\neorv32_int_dmem_inst_true:neorv32_int_dmem_inst|altsyncram:mem_ram_b3_rtl_0|altsyncram_20e1:auto_generated                                                                                   ; altsyncram_20e1               ; work         ;
 ;       |neorv32_gpio:\neorv32_gpio_inst_true:neorv32_gpio_inst|                                           ; 41 (41)             ; 121 (121)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_gpio:\neorv32_gpio_inst_true:neorv32_gpio_inst                                                                                                                                                      ; neorv32_gpio                  ; neorv32      ;
-;       |neorv32_gptmr:\neorv32_gptmr_inst_true:neorv32_gptmr_inst|                                        ; 134 (134)           ; 105 (105)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_gptmr:\neorv32_gptmr_inst_true:neorv32_gptmr_inst                                                                                                                                                   ; neorv32_gptmr                 ; neorv32      ;
-;       |neorv32_imem:\neorv32_int_imem_inst_true:neorv32_int_imem_inst|                                   ; 11 (11)             ; 2 (2)                     ; 262144      ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_imem:\neorv32_int_imem_inst_true:neorv32_int_imem_inst                                                                                                                                              ; neorv32_imem                  ; neorv32      ;
+;       |neorv32_gptmr:\neorv32_gptmr_inst_true:neorv32_gptmr_inst|                                        ; 133 (133)           ; 105 (105)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_gptmr:\neorv32_gptmr_inst_true:neorv32_gptmr_inst                                                                                                                                                   ; neorv32_gptmr                 ; neorv32      ;
+;       |neorv32_imem:\neorv32_int_imem_inst_true:neorv32_int_imem_inst|                                   ; 12 (12)             ; 2 (2)                     ; 262144      ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_imem:\neorv32_int_imem_inst_true:neorv32_int_imem_inst                                                                                                                                              ; neorv32_imem                  ; neorv32      ;
 ;          |altsyncram:mem_ram_b0_rtl_0|                                                                   ; 0 (0)               ; 0 (0)                     ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_imem:\neorv32_int_imem_inst_true:neorv32_int_imem_inst|altsyncram:mem_ram_b0_rtl_0                                                                                                                  ; altsyncram                    ; work         ;
 ;             |altsyncram_60e1:auto_generated|                                                             ; 0 (0)               ; 0 (0)                     ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_imem:\neorv32_int_imem_inst_true:neorv32_int_imem_inst|altsyncram:mem_ram_b0_rtl_0|altsyncram_60e1:auto_generated                                                                                   ; altsyncram_60e1               ; work         ;
 ;          |altsyncram:mem_ram_b1_rtl_0|                                                                   ; 0 (0)               ; 0 (0)                     ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_imem:\neorv32_int_imem_inst_true:neorv32_int_imem_inst|altsyncram:mem_ram_b1_rtl_0                                                                                                                  ; altsyncram                    ; work         ;
@@ -391,7 +391,7 @@ https://fpgasoftware.intel.com/eula.
 ;          |altsyncram:mem_ram_b3_rtl_0|                                                                   ; 0 (0)               ; 0 (0)                     ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_imem:\neorv32_int_imem_inst_true:neorv32_int_imem_inst|altsyncram:mem_ram_b3_rtl_0                                                                                                                  ; altsyncram                    ; work         ;
 ;             |altsyncram_60e1:auto_generated|                                                             ; 0 (0)               ; 0 (0)                     ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_imem:\neorv32_int_imem_inst_true:neorv32_int_imem_inst|altsyncram:mem_ram_b3_rtl_0|altsyncram_60e1:auto_generated                                                                                   ; altsyncram_60e1               ; work         ;
 ;       |neorv32_mtime:\neorv32_mtime_inst_true:neorv32_mtime_inst|                                        ; 287 (287)           ; 166 (166)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_mtime:\neorv32_mtime_inst_true:neorv32_mtime_inst                                                                                                                                                   ; neorv32_mtime                 ; neorv32      ;
-;       |neorv32_pwm:\neorv32_pwm_inst_true:neorv32_pwm_inst|                                              ; 153 (153)           ; 135 (135)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_pwm:\neorv32_pwm_inst_true:neorv32_pwm_inst                                                                                                                                                         ; neorv32_pwm                   ; neorv32      ;
+;       |neorv32_pwm:\neorv32_pwm_inst_true:neorv32_pwm_inst|                                              ; 152 (152)           ; 135 (135)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_pwm:\neorv32_pwm_inst_true:neorv32_pwm_inst                                                                                                                                                         ; neorv32_pwm                   ; neorv32      ;
 ;       |neorv32_spi:\neorv32_spi_inst_true:neorv32_spi_inst|                                              ; 95 (95)             ; 94 (94)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_spi:\neorv32_spi_inst_true:neorv32_spi_inst                                                                                                                                                         ; neorv32_spi                   ; neorv32      ;
 ;       |neorv32_sysinfo:neorv32_sysinfo_inst|                                                             ; 9 (9)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_sysinfo:neorv32_sysinfo_inst                                                                                                                                                                        ; neorv32_sysinfo               ; neorv32      ;
 ;       |neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|                                           ; 65 (16)             ; 80 (21)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst                                                                                                                                                      ; neorv32_trng                  ; neorv32      ;
@@ -405,7 +405,7 @@ https://fpgasoftware.intel.com/eula.
 ;       |neorv32_uart:\neorv32_uart1_inst_true:neorv32_uart1_inst|                                         ; 155 (147)           ; 143 (121)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_uart:\neorv32_uart1_inst_true:neorv32_uart1_inst                                                                                                                                                    ; neorv32_uart                  ; neorv32      ;
 ;          |neorv32_fifo:rx_engine_fifo_inst|                                                              ; 5 (5)               ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_uart:\neorv32_uart1_inst_true:neorv32_uart1_inst|neorv32_fifo:rx_engine_fifo_inst                                                                                                                   ; neorv32_fifo                  ; neorv32      ;
 ;          |neorv32_fifo:tx_engine_fifo_inst|                                                              ; 3 (3)               ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_uart:\neorv32_uart1_inst_true:neorv32_uart1_inst|neorv32_fifo:tx_engine_fifo_inst                                                                                                                   ; neorv32_fifo                  ; neorv32      ;
-;       |neorv32_xirq:\neorv32_xirq_inst_true:neorv32_slink_inst|                                          ; 19 (19)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_xirq:\neorv32_xirq_inst_true:neorv32_slink_inst                                                                                                                                                     ; neorv32_xirq                  ; neorv32      ;
+;       |neorv32_xirq:\neorv32_xirq_inst_true:neorv32_slink_inst|                                          ; 20 (20)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst|neorv32_xirq:\neorv32_xirq_inst_true:neorv32_slink_inst                                                                                                                                                     ; neorv32_xirq                  ; neorv32      ;
 +----------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -768,7 +768,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 3012  ;
+; Total registers                              ; 3016  ;
 ; Number of registers using Synchronous Clear  ; 250   ;
 ; Number of registers using Synchronous Load   ; 672   ;
 ; Number of registers using Asynchronous Clear ; 220   ;
@@ -801,7 +801,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.pc[16]      ; 6       ;
 ; neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.pc[31]      ; 7       ;
 ; neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|execute_engine.branched    ; 2       ;
-; neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.privilege              ; 10      ;
+; neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.privilege              ; 9       ;
 ; neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.mscratch[2]            ; 1       ;
 ; neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.mscratch[8]            ; 1       ;
 ; neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|csr.mscratch[9]            ; 1       ;
@@ -2496,7 +2496,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 76                          ;
-; cycloneiii_ff         ; 3012                        ;
+; cycloneiii_ff         ; 3016                        ;
 ;     CLR               ; 94                          ;
 ;     CLR SCLR          ; 22                          ;
 ;     CLR SLD           ; 2                           ;
@@ -2508,17 +2508,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SCLR              ; 67                          ;
 ;     SCLR SLD          ; 40                          ;
 ;     SLD               ; 139                         ;
-;     plain             ; 727                         ;
-; cycloneiii_lcell_comb ; 5670                        ;
+;     plain             ; 731                         ;
+; cycloneiii_lcell_comb ; 5659                        ;
 ;     arith             ; 1031                        ;
 ;         2 data inputs ; 464                         ;
 ;         3 data inputs ; 567                         ;
-;     normal            ; 4639                        ;
+;     normal            ; 4628                        ;
 ;         0 data inputs ; 8                           ;
-;         1 data inputs ; 65                          ;
-;         2 data inputs ; 336                         ;
-;         3 data inputs ; 1392                        ;
-;         4 data inputs ; 2838                        ;
+;         1 data inputs ; 66                          ;
+;         2 data inputs ; 340                         ;
+;         3 data inputs ; 1383                        ;
+;         4 data inputs ; 2831                        ;
 ; cycloneiii_mac_mult   ; 4                           ;
 ; cycloneiii_mac_out    ; 4                           ;
 ; cycloneiii_ram_block  ; 128                         ;
@@ -2533,7 +2533,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:22     ;
+; Top            ; 00:00:21     ;
 +----------------+--------------+
 
 
@@ -2543,7 +2543,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Apr 29 12:51:57 2022
+    Info: Processing started: Sat Apr 30 16:39:57 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off de0-nano-test-setup -c de0-nano-test-setup
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -2677,7 +2677,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file neorv32
 Info (12127): Elaborating entity "neorv32_test_setup_bootloader" for the top level hierarchy
 Warning (10873): Using initial value X (don't care) for net "con_gpio_i[63..23]" at neorv32_test_setup_bootloader.vhd(78) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/setups/test_full_gpio/neorv32_test_setup_bootloader.vhd Line: 78
 Warning (10873): Using initial value X (don't care) for net "con_xirq_i[31..2]" at neorv32_test_setup_bootloader.vhd(80) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/setups/test_full_gpio/neorv32_test_setup_bootloader.vhd Line: 80
-Info (12128): Elaborating entity "neorv32_top" for hierarchy "neorv32_top:neorv32_top_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/setups/test_full_gpio/neorv32_test_setup_bootloader.vhd Line: 86
+Info (12128): Elaborating entity "neorv32_top" for hierarchy "neorv32_top:neorv32_top_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/setups/test_full_gpio/neorv32_test_setup_bootloader.vhd Line: 88
 Warning (10036): Verilog HDL or VHDL warning at neorv32_top.vhd(309): object "dmi" assigned a value but never read File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_top.vhd Line: 309
 Warning (10036): Verilog HDL or VHDL warning at neorv32_top.vhd(355): object "xip_enable" assigned a value but never read File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_top.vhd Line: 355
 Warning (10036): Verilog HDL or VHDL warning at neorv32_top.vhd(356): object "xip_page" assigned a value but never read File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_top.vhd Line: 356
@@ -3051,16 +3051,16 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 16 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 6941 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 6929 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 30 input pins
     Info (21059): Implemented 46 output pins
-    Info (21061): Implemented 6730 logic cells
+    Info (21061): Implemented 6718 logic cells
     Info (21064): Implemented 128 RAM segments
     Info (21062): Implemented 7 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 49 warnings
-    Info: Peak virtual memory: 511 megabytes
-    Info: Processing ended: Fri Apr 29 12:52:49 2022
-    Info: Elapsed time: 00:00:52
-    Info: Total CPU time (on all processors): 00:00:41
+    Info: Peak virtual memory: 505 megabytes
+    Info: Processing ended: Sat Apr 30 16:40:33 2022
+    Info: Elapsed time: 00:00:36
+    Info: Total CPU time (on all processors): 00:00:40
 
 

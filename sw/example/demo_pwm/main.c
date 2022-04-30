@@ -88,8 +88,8 @@ int main() {
   // deactivate all PWM channels
   neorv32_pwm_set(0, 0);
   neorv32_pwm_set(1, 0);
-  neorv32_pwm_set(2, 0);
-  neorv32_pwm_set(3, 0);
+  //neorv32_pwm_set(2, 0);
+  //neorv32_pwm_set(3, 0);
 
   // configure and enable PWM
   neorv32_pwm_setup(CLK_PRSC_64);
@@ -113,7 +113,7 @@ int main() {
     }
     else {
       if (pwm == 0) {
-        ch = (ch + 1) & 3; // goto next channel
+        ch = (ch + 1) & 1; // goto next channel
         up = 1;
       }
       else {
@@ -122,7 +122,7 @@ int main() {
     }
   
     // output new duty cycle
-    if (ch != 3) { // skip channel 3
+    if (ch != 2) { // skip channel 3
       neorv32_pwm_set(ch, pwm);
     }
 

@@ -94,7 +94,7 @@ spi_csn_o[1]                 : B6        : output : 3.3-V LVTTL       :         
 spi_csn_o[2]                 : B7        : output : 3.3-V LVTTL       :         : 8         : Y              
 GND+                         : B8        :        :                   :         : 8         :                
 gpio_i[3]                    : B9        : input  : 3.3-V LVTTL       :         : 7         : Y              
-gpio_i[22]                   : B10       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B10       :        :                   :         : 7         :                
 pwm_o[5]                     : B11       : output : 3.3-V LVTTL       :         : 7         : Y              
 pwm_o[9]                     : B12       : output : 3.3-V LVTTL       :         : 7         : Y              
 gpio_o[2]                    : B13       : output : 3.3-V LVTTL       :         : 7         : Y              
@@ -163,7 +163,7 @@ VCCINT                       : F11       : power  :                   : 1.2V    
 VCCA2                        : F12       : power  :                   : 2.5V    :           :                
 gpio_i[5]                    : F13       : input  : 3.3-V LVTTL       :         : 6         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : F14       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : F15       :        :                   :         : 6         :                
+gpio_i[22]                   : F15       : input  : 2.5 V             :         : 6         : N              
 ~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : F16       : output : 3.3-V LVTTL       :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : G1        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G2        :        :                   :         : 1         :                
