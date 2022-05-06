@@ -35,3 +35,16 @@ void displaySymbol(uint8_t data[rows][cols], uint8_t pins[cols + 3]) {
         //neorv32_uart0_printf("%x: %x, \n", buffer << sel1, tmp);
     }*/
 }
+
+void displayLine(uint8_t data[cols], uint8_t pins[rows], uint8_t line) {
+    uint8_t buf = (~line) << cols;
+    for (uint8_t i=0; i<cols; i++) {
+        buf |= data[i] << (cols-i);
+    }
+
+    uint64_t tmp = (((uint64_t)NEORV32_GPIO.OUTPUT_HI << 32) | NEORV32_GPIO.OUTPUT_LO) & (~(uint64_t)0xff << 24); // pripravimo ustrezen buffer, da preprečimo kvarjenje ostalih podatkov
+
+    tmp |= (buf << 24);
+    neorv32_gpio_port_set(tmp);
+
+};

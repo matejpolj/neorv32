@@ -4,6 +4,22 @@
 
 # define BAUD_RATE 19200
 
+void gptmr_firq_handler(void);
+
+// predpripravljena števila
+
+uint8_t nic[rows][cols] = {{1, 0, 0, 0, 1},
+                        {0, 1, 0, 0, 1},
+                        {1, 1, 0, 0, 1},
+                        {0, 0, 1, 0, 1},
+                        {1, 0, 1, 0, 1},
+                        {0, 1, 1, 0, 1},
+                        {1, 1, 1, 0, 1}};
+
+uint8_t pins[cols + 3] = {24, 25, 26, 27, 28, 29, 30, 31};
+
+uint8_t tmp[cols + 3] = {0, 1, 0, 0, 1, 1, 1, 0};
+
 int main(void) {
 
     // preverimo stanje uart
@@ -20,33 +36,73 @@ int main(void) {
 
     neorv32_uart0_print("LED matrika test:\n");
 
-    // predpripravljena števila
+    // install GPTMR interrupt handler
+    neorv32_rte_exception_install(GPTMR_RTE_ID, gptmr_firq_handler);
 
-    uint8_t nic[rows][cols] = {{1, 0, 0, 0, 1},
-                            {0, 1, 0, 0, 1},
-                            {1, 1, 0, 0, 1},
-                            {0, 0, 1, 0, 1},
-                            {1, 0, 1, 0, 1},
-                            {0, 1, 1, 0, 1},
-                            {1, 1, 1, 0, 1}};
-    
-    uint8_t pins[cols + 3] = {24, 25, 26, 27, 28, 29, 30, 31};
+    // configure timer for 1Hz in continuous mode
+    uint32_t soc_clock = NEORV32_SYSINFO.CLK;
+    soc_clock = soc_clock / 2; // divide by two as we are using the 1/2 clock prescaler
+    neorv32_gptmr_setup(CLK_PRSC_2, 1, soc_clock);
 
-    //uint8_t tmp[cols + 3] = {0, 1, 0, 0, 1, 1, 1, 0};
+    // enable interrupt
+    neorv32_cpu_irq_enable(GPTMR_FIRQ_ENABLE); // enable GPTRM FIRQ channel
+    neorv32_cpu_eint(); // enable global interrupt flag
 
     neorv32_gpio_pin_clr(sel1);
     neorv32_gpio_pin_set(sel2);
     while (1)
     {
-        displaySymbol(nic, pins);
-        //neorv32_cpu_delay_ms(10);
-        /*
-        for (uint8_t i=0; i<8; i++) {
-            tmp[i] ? neorv32_gpio_pin_set(pins[i]) : neorv32_gpio_pin_clr(pins[i]);
-            neorv32_uart0_printf("%i", tmp[i]);
-        }
-        neorv32_uart0_printf("\n");*/
+        //displaySymbol(nic, pins);
+        
     }
 
     return 0;
+}
+
+/**********************************************************************//**
+ * GPTMR FIRQ handler.
+ *
+ * @warning This function has to be of type "void xyz(void)" and must not use any interrupt attributes!
+ **************************************************************************/
+void gptmr_firq_handler(void) {
+    static uint8_t cout = 0;
+
+    neorv32_cpu_csr_write(CSR_MIP, ~(1<<GPTMR_FIRQ_PENDING)); // clear/ack pending FIRQ
+
+    neorv32_uart0_putc('.'); // send tick symbol via UART
+
+    switch (cout)
+    {
+    case 0:
+        displayLine(nic[cout], pins, cout);
+        cout++;
+        break;
+    case 1:
+        displayLine(nic[cout], pins, cout);
+        cout++;
+        break;
+    case 2:
+        displayLine(nic[cout], pins, cout);
+        cout++;
+        break;
+    case 3:
+        displayLine(nic[cout], pins, cout);
+        cout++;
+        break;
+    case 4:
+        displayLine(nic[cout], pins, cout);
+        cout++;
+        break;
+    case 5:
+        displayLine(nic[cout], pins, cout);
+        cout++;
+        break;
+    case 6:
+        displayLine(nic[cout], pins, cout);
+        cout = 0;
+        break;
+    default:
+        break;
+    }
+  
 }
