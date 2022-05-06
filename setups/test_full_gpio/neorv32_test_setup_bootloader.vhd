@@ -78,8 +78,6 @@ architecture neorv32_test_setup_bootloader_rtl of neorv32_test_setup_bootloader 
   signal con_gpio_i : std_ulogic_vector(63 downto 0);
   signal con_pwm_o  : std_ulogic_vector(59 downto 0);
   signal con_xirq_i : std_ulogic_vector(31 downto 0);
-  
-  signal clk_divider        : unsigned(3 downto 0);
 
 begin
 
@@ -154,15 +152,15 @@ begin
   con_xirq_i(1 downto 0) <= xirq_i;
   -- CLK --
   --clk_o <= clk_i;
-  clk_o <= clk_divider(3);
+  clk_o <= clk_i;
 	
-	p_clk_divider: process(clk_i)
-		begin
-			--if(i_rst='0') then
-			--	clk_divider   <= (others=>'0');
-			if(rising_edge(clk_i)) then
-				clk_divider   <= clk_divider + 1;
-			end if;
-	end process p_clk_divider;
+--	p_clk_divider: process(clk_i)
+--		begin
+--			--if(i_rst='0') then
+--			--	clk_divider   <= (others=>'0');
+--			if(rising_edge(clk_i)) then
+--				clk_divider   <= clk_divider + 1;
+--			end if;
+--	end process p_clk_divider;
 	
 end architecture;

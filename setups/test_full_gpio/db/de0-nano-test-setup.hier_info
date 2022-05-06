@@ -1,9 +1,6 @@
 |neorv32_test_setup_bootloader
 clk_i => neorv32_top:neorv32_top_inst.clk_i
-clk_i => clk_divider[0].CLK
-clk_i => clk_divider[1].CLK
-clk_i => clk_divider[2].CLK
-clk_i => clk_divider[3].CLK
+clk_i => clk_o.DATAIN
 rstn_i => neorv32_top:neorv32_top_inst.rstn_i
 gpio_o[0] <= neorv32_top:neorv32_top_inst.gpio_o[0]
 gpio_o[1] <= neorv32_top:neorv32_top_inst.gpio_o[1]
@@ -78,7 +75,7 @@ spi_csn_o[6] <= neorv32_top:neorv32_top_inst.spi_csn_o[6]
 spi_csn_o[7] <= neorv32_top:neorv32_top_inst.spi_csn_o[7]
 xirq_i[0] => neorv32_top:neorv32_top_inst.xirq_i[0]
 xirq_i[1] => neorv32_top:neorv32_top_inst.xirq_i[1]
-clk_o <= clk_divider[3].DB_MAX_OUTPUT_PORT_TYPE
+clk_o <= clk_i.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst
