@@ -42,7 +42,8 @@ int main(void) {
     // configure timer for 1Hz in continuous mode
     uint32_t soc_clock = NEORV32_SYSINFO.CLK;
     soc_clock = soc_clock / 2; // divide by two as we are using the 1/2 clock prescaler
-    neorv32_gptmr_setup(CLK_PRSC_2, 1, soc_clock);
+    //neorv32_gptmr_setup(CLK_PRSC_2, 1, soc_clock);
+    neorv32_gptmr_setup(CLK_PRSC_8, 1, NEORV32_SYSINFO.CLK / (8 * 2));
 
     // enable interrupt
     neorv32_cpu_irq_enable(GPTMR_FIRQ_ENABLE); // enable GPTRM FIRQ channel
@@ -59,50 +60,57 @@ int main(void) {
     return 0;
 }
 
+uint8_t cout = 0;
 /**********************************************************************//**
  * GPTMR FIRQ handler.
  *
  * @warning This function has to be of type "void xyz(void)" and must not use any interrupt attributes!
  **************************************************************************/
 void gptmr_firq_handler(void) {
-    static uint8_t cout = 0;
 
     neorv32_cpu_csr_write(CSR_MIP, ~(1<<GPTMR_FIRQ_PENDING)); // clear/ack pending FIRQ
 
     neorv32_uart0_putc('.'); // send tick symbol via UART
+    neorv32_uart0_printf("%x   %u\n", (((uint64_t)NEORV32_GPIO.OUTPUT_HI << 32) | (uint64_t)NEORV32_GPIO.OUTPUT_LO), cout);
+
+    displaySymbol(nic, pins);
+
+    /*
+    (cout == rows) ? cout = 0: cout++;
 
     switch (cout)
     {
     case 0:
         displayLine(nic[cout], pins, cout);
-        cout++;
+        //cout++;
         break;
     case 1:
         displayLine(nic[cout], pins, cout);
-        cout++;
+        //cout++;
         break;
     case 2:
         displayLine(nic[cout], pins, cout);
-        cout++;
+        //cout++;
         break;
     case 3:
         displayLine(nic[cout], pins, cout);
-        cout++;
+        //cout++;
         break;
     case 4:
         displayLine(nic[cout], pins, cout);
-        cout++;
+        //cout++;
         break;
     case 5:
         displayLine(nic[cout], pins, cout);
-        cout++;
+        //cout++;
         break;
     case 6:
         displayLine(nic[cout], pins, cout);
-        cout = 0;
+        //cout = 0;
         break;
     default:
         break;
     }
+    */
   
 }

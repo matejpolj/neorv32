@@ -42,9 +42,10 @@ void displayLine(uint8_t data[cols], uint8_t pins[rows], uint8_t line) {
         buf |= data[i] << (cols-i);
     }
 
-    uint64_t tmp = (((uint64_t)NEORV32_GPIO.OUTPUT_HI << 32) | NEORV32_GPIO.OUTPUT_LO) & (~(uint64_t)0xff << 24); // pripravimo ustrezen buffer, da preprečimo kvarjenje ostalih podatkov
+    uint64_t tmp =  0; // (((uint64_t)NEORV32_GPIO.OUTPUT_HI << 32) | NEORV32_GPIO.OUTPUT_LO) & (~(uint64_t)0xff << 24); // pripravimo ustrezen buffer, da preprečimo kvarjenje ostalih podatkov
 
     tmp |= (buf << 24);
     neorv32_gpio_port_set(tmp);
+    neorv32_uart0_printf("a: %x  \n", tmp);
 
 };
