@@ -132,7 +132,6 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to led7
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rot_a
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rot_b
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rot_p
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name QSYS_FILE vio.qsys
 set_global_assignment -name VHDL_FILE mux4.vhd
 set_global_assignment -name VHDL_FILE IOmodul.vhd
@@ -143,3 +142,4 @@ set_global_assignment -name VHDL_FILE proc.vhd
 set_global_assignment -name VHDL_FILE cpu.vhd
 set_global_assignment -name VHDL_FILE reg12.vhd
 set_global_assignment -name BDF_FILE ProcBlock.bdf
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -48,47 +48,6 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 # vhdl files
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu_regfile.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_application_image.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_bootloader_image.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_boot_rom.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_busswitch.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_bus_keeper.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cfs.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu_alu.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu_bus.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu_control.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu_cp_bitmanip.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu_cp_fpu.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu_cp_muldiv.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu_cp_shifter.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu_decompressor.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_debug_dm.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_debug_dtm.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_dmem.entity.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_fifo.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_gpio.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_gptmr.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_icache.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_imem.entity.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_mtime.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_neoled.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_package.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_pwm.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_slink.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_spi.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_sysinfo.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_top.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_trng.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_twi.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_uart.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_wdt.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_wishbone.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_xirq.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/mem/neorv32_dmem.default.vhd -library neorv32
-set_global_assignment -name VHDL_FILE ./../../rtl/core/mem/neorv32_imem.default.vhd -library neorv32
-set_global_assignment -name VHDL_FILE neorv32_test_setup_bootloader.vhd
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
@@ -122,7 +81,7 @@ set_location_assignment PIN_A5 -to spi_csn_o[0]
 set_location_assignment PIN_B6 -to spi_csn_o[1]
 set_location_assignment PIN_B7 -to spi_csn_o[2]
 set_location_assignment PIN_A7 -to spi_csn_o[3]
-set_location_assignment PIN_C8 -to spi_csn_o]4]
+set_location_assignment PIN_C8 -to spi_csn_o[4]
 set_location_assignment PIN_E7 -to spi_csn_o[5]
 set_location_assignment PIN_E8 -to spi_csn_o[6]
 set_location_assignment PIN_F9 -to spi_csn_o[7]
@@ -219,7 +178,6 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_csn_o[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_csn_o[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_csn_o[2]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_csn_o[3]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_csn_o]4]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_csn_o[5]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_csn_o[6]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_csn_o[7]
@@ -288,4 +246,55 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pwm_o[9]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to xirq_i[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to xirq_i[1]
 # other
+#set_global_assignment -name VHDL_FILE IOmodul.vhd
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu_regfile.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_application_image.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_bootloader_image.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_boot_rom.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_busswitch.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_bus_keeper.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cfs.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu_alu.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu_bus.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu_control.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu_cp_bitmanip.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu_cp_fpu.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu_cp_muldiv.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu_cp_shifter.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_cpu_decompressor.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_debug_dm.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_debug_dtm.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_dmem.entity.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_fifo.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_gpio.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_gptmr.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_icache.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_imem.entity.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_mtime.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_neoled.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_package.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_pwm.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_slink.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_spi.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_sysinfo.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_top.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_trng.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_twi.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_uart.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_wdt.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_wishbone.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_xirq.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/mem/neorv32_dmem.default.vhd -library neorv32
+set_global_assignment -name VHDL_FILE ./../../rtl/core/mem/neorv32_imem.default.vhd -library neorv32
+set_global_assignment -name VHDL_FILE neorv32_test_setup_bootloader.vhd
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_csn_o[4]
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -34,6 +34,51 @@ void displaySymbol(uint8_t data[rows][cols], uint8_t pins[cols + 3]) {
         neorv32_gpio_port_set(buffer << sel1);
         //neorv32_uart0_printf("%x: %x, \n", buffer << sel1, tmp);
     }*/
+
+    for (int i=0; i<rows; i++) {
+        uint8_t izbir = (~i) & 0x7;
+        // za izbiro vrstice
+        for (uint8_t j=0; j<3; j++) {
+            //((izbir & (1<<j))>>j) ? neorv32_gpio_pin_set(pins[cols + 2 - j]) : neorv32_gpio_pin_clr(pins[cols + 2 - j]);
+            ((izbir & (1<<j))>>j) ? neorv32_gpio_pin_set(pins[cols + j]) : neorv32_gpio_pin_clr(pins[cols + j]);
+            //neorv32_uart0_printf("%x: %u, %x    ", ((izbir & (1<<j))>>j), pins[cols + j], izbir);
+        }
+        // za izbiro stolpca
+        for (uint8_t j=0; j<cols; j++) {
+            //data[j] ? neorv32_gpio_pin_set(pins[j]) : neorv32_gpio_pin_clr(pins[j]);
+            if (data[i][j]) {
+                //neorv32_gpio_pin_clr(pins[j]);
+                neorv32_gpio_pin_set(pins[j]);
+                } else {
+                //neorv32_gpio_pin_set(pins[j]);
+                neorv32_gpio_pin_clr(pins[j]);
+                }
+        }
+    }
+}
+
+void displayLinePart(uint8_t data[cols], uint8_t pins[cols + 3], uint8_t num) {
+    uint8_t izbir = (~num) & 0x7;
+    // za izbiro vrstice
+    for (uint8_t j=0; j<3; j++) {
+        //((izbir & (1<<j))>>j) ? neorv32_gpio_pin_set(pins[cols + 2 - j]) : neorv32_gpio_pin_clr(pins[cols + 2 - j]);
+        ((izbir & (1<<j))>>j) ? neorv32_gpio_pin_set(pins[cols + j]) : neorv32_gpio_pin_clr(pins[cols + j]);
+        neorv32_uart0_printf("%x: %u, %x    ", ((izbir & (1<<j))>>j), pins[cols + j], izbir);
+    }
+    // za izbiro stolpca
+    for (uint8_t j=0; j<cols; j++) {
+        //data[j] ? neorv32_gpio_pin_set(pins[j]) : neorv32_gpio_pin_clr(pins[j]);
+        if (data[j]) {
+            //neorv32_gpio_pin_clr(pins[j]);
+            neorv32_gpio_pin_set(pins[j]);
+            } else {
+            //neorv32_gpio_pin_set(pins[j]);
+            neorv32_gpio_pin_clr(pins[j]);
+            }
+    }
+    neorv32_uart0_printf("\n");
+
+
 }
 
 void displayLine(uint8_t data[cols], uint8_t pins[rows], uint8_t line) {

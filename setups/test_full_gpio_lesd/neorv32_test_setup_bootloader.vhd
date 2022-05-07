@@ -68,7 +68,9 @@ entity neorv32_test_setup_bootloader is
     spi_csn_o   : out std_ulogic_vector(7 downto 0); -- dedicated chip select
 	 -- XIRQ --
 	 xirq_i		 : in	 std_ulogic_vector(1 downto 0); -- interrupt channels
-	 clk_o		 : out std_ulogic -- clk out
+	 ------------------------------------------------------------------------
+	 -- pač za dodati še par stvari!!!!!!
+	 
   );
 end entity;
 

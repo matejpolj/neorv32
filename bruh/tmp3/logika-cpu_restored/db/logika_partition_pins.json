@@ -1,0 +1,93 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ioclk",
+					"strict" : false
+				},
+				{
+					"name" : "led3",
+					"strict" : false
+				},
+				{
+					"name" : "led2",
+					"strict" : false
+				},
+				{
+					"name" : "led1",
+					"strict" : false
+				},
+				{
+					"name" : "led0",
+					"strict" : false
+				},
+				{
+					"name" : "led7",
+					"strict" : false
+				},
+				{
+					"name" : "iobus[9]",
+					"strict" : false
+				},
+				{
+					"name" : "iobus[8]",
+					"strict" : false
+				},
+				{
+					"name" : "iobus[7]",
+					"strict" : false
+				},
+				{
+					"name" : "iobus[6]",
+					"strict" : false
+				},
+				{
+					"name" : "iobus[5]",
+					"strict" : false
+				},
+				{
+					"name" : "iobus[4]",
+					"strict" : false
+				},
+				{
+					"name" : "iobus[3]",
+					"strict" : false
+				},
+				{
+					"name" : "iobus[2]",
+					"strict" : false
+				},
+				{
+					"name" : "iobus[1]",
+					"strict" : false
+				},
+				{
+					"name" : "iobus[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clock50",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tms",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tck",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdi",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdo",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

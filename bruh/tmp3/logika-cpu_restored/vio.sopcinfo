@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="vio" kind="vio" version="1.0" fabric="QSYS">
- <!-- Format version 17.0 595 (Future versions may contain additional information.) -->
- <!-- 2020.05.01.13:39:35 -->
+ <!-- Format version 20.1 720 (Future versions may contain additional information.) -->
+ <!-- 2022.05.07.16:22:45 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1588333175</value>
+  <value>1651933365</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -68,7 +68,7 @@
  <module
    name="in_system_sources_probes_0"
    kind="altera_in_system_sources_probes"
-   version="17.0"
+   version="20.1"
    path="in_system_sources_probes_0">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
@@ -189,7 +189,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="sources" kind="conduit_end" version="17.0">
+  <interface name="sources" kind="conduit_end" version="20.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -240,8 +240,8 @@ parameters are a RESULT of the module parameters. -->
   <name>altera_in_system_sources_probes</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
-  <displayName><![CDATA[Altera In-System Sources & Probes]]></displayName>
-  <version>17.0</version>
+  <displayName><![CDATA[Intel FPGA In-System Sources & Probes]]></displayName>
+  <version>20.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -249,8 +249,8 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Conduit</displayName>
-  <version>17.0</version>
+  <version>20.1</version>
  </plugin>
- <reportVersion>17.0 595</reportVersion>
+ <reportVersion>20.1 720</reportVersion>
  <uniqueIdentifier></uniqueIdentifier>
 </EnsembleReport>
