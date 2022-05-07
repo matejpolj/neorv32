@@ -71,11 +71,11 @@ void gptmr_firq_handler(void) {
     neorv32_cpu_csr_write(CSR_MIP, ~(1<<GPTMR_FIRQ_PENDING)); // clear/ack pending FIRQ
 
     neorv32_uart0_putc('.'); // send tick symbol via UART
-    neorv32_uart0_printf("%x   %u\n", (((uint64_t)NEORV32_GPIO.OUTPUT_HI << 32) | (uint64_t)NEORV32_GPIO.OUTPUT_LO), cout);
+    neorv32_uart0_printf("%x  : : %x %u\n", NEORV32_GPIO.OUTPUT_HI, NEORV32_GPIO.OUTPUT_LO, cout);
 
-    displaySymbol(nic, pins);
+    //displaySymbol(nic, pins);
 
-    /*
+    
     (cout == rows) ? cout = 0: cout++;
 
     switch (cout)
@@ -111,6 +111,6 @@ void gptmr_firq_handler(void) {
     default:
         break;
     }
-    */
+    
   
 }
