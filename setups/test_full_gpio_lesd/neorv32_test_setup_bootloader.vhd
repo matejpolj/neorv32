@@ -51,8 +51,8 @@ entity neorv32_test_setup_bootloader is
     clk_i       : in  std_ulogic; -- global clock, rising edge
     rstn_i      : in  std_ulogic; -- global reset, low-active, async
     -- GPIO --
-    gpio_o      : out std_ulogic_vector(22 downto 0); -- parallel output
-    gpio_i      : in  std_ulogic_vector(22 downto 0); -- parallel input
+    gpio_o      : out std_ulogic_vector(23 downto 0); -- parallel output
+    gpio_i      : in  std_ulogic_vector(21 downto 0); -- parallel input
     -- UART0 --
     uart0_txd_o : out std_ulogic; -- UART0 send data
     uart0_rxd_i : in  std_ulogic;  -- UART0 receive data
@@ -68,9 +68,9 @@ entity neorv32_test_setup_bootloader is
     spi_csn_o   : out std_ulogic_vector(7 downto 0); -- dedicated chip select
 	 -- XIRQ --
 	 xirq_i		 : in	 std_ulogic_vector(1 downto 0); -- interrupt channels
-	 ------------------------------------------------------------------------
-	 -- pač za dodati še par stvari!!!!!!
-	 
+   -- EXTENTION BOARD --
+	 clk_o		 : out std_ulogic; -- clk out
+    iobus       : inout std_ulogic_vector(7 downto 0) --inout extention pini
   );
 end entity;
 
@@ -146,8 +146,10 @@ begin
   );
 
   -- GPIO --
-  gpio_o <= con_gpio_o(22 downto 0);
-  con_gpio_i(22 downto 0) <= gpio_i(22 downto 0);
+  gpio_o <= con_gpio_o(23 downto 0);
+  iobus <= con_gpio_o(31 downto 24);
+  con_gpio_i(21 downto 0) <= gpio_i(21 downto 0);
+  con_gpio_i(29 downto 22) <= iobus(7 downto 0);
   -- PWM --
   pwm_o  <= con_pwm_o(9 downto 0);
   -- XIRQ --
@@ -156,13 +158,5 @@ begin
   --clk_o <= clk_i;
   clk_o <= clk_i;
 	
---	p_clk_divider: process(clk_i)
---		begin
---			--if(i_rst='0') then
---			--	clk_divider   <= (others=>'0');
---			if(rising_edge(clk_i)) then
---				clk_divider   <= clk_divider + 1;
---			end if;
---	end process p_clk_divider;
-	
+
 end architecture;

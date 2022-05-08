@@ -9,12 +9,12 @@ void gptmr_firq_handler(void);
 // predpripravljena števila
 
 uint8_t nic[rows][cols] = {{1, 0, 0, 0, 1},
-                        {0, 1, 0, 0, 1},
-                        {1, 1, 0, 0, 1},
-                        {0, 0, 1, 0, 1},
+                        {1, 0, 0, 0, 1},
+                        {1, 0, 0, 0, 1},
+                        {1, 0, 0, 0, 1},
                         {1, 0, 1, 0, 1},
-                        {0, 1, 1, 0, 1},
-                        {1, 1, 1, 0, 1}};
+                        {1, 1, 0, 1, 1},
+                        {1, 0, 0, 0, 1}};
 
 uint8_t pins[cols + 3] = {24, 25, 26, 27, 28, 29, 30, 31};
 
@@ -70,48 +70,48 @@ void gptmr_firq_handler(void) {
 
     neorv32_cpu_csr_write(CSR_MIP, ~(1<<GPTMR_FIRQ_PENDING)); // clear/ack pending FIRQ
 
-    neorv32_uart0_putc('.'); // send tick symbol via UART
+    //neorv32_uart0_putc('.'); // send tick symbol via UART
     //neorv32_uart0_printf("%x  : : %x %u\n", NEORV32_GPIO.OUTPUT_HI, NEORV32_GPIO.OUTPUT_LO, cout);
 
-    displaySymbol(nic, pins);
+    //displaySymbol(nic, pins);
 
     //displayLinePart(tmp, pins, 3);
-    /*
-    (cout == rows) ? cout = 0: cout++;
+    
+    (cout >= (rows-1)) ? cout = 0: cout++;
 
     switch (cout)
     {
     case 0:
-        displayLine(nic[cout], pins, cout);
+        displayLinePart(nic[cout], pins, cout);
         //cout++;
         break;
     case 1:
-        displayLine(nic[cout], pins, cout);
+        displayLinePart(nic[cout], pins, cout);
         //cout++;
         break;
     case 2:
-        displayLine(nic[cout], pins, cout);
+        displayLinePart(nic[cout], pins, cout);
         //cout++;
         break;
     case 3:
-        displayLine(nic[cout], pins, cout);
+        displayLinePart(nic[cout], pins, cout);
         //cout++;
         break;
     case 4:
-        displayLine(nic[cout], pins, cout);
+        displayLinePart(nic[cout], pins, cout);
         //cout++;
         break;
     case 5:
-        displayLine(nic[cout], pins, cout);
+        displayLinePart(nic[cout], pins, cout);
         //cout++;
         break;
     case 6:
-        displayLine(nic[cout], pins, cout);
+        displayLinePart(nic[cout], pins, cout);
         //cout = 0;
         break;
     default:
         break;
     }
-    */
+    
   
 }

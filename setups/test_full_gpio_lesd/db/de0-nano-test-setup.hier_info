@@ -25,6 +25,7 @@ gpio_o[19] << neorv32_top:neorv32_top_inst.gpio_o[19]
 gpio_o[20] << neorv32_top:neorv32_top_inst.gpio_o[20]
 gpio_o[21] << neorv32_top:neorv32_top_inst.gpio_o[21]
 gpio_o[22] << neorv32_top:neorv32_top_inst.gpio_o[22]
+gpio_o[23] << neorv32_top:neorv32_top_inst.gpio_o[23]
 gpio_i[0] => neorv32_top:neorv32_top_inst.gpio_i[0]
 gpio_i[1] => neorv32_top:neorv32_top_inst.gpio_i[1]
 gpio_i[2] => neorv32_top:neorv32_top_inst.gpio_i[2]
@@ -47,7 +48,6 @@ gpio_i[18] => neorv32_top:neorv32_top_inst.gpio_i[18]
 gpio_i[19] => neorv32_top:neorv32_top_inst.gpio_i[19]
 gpio_i[20] => neorv32_top:neorv32_top_inst.gpio_i[20]
 gpio_i[21] => neorv32_top:neorv32_top_inst.gpio_i[21]
-gpio_i[22] => neorv32_top:neorv32_top_inst.gpio_i[22]
 uart0_txd_o << neorv32_top:neorv32_top_inst.uart0_txd_o
 uart0_rxd_i => neorv32_top:neorv32_top_inst.uart0_rxd_i
 uart1_txd_o << neorv32_top:neorv32_top_inst.uart1_txd_o
@@ -76,6 +76,14 @@ spi_csn_o[7] << neorv32_top:neorv32_top_inst.spi_csn_o[7]
 xirq_i[0] => neorv32_top:neorv32_top_inst.xirq_i[0]
 xirq_i[1] => neorv32_top:neorv32_top_inst.xirq_i[1]
 clk_o << clk_i.DB_MAX_OUTPUT_PORT_TYPE
+iobus[0] <> iobus[0]
+iobus[1] <> iobus[1]
+iobus[2] <> iobus[2]
+iobus[3] <> iobus[3]
+iobus[4] <> iobus[4]
+iobus[5] <> iobus[5]
+iobus[6] <> iobus[6]
+iobus[7] <> iobus[7]
 
 
 |neorv32_test_setup_bootloader|neorv32_top:neorv32_top_inst

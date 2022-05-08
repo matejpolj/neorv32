@@ -63,7 +63,7 @@ void displayLinePart(uint8_t data[cols], uint8_t pins[cols + 3], uint8_t num) {
     for (uint8_t j=0; j<3; j++) {
         //((izbir & (1<<j))>>j) ? neorv32_gpio_pin_set(pins[cols + 2 - j]) : neorv32_gpio_pin_clr(pins[cols + 2 - j]);
         ((izbir & (1<<j))>>j) ? neorv32_gpio_pin_set(pins[cols + j]) : neorv32_gpio_pin_clr(pins[cols + j]);
-        neorv32_uart0_printf("%x: %u, %x    ", ((izbir & (1<<j))>>j), pins[cols + j], izbir);
+        //neorv32_uart0_printf("%x: %u, %x    ", ((izbir & (1<<j))>>j), pins[cols + j], izbir);
     }
     // za izbiro stolpca
     for (uint8_t j=0; j<cols; j++) {
@@ -76,7 +76,7 @@ void displayLinePart(uint8_t data[cols], uint8_t pins[cols + 3], uint8_t num) {
             neorv32_gpio_pin_clr(pins[j]);
             }
     }
-    neorv32_uart0_printf("\n");
+    //neorv32_uart0_printf("\n");
 
 
 }
