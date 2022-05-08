@@ -51,7 +51,7 @@ entity neorv32_test_setup_bootloader is
     clk_i       : in  std_ulogic; -- global clock, rising edge
     rstn_i      : in  std_ulogic; -- global reset, low-active, async
     -- GPIO --
-    gpio_o      : out std_ulogic_vector(23 downto 0); -- parallel output
+    gpio_o      : out std_ulogic_vector(21 downto 0); -- parallel output
     gpio_i      : in  std_ulogic_vector(21 downto 0); -- parallel input
     -- UART0 --
     uart0_txd_o : out std_ulogic; -- UART0 send data
@@ -69,8 +69,8 @@ entity neorv32_test_setup_bootloader is
 	 -- XIRQ --
 	 xirq_i		 : in	 std_ulogic_vector(1 downto 0); -- interrupt channels
    -- EXTENTION BOARD --
-	 clk_o		 : out std_ulogic; -- clk out
-    iobus       : inout std_ulogic_vector(7 downto 0) --inout extention pini
+	 ioclk2		 : out std_ulogic; -- clk out
+    iobus       : inout std_ulogic_vector(9 downto 0) --inout extention pini
   );
 end entity;
 
@@ -80,6 +80,8 @@ architecture neorv32_test_setup_bootloader_rtl of neorv32_test_setup_bootloader 
   signal con_gpio_i : std_ulogic_vector(63 downto 0);
   signal con_pwm_o  : std_ulogic_vector(59 downto 0);
   signal con_xirq_i : std_ulogic_vector(31 downto 0);
+  signal con_number : std_ulogic_vector(3 downto 0);
+  signal con_buttons : std_ulogic_vector(3 downto 0);
 
 begin
 
@@ -142,21 +144,29 @@ begin
     spi_csn_o   => spi_csn_o,   -- chip-select
     xirq_i      => con_xirq_i,      -- IRQ channels
     -- PWM output control --
-    pwm_o       => con_pwm_o    -- PWM output
+    pwm_o       => con_pwm_o,    -- PWM output
+    -- external board --
+	 clock50       => clk_i,
+    ioclk       => ioclk2,
+    iobus       => iobus,
+    clk2        => clk2,
+    number      => con_number,
+    on_off      => '1',
+    buttons     => con_buttons
   );
 
   -- GPIO --
-  gpio_o <= con_gpio_o(23 downto 0);
-  iobus <= con_gpio_o(31 downto 24);
+  gpio_o <= con_gpio_o(21 downto 0);
+  con_number <= con_gpio_0(25 downto 22);
   con_gpio_i(21 downto 0) <= gpio_i(21 downto 0);
-  con_gpio_i(29 downto 22) <= iobus(7 downto 0);
+  con_gpio_i(25 downto 22) <= con_buttons;
   -- PWM --
   pwm_o  <= con_pwm_o(9 downto 0);
   -- XIRQ --
   con_xirq_i(1 downto 0) <= xirq_i;
   -- CLK --
   --clk_o <= clk_i;
-  clk_o <= clk_i;
+  ioclk2 <= ioclk2;
 	
 
 end architecture;

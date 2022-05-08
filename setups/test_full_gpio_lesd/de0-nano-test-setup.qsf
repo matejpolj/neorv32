@@ -89,7 +89,7 @@ set_global_assignment -name VHDL_FILE ./../../rtl/core/neorv32_xirq.vhd -library
 set_global_assignment -name VHDL_FILE ./../../rtl/core/mem/neorv32_dmem.default.vhd -library neorv32
 set_global_assignment -name VHDL_FILE ./../../rtl/core/mem/neorv32_imem.default.vhd -library neorv32
 set_global_assignment -name VHDL_FILE neorv32_test_setup_bootloader.vhd
-#set_global_assignment -name VHDL_FILE IOmodul.vhd
+set_global_assignment -name VHDL_FILE IOmodul.vhd
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
@@ -97,7 +97,7 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 # clock signal
 set_location_assignment PIN_R8 -to clk_i
-set_location_assignment PIN_A14 -to clk_o
+set_location_assignment PIN_A14 -to ioclk2
 # embedded LEDs
 set_location_assignment PIN_T14 -to gpio_o[7]
 set_location_assignment PIN_B1 -to gpio_o[6]
@@ -166,8 +166,8 @@ set_location_assignment PIN_L14 -to gpio_o[19]
 set_location_assignment PIN_M10 -to gpio_o[20]
 set_location_assignment PIN_J16 -to gpio_o[21]
 # dotherboard select connections
-set_location_assignment PIN_B16 -to gpio_o[22]
-set_location_assignment PIN_C14 -to gpio_o[23]
+set_location_assignment PIN_B16 -to iobus[8]
+set_location_assignment PIN_C14 -to iobus[9]
 # dotherboard data connections
 set_location_assignment PIN_C16 -to iobus[0]
 set_location_assignment PIN_C15 -to iobus[1]
@@ -177,6 +177,7 @@ set_location_assignment PIN_D14 -to iobus[4]
 set_location_assignment PIN_F15 -to iobus[5]
 set_location_assignment PIN_F16 -to iobus[6]
 set_location_assignment PIN_F14 -to iobus[7]
+set_location_assignment PIN_G16 -to clk2
 # pwm connections
 set_location_assignment PIN_C9 -to pwm_o[0]
 set_location_assignment PIN_D9 -to pwm_o[1]
@@ -194,6 +195,7 @@ set_location_assignment PIN_J14 -to xirq_i[1]
 ## logic levels
 # clock signal
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk_i
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ioclk2
 # embedded LEDs
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[7]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[6]
@@ -264,7 +266,7 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[21]
 # dotherboard select connections
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[22]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[23]
-# dotherboard data connections
+# dotherboard data connections  2.5-V     3.3-V LVTTL
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to iobus[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to iobus[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to iobus[2]
@@ -273,6 +275,7 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to iobus[4]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to iobus[5]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to iobus[6]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to iobus[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk2
 # pwm connections
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pwm_o[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pwm_o[1]
@@ -296,5 +299,5 @@ set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk_o
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ioclk
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
