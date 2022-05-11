@@ -4,22 +4,22 @@ use IEEE.numeric_std.all;    -- def. unsigned in sestevanja
 
 entity IOmodul is
   generic (FREQ2 :  integer := 5);
-  port ( clock50	: in  std_ulogic; -- modified to ulogic
-			ioclk		: out std_ulogic;
-			iobus		: inout std_ulogic_vector(9 downto 0); 
+  port ( clock50	: in  std_logic;
+			ioclk		: out std_logic;
+			iobus		: inout std_logic_vector(9 downto 0); 
 			-- clk 2 Hz
-			clk2		: out std_ulogic;
+			clk2		: out std_logic;
 			----ledmatrix----
-			number	: in std_ulogic_vector(3 downto 0);
-			on_off	: in std_ulogic;						
+			number	: in std_logic_vector(3 downto 0);
+			on_off	: in std_logic;						
 			----buttons----
-			buttons	: out std_ulogic_vector(3 downto 0)				
+			buttons	: out std_logic_vector(3 downto 0)				
         );
 end IOmodul;
 
 architecture Opis of IOmodul is
  	component vio is
-		port (source : out std_ulogic_vector(3 downto 0));
+		port (source : out std_logic_vector(3 downto 0));
 	end component vio;
 	
 	signal line_cnt : unsigned(2 downto 0):="000";
@@ -28,12 +28,12 @@ architecture Opis of IOmodul is
 	signal rom_data : unsigned(4 downto 0);
   
 	signal addr_counter : unsigned(1 downto 0):="00";
-	signal data_led : std_ulogic_vector(7 downto 0):="00000000";
+	signal data_led : std_logic_vector(7 downto 0):="00000000";
 	
 	signal addr : unsigned(1 downto 0);      
 
 	signal div: integer range 0 to 12500000;
-	signal divclk: std_ulogic := '0';
+	signal divclk: std_logic := '0';
 	
 	-- slow clock 0.25 Hz for the lock exercise (1a and 1b)
 			
@@ -170,7 +170,7 @@ type rom_type is array(0 to 111) of unsigned(4 downto 0);  --16 znakov * 7 vrsti
         "10000"  --#
     );	
 
-	 signal vkey: std_ulogic_vector(3 downto 0);
+	 signal vkey: std_logic_vector(3 downto 0);
 begin
 
 u0: component vio
@@ -194,7 +194,7 @@ begin
 				if rom_data="00000" then  --če je vrstica prazna vpišemo v "000" kar naredi vrstico led matrike neaktivno
 					data_led(7 downto 5)<="000";
 				else
-					data_led(7 downto 5)<= std_ulogic_vector(line_cnt + 1);  --vpišemo katera vrstica led matrike bo aktivna glede na stevec (line_cnt)
+					data_led(7 downto 5)<= std_logic_vector(line_cnt + 1);  --vpišemo katera vrstica led matrike bo aktivna glede na stevec (line_cnt)
 				end if;
 			else
 				data_led<="00000000";
@@ -235,7 +235,7 @@ begin
 end process; 
 
 ioclk <= clock50;
-iobus(9 downto 8) <= std_ulogic_vector(addr);
+iobus(9 downto 8) <= std_logic_vector(addr);
 
 clk2 <= divclk;
 

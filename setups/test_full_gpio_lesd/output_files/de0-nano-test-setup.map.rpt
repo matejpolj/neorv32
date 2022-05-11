@@ -1,5 +1,5 @@
 Analysis & Synthesis report for de0-nano-test-setup
-Sun May  8 14:47:02 2022
+Wed May 11 19:43:07 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Sun May  8 14:47:02 2022           ;
+; Analysis & Synthesis Status        ; Failed - Wed May 11 19:43:07 2022           ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; de0-nano-test-setup                         ;
 ; Top-level Entity Name              ; neorv32_test_setup_bootloader               ;
@@ -162,7 +162,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun May  8 14:46:53 2022
+    Info: Processing started: Wed May 11 19:42:57 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off de0-nano-test-setup -c de0-nano-test-setup
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -291,16 +291,143 @@ Info (12021): Found 1 design units, including 0 entities, in source file /mnt/50
 Info (12021): Found 1 design units, including 0 entities, in source file /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/mem/neorv32_imem.default.vhd
     Info (12022): Found design unit 1: neorv32_imem-neorv32_imem_rtl File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/mem/neorv32_imem.default.vhd Line: 46
 Info (12021): Found 2 design units, including 1 entities, in source file neorv32_test_setup_bootloader.vhd
-    Info (12022): Found design unit 1: neorv32_test_setup_bootloader-neorv32_test_setup_bootloader_rtl File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/setups/test_full_gpio_lesd/neorv32_test_setup_bootloader.vhd Line: 77
+    Info (12022): Found design unit 1: neorv32_test_setup_bootloader-neorv32_test_setup_bootloader_rtl File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/setups/test_full_gpio_lesd/neorv32_test_setup_bootloader.vhd Line: 78
     Info (12023): Found entity 1: neorv32_test_setup_bootloader File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/setups/test_full_gpio_lesd/neorv32_test_setup_bootloader.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file IOmodul.vhd
     Info (12022): Found design unit 1: IOmodul-Opis File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/setups/test_full_gpio_lesd/IOmodul.vhd Line: 20
     Info (12023): Found entity 1: IOmodul File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/setups/test_full_gpio_lesd/IOmodul.vhd Line: 5
-Error (10349): VHDL Association List error at neorv32_test_setup_bootloader.vhd(149): formal "clock50" does not exist File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/setups/test_full_gpio_lesd/neorv32_test_setup_bootloader.vhd Line: 149
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 437 megabytes
-    Error: Processing ended: Sun May  8 14:47:02 2022
-    Error: Elapsed time: 00:00:09
-    Error: Total CPU time (on all processors): 00:00:19
+Info (12127): Elaborating entity "neorv32_test_setup_bootloader" for the top level hierarchy
+Warning (10873): Using initial value X (don't care) for net "con_gpio_i[63..26]" at neorv32_test_setup_bootloader.vhd(81) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/setups/test_full_gpio_lesd/neorv32_test_setup_bootloader.vhd Line: 81
+Warning (10873): Using initial value X (don't care) for net "con_xirq_i[31..2]" at neorv32_test_setup_bootloader.vhd(83) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/setups/test_full_gpio_lesd/neorv32_test_setup_bootloader.vhd Line: 83
+Info (12128): Elaborating entity "neorv32_top" for hierarchy "neorv32_top:neorv32_top_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/setups/test_full_gpio_lesd/neorv32_test_setup_bootloader.vhd Line: 91
+Warning (10036): Verilog HDL or VHDL warning at neorv32_top.vhd(309): object "dmi" assigned a value but never read File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_top.vhd Line: 309
+Warning (10036): Verilog HDL or VHDL warning at neorv32_top.vhd(355): object "xip_enable" assigned a value but never read File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_top.vhd Line: 355
+Warning (10036): Verilog HDL or VHDL warning at neorv32_top.vhd(356): object "xip_page" assigned a value but never read File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_top.vhd Line: 356
+Warning (10036): Verilog HDL or VHDL warning at neorv32_top.vhd(357): object "debug_mode" assigned a value but never read File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_top.vhd Line: 357
+Info (10544): VHDL Assertion Statement at neorv32_top.vhd(363): assertion is false - report "NEORV32 PROCESSOR IO Configuration: GPIO MTIME UART0 UART1 SPI PWM TRNG XIRQ GPTMR " (NOTE) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_top.vhd Line: 363
+Info (10544): VHDL Assertion Statement at neorv32_top.vhd(387): assertion is false - report "NEORV32 PROCESSOR CONFIG NOTE: Boot configuration: Indirect boot via bootloader (processor-internal BOOTROM)." (NOTE) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_top.vhd Line: 387
+Info (12128): Elaborating entity "neorv32_cpu" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_top.vhd Line: 482
+Info (10544): VHDL Assertion Statement at neorv32_cpu.vhd(171): assertion is false - report "NEORV32 CPU ISA Configuration (MARCH): RV32IMACBU_Zicsr_Zicntr_Zihpm_Zifencei_Zfinx" (NOTE) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu.vhd Line: 171
+Info (10544): VHDL Assertion Statement at neorv32_cpu.vhd(195): assertion is false - report "NEORV32 CPU INFO: Seems like this is real hardware." (NOTE) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu.vhd Line: 195
+Info (10544): VHDL Assertion Statement at neorv32_cpu.vhd(198): assertion is false - report "NEORV32 CPU CONFIG NOTE: Implementing NO dedicated hardware reset for uncritical registers (default)." (NOTE) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu.vhd Line: 198
+Info (12128): Elaborating entity "neorv32_cpu_control" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu.vhd Line: 249
+Warning (10445): VHDL Subtype or Type Declaration warning at neorv32_cpu_control.vhd(264): subtype or type has null range File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_control.vhd Line: 264
+Warning (10445): VHDL Subtype or Type Declaration warning at neorv32_cpu_control.vhd(265): subtype or type has null range File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_control.vhd Line: 265
+Warning (10445): VHDL Subtype or Type Declaration warning at neorv32_cpu_control.vhd(267): subtype or type has null range File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_control.vhd Line: 267
+Warning (10445): VHDL Subtype or Type Declaration warning at neorv32_cpu_control.vhd(268): subtype or type has null range File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_control.vhd Line: 268
+Warning (10445): VHDL Subtype or Type Declaration warning at neorv32_cpu_control.vhd(269): subtype or type has null range File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_control.vhd Line: 269
+Warning (10445): VHDL Subtype or Type Declaration warning at neorv32_cpu_control.vhd(298): subtype or type has null range File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_control.vhd Line: 298
+Warning (10445): VHDL Subtype or Type Declaration warning at neorv32_cpu_control.vhd(370): subtype or type has null range File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_control.vhd Line: 370
+Warning (10445): VHDL Subtype or Type Declaration warning at neorv32_cpu_control.vhd(2553): subtype or type has null range File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_control.vhd Line: 2553
+Warning (10541): VHDL Signal Declaration warning at neorv32_cpu_control.vhd(369): used implicit default value for signal "cnt_event" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_control.vhd Line: 369
+Warning (10037): Verilog HDL or VHDL warning at neorv32_cpu_control.vhd(1193): conditional expression evaluates to a constant File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_control.vhd Line: 1193
+Warning (10631): VHDL Process Statement warning at neorv32_cpu_control.vhd(1517): inferring latch(es) for signal or variable "trap_ctrl", which holds its previous value in one or more paths through the process File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_control.vhd Line: 1517
+Warning (10631): VHDL Process Statement warning at neorv32_cpu_control.vhd(1782): inferring latch(es) for signal or variable "csr", which holds its previous value in one or more paths through the process File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_control.vhd Line: 1782
+Warning (10445): VHDL Subtype or Type Declaration warning at neorv32_cpu_control.vhd(2125): subtype or type has null range File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_control.vhd Line: 2125
+Warning (10445): VHDL Subtype or Type Declaration warning at neorv32_cpu_control.vhd(2516): subtype or type has null range File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_control.vhd Line: 2516
+Warning (10296): VHDL warning at neorv32_cpu_control.vhd(2585): ignored assignment of value to null range File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_control.vhd Line: 2585
+Info (10041): Inferred latch for "trap_ctrl.irq_buf[19]" at neorv32_cpu_control.vhd(1517) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_control.vhd Line: 1517
+Info (10041): Inferred latch for "trap_ctrl.irq_buf[20]" at neorv32_cpu_control.vhd(1517) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_control.vhd Line: 1517
+Info (10041): Inferred latch for "trap_ctrl.exc_buf[10]" at neorv32_cpu_control.vhd(1517) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_control.vhd Line: 1517
+Info (10041): Inferred latch for "trap_ctrl.exc_buf[11]" at neorv32_cpu_control.vhd(1517) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_control.vhd Line: 1517
+Info (12128): Elaborating entity "neorv32_fifo" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|neorv32_fifo:\prefetch_buffer:0:prefetch_buffer_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_control.vhd Line: 490
+Info (12128): Elaborating entity "neorv32_cpu_decompressor" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_control:neorv32_cpu_control_inst|neorv32_cpu_decompressor:\neorv32_cpu_decompressor_inst_true:neorv32_cpu_decompressor_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_control.vhd Line: 582
+Info (12128): Elaborating entity "neorv32_cpu_regfile" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_regfile:neorv32_cpu_regfile_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu.vhd Line: 345
+Info (12128): Elaborating entity "neorv32_cpu_alu" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu.vhd Line: 366
+Info (12128): Elaborating entity "neorv32_cpu_cp_shifter" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_shifter:neorv32_cpu_cp_shifter_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_alu.vhd Line: 178
+Info (12128): Elaborating entity "neorv32_cpu_cp_muldiv" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_muldiv:\neorv32_cpu_cp_muldiv_inst_true:neorv32_cpu_cp_muldiv_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_alu.vhd Line: 201
+Info (12128): Elaborating entity "neorv32_cpu_cp_bitmanip" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_bitmanip:\neorv32_cpu_cp_bitmanip_inst_true:neorv32_cpu_cp_bitmanip_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_alu.vhd Line: 232
+Info (10544): VHDL Assertion Statement at neorv32_cpu_cp_bitmanip.vhd(172): assertion is false - report "NEORV32 CPU: Implementing bit-manipulation (B) sub-extensions Zba Zbb Zbc Zbs " (NOTE) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_cp_bitmanip.vhd Line: 172
+Warning (10037): Verilog HDL or VHDL warning at neorv32_cpu_cp_bitmanip.vhd(434): conditional expression evaluates to a constant File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_cp_bitmanip.vhd Line: 434
+Info (12128): Elaborating entity "neorv32_cpu_cp_fpu" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_fpu:\neorv32_cpu_cp_fpu_inst_true:neorv32_cpu_cp_fpu_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_alu.vhd Line: 264
+Info (12128): Elaborating entity "neorv32_cpu_cp_fpu_f2i" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_fpu:\neorv32_cpu_cp_fpu_inst_true:neorv32_cpu_cp_fpu_inst|neorv32_cpu_cp_fpu_f2i:neorv32_cpu_cp_fpu_f2i_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_cp_fpu.vhd Line: 552
+Info (12128): Elaborating entity "neorv32_cpu_cp_fpu_normalizer" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_alu:neorv32_cpu_alu_inst|neorv32_cpu_cp_fpu:\neorv32_cpu_cp_fpu_inst_true:neorv32_cpu_cp_fpu_inst|neorv32_cpu_cp_fpu_normalizer:neorv32_cpu_cp_fpu_normalizer_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_cp_fpu.vhd Line: 1098
+Info (12128): Elaborating entity "neorv32_cpu_bus" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_cpu:neorv32_cpu_inst|neorv32_cpu_bus:neorv32_cpu_bus_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu.vhd Line: 400
+Warning (10445): VHDL Subtype or Type Declaration warning at neorv32_cpu_bus.vhd(130): subtype or type has null range File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_bus.vhd Line: 130
+Warning (10445): VHDL Subtype or Type Declaration warning at neorv32_cpu_bus.vhd(131): subtype or type has null range File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_bus.vhd Line: 131
+Warning (10445): VHDL Subtype or Type Declaration warning at neorv32_cpu_bus.vhd(132): subtype or type has null range File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_bus.vhd Line: 132
+Warning (10445): VHDL Subtype or Type Declaration warning at neorv32_cpu_bus.vhd(133): subtype or type has null range File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_bus.vhd Line: 133
+Warning (10445): VHDL Subtype or Type Declaration warning at neorv32_cpu_bus.vhd(134): subtype or type has null range File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_bus.vhd Line: 134
+Warning (10445): VHDL Subtype or Type Declaration warning at neorv32_cpu_bus.vhd(368): subtype or type has null range File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_bus.vhd Line: 368
+Warning (10445): VHDL Subtype or Type Declaration warning at neorv32_cpu_bus.vhd(387): subtype or type has null range File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_cpu_bus.vhd Line: 387
+Info (12128): Elaborating entity "neorv32_busswitch" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_busswitch:neorv32_busswitch_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_top.vhd Line: 640
+Info (12128): Elaborating entity "neorv32_bus_keeper" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_bus_keeper:neorv32_bus_keeper_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_top.vhd Line: 712
+Info (12128): Elaborating entity "neorv32_imem" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_imem:\neorv32_int_imem_inst_true:neorv32_int_imem_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_top.vhd Line: 743
+Info (10544): VHDL Assertion Statement at neorv32_imem.default.vhd(89): assertion is false - report "NEORV32 PROCESSOR CONFIG NOTE: Using DEFAULT platform-agnostic IMEM." (NOTE) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/mem/neorv32_imem.default.vhd Line: 89
+Info (10544): VHDL Assertion Statement at neorv32_imem.default.vhd(93): assertion is false - report "NEORV32 PROCESSOR CONFIG NOTE: Implementing processor-internal IMEM as blank RAM (32768 bytes)." (NOTE) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/mem/neorv32_imem.default.vhd Line: 93
+Info (12128): Elaborating entity "neorv32_dmem" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_dmem:\neorv32_int_dmem_inst_true:neorv32_int_dmem_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_top.vhd Line: 772
+Info (10544): VHDL Assertion Statement at neorv32_dmem.default.vhd(72): assertion is false - report "NEORV32 PROCESSOR CONFIG NOTE: Using DEFAULT platform-agnostic DMEM." (NOTE) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/mem/neorv32_dmem.default.vhd Line: 72
+Info (10544): VHDL Assertion Statement at neorv32_dmem.default.vhd(73): assertion is false - report "NEORV32 PROCESSOR CONFIG NOTE: Implementing processor-internal DMEM (RAM, 16384 bytes)." (NOTE) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/mem/neorv32_dmem.default.vhd Line: 73
+Info (12128): Elaborating entity "neorv32_boot_rom" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_boot_rom:\neorv32_boot_rom_inst_true:neorv32_boot_rom_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_top.vhd Line: 800
+Info (10544): VHDL Assertion Statement at neorv32_boot_rom.vhd(81): assertion is false - report "NEORV32 PROCESSOR CONFIG NOTE: Implementing internal bootloader ROM (4096 bytes)." (NOTE) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_boot_rom.vhd Line: 81
+Info (12128): Elaborating entity "neorv32_gpio" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_gpio:\neorv32_gpio_inst_true:neorv32_gpio_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_top.vhd Line: 1003
+Info (12128): Elaborating entity "neorv32_mtime" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_mtime:\neorv32_mtime_inst_true:neorv32_mtime_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_top.vhd Line: 1072
+Info (12128): Elaborating entity "neorv32_uart" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_uart:\neorv32_uart0_inst_true:neorv32_uart0_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_top.vhd Line: 1123
+Info (12128): Elaborating entity "neorv32_fifo" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_uart:\neorv32_uart0_inst_true:neorv32_uart0_inst|neorv32_fifo:tx_engine_fifo_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_uart.vhd Line: 330
+Warning (10445): VHDL Subtype or Type Declaration warning at neorv32_fifo.vhd(127): subtype or type has null range File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_fifo.vhd Line: 127
+Warning (10445): VHDL Subtype or Type Declaration warning at neorv32_fifo.vhd(169): subtype or type has null range File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_fifo.vhd Line: 169
+Info (12128): Elaborating entity "neorv32_fifo" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_uart:\neorv32_uart0_inst_true:neorv32_uart0_inst|neorv32_fifo:rx_engine_fifo_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_uart.vhd Line: 506
+Warning (10445): VHDL Subtype or Type Declaration warning at neorv32_fifo.vhd(127): subtype or type has null range File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_fifo.vhd Line: 127
+Warning (10445): VHDL Subtype or Type Declaration warning at neorv32_fifo.vhd(169): subtype or type has null range File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_fifo.vhd Line: 169
+Info (12128): Elaborating entity "neorv32_uart" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_uart:\neorv32_uart1_inst_true:neorv32_uart1_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_top.vhd Line: 1170
+Info (12128): Elaborating entity "neorv32_spi" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_spi:\neorv32_spi_inst_true:neorv32_spi_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_top.vhd Line: 1217
+Info (12128): Elaborating entity "neorv32_pwm" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_pwm:\neorv32_pwm_inst_true:neorv32_pwm_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_top.vhd Line: 1294
+Info (12128): Elaborating entity "neorv32_trng" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_top.vhd Line: 1329
+Info (12128): Elaborating entity "neoTRNG" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neoTRNG:neoTRNG_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 158
+Info (12128): Elaborating entity "neoTRNG_cell" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neoTRNG:neoTRNG_inst|neoTRNG_cell:\neoTRNG_cell_inst:0:neoTRNG_cell_inst_i" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 310
+Warning (10631): VHDL Process Statement warning at neorv32_trng.vhd(495): inferring latch(es) for signal or variable "inv_chain_s", which holds its previous value in one or more paths through the process File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 495
+Warning (10631): VHDL Process Statement warning at neorv32_trng.vhd(511): inferring latch(es) for signal or variable "inv_chain_l", which holds its previous value in one or more paths through the process File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 511
+Info (10041): Inferred latch for "inv_chain_l[0]" at neorv32_trng.vhd(511) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 511
+Info (10041): Inferred latch for "inv_chain_l[1]" at neorv32_trng.vhd(511) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 511
+Info (10041): Inferred latch for "inv_chain_l[2]" at neorv32_trng.vhd(511) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 511
+Info (10041): Inferred latch for "inv_chain_l[3]" at neorv32_trng.vhd(511) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 511
+Info (10041): Inferred latch for "inv_chain_l[4]" at neorv32_trng.vhd(511) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 511
+Info (10041): Inferred latch for "inv_chain_s[0]" at neorv32_trng.vhd(495) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 495
+Info (10041): Inferred latch for "inv_chain_s[1]" at neorv32_trng.vhd(495) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 495
+Info (10041): Inferred latch for "inv_chain_s[2]" at neorv32_trng.vhd(495) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 495
+Info (12128): Elaborating entity "neoTRNG_cell" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neoTRNG:neoTRNG_inst|neoTRNG_cell:\neoTRNG_cell_inst:1:neoTRNG_cell_inst_i" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 310
+Warning (10631): VHDL Process Statement warning at neorv32_trng.vhd(495): inferring latch(es) for signal or variable "inv_chain_s", which holds its previous value in one or more paths through the process File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 495
+Warning (10631): VHDL Process Statement warning at neorv32_trng.vhd(511): inferring latch(es) for signal or variable "inv_chain_l", which holds its previous value in one or more paths through the process File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 511
+Info (10041): Inferred latch for "inv_chain_l[0]" at neorv32_trng.vhd(511) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 511
+Info (10041): Inferred latch for "inv_chain_l[1]" at neorv32_trng.vhd(511) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 511
+Info (10041): Inferred latch for "inv_chain_l[2]" at neorv32_trng.vhd(511) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 511
+Info (10041): Inferred latch for "inv_chain_l[3]" at neorv32_trng.vhd(511) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 511
+Info (10041): Inferred latch for "inv_chain_l[4]" at neorv32_trng.vhd(511) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 511
+Info (10041): Inferred latch for "inv_chain_l[5]" at neorv32_trng.vhd(511) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 511
+Info (10041): Inferred latch for "inv_chain_l[6]" at neorv32_trng.vhd(511) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 511
+Info (10041): Inferred latch for "inv_chain_s[0]" at neorv32_trng.vhd(495) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 495
+Info (10041): Inferred latch for "inv_chain_s[1]" at neorv32_trng.vhd(495) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 495
+Info (10041): Inferred latch for "inv_chain_s[2]" at neorv32_trng.vhd(495) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 495
+Info (10041): Inferred latch for "inv_chain_s[3]" at neorv32_trng.vhd(495) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 495
+Info (10041): Inferred latch for "inv_chain_s[4]" at neorv32_trng.vhd(495) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 495
+Info (12128): Elaborating entity "neoTRNG_cell" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_trng:\neorv32_trng_inst_true:neorv32_trng_inst|neoTRNG:neoTRNG_inst|neoTRNG_cell:\neoTRNG_cell_inst:2:neoTRNG_cell_inst_i" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 310
+Warning (10631): VHDL Process Statement warning at neorv32_trng.vhd(495): inferring latch(es) for signal or variable "inv_chain_s", which holds its previous value in one or more paths through the process File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 495
+Warning (10631): VHDL Process Statement warning at neorv32_trng.vhd(511): inferring latch(es) for signal or variable "inv_chain_l", which holds its previous value in one or more paths through the process File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 511
+Info (10041): Inferred latch for "inv_chain_l[0]" at neorv32_trng.vhd(511) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 511
+Info (10041): Inferred latch for "inv_chain_l[1]" at neorv32_trng.vhd(511) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 511
+Info (10041): Inferred latch for "inv_chain_l[2]" at neorv32_trng.vhd(511) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 511
+Info (10041): Inferred latch for "inv_chain_l[3]" at neorv32_trng.vhd(511) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 511
+Info (10041): Inferred latch for "inv_chain_l[4]" at neorv32_trng.vhd(511) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 511
+Info (10041): Inferred latch for "inv_chain_l[5]" at neorv32_trng.vhd(511) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 511
+Info (10041): Inferred latch for "inv_chain_l[6]" at neorv32_trng.vhd(511) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 511
+Info (10041): Inferred latch for "inv_chain_l[7]" at neorv32_trng.vhd(511) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 511
+Info (10041): Inferred latch for "inv_chain_l[8]" at neorv32_trng.vhd(511) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 511
+Info (10041): Inferred latch for "inv_chain_s[0]" at neorv32_trng.vhd(495) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 495
+Info (10041): Inferred latch for "inv_chain_s[1]" at neorv32_trng.vhd(495) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 495
+Info (10041): Inferred latch for "inv_chain_s[2]" at neorv32_trng.vhd(495) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 495
+Info (10041): Inferred latch for "inv_chain_s[3]" at neorv32_trng.vhd(495) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 495
+Info (10041): Inferred latch for "inv_chain_s[4]" at neorv32_trng.vhd(495) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 495
+Info (10041): Inferred latch for "inv_chain_s[5]" at neorv32_trng.vhd(495) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 495
+Info (10041): Inferred latch for "inv_chain_s[6]" at neorv32_trng.vhd(495) File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_trng.vhd Line: 495
+Info (12128): Elaborating entity "neorv32_xirq" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_xirq:\neorv32_xirq_inst_true:neorv32_slink_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_top.vhd Line: 1438
+Info (12128): Elaborating entity "neorv32_gptmr" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_gptmr:\neorv32_gptmr_inst_true:neorv32_gptmr_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_top.vhd Line: 1473
+Info (12128): Elaborating entity "neorv32_sysinfo" for hierarchy "neorv32_top:neorv32_top_inst|neorv32_sysinfo:neorv32_sysinfo_inst" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/rtl/core/neorv32_top.vhd Line: 1503
+Info (12128): Elaborating entity "IOmodul" for hierarchy "IOmodul:u" File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/setups/test_full_gpio_lesd/neorv32_test_setup_bootloader.vhd Line: 152
+Error (12006): Node instance "u0" instantiates undefined entity "vio". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: /mnt/5064E3264BEB0448/github/rubikscube/neorv32/setups/test_full_gpio_lesd/IOmodul.vhd Line: 176
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 40 warnings
+    Error: Peak virtual memory: 462 megabytes
+    Error: Processing ended: Wed May 11 19:43:07 2022
+    Error: Elapsed time: 00:00:10
+    Error: Total CPU time (on all processors): 00:00:18
 
 

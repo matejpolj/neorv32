@@ -70,7 +70,8 @@ entity neorv32_test_setup_bootloader is
 	 xirq_i		 : in	 std_ulogic_vector(1 downto 0); -- interrupt channels
    -- EXTENTION BOARD --
 	 ioclk2		 : out std_ulogic; -- clk out
-    iobus       : inout std_ulogic_vector(9 downto 0) --inout extention pini
+    iobus       : inout std_ulogic_vector(9 downto 0); --inout extention pini
+	 clk2			 : out std_ulogic
   );
 end entity;
 
@@ -144,8 +145,11 @@ begin
     spi_csn_o   => spi_csn_o,   -- chip-select
     xirq_i      => con_xirq_i,      -- IRQ channels
     -- PWM output control --
-    pwm_o       => con_pwm_o,    -- PWM output
+    pwm_o       => con_pwm_o    -- PWM output
     -- external board --
+  );
+
+  u: entity work.IOmodul port map(
 	 clock50       => clk_i,
     ioclk       => ioclk2,
     iobus       => iobus,
@@ -157,7 +161,7 @@ begin
 
   -- GPIO --
   gpio_o <= con_gpio_o(21 downto 0);
-  con_number <= con_gpio_0(25 downto 22);
+  con_number <= con_gpio_o(25 downto 22);
   con_gpio_i(21 downto 0) <= gpio_i(21 downto 0);
   con_gpio_i(25 downto 22) <= con_buttons;
   -- PWM --
@@ -166,7 +170,7 @@ begin
   con_xirq_i(1 downto 0) <= xirq_i;
   -- CLK --
   --clk_o <= clk_i;
-  ioclk2 <= ioclk2;
+  --ioclk2 <= ioclk2;
 	
 
 end architecture;

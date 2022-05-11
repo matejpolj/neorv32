@@ -1,5 +1,5 @@
 Flow report for de0-nano-test-setup
-Sun May  8 14:47:02 2022
+Wed May 11 19:43:07 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Flow Failed - Sun May  8 14:47:02 2022      ;
+; Flow Status                        ; Flow Failed - Wed May 11 19:43:07 2022      ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; de0-nano-test-setup                         ;
 ; Top-level Entity Name              ; neorv32_test_setup_bootloader               ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/08/2022 14:46:54 ;
+; Start date & time ; 05/11/2022 19:42:58 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; de0-nano-test-setup ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------------+-------------------------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value       ; Entity Name                   ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------------+-------------------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 71126643906493.165201401334803         ; --                  ; --                            ; --         ;
+; COMPILER_SIGNATURE_ID               ; 71126643906493.165229097825923         ; --                  ; --                            ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --                  ; --                            ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --                  ; --                            ; --         ;
 ; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --                  ; --                            ; --         ;
@@ -98,8 +98,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 437 MB              ; 00:00:19                           ;
-; Total                ; 00:00:09     ; --                      ; --                  ; 00:00:19                           ;
+; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 462 MB              ; 00:00:18                           ;
+; Total                ; 00:00:10     ; --                      ; --                  ; 00:00:18                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
