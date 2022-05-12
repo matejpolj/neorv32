@@ -1,5 +1,5 @@
 Flow report for de0-nano-test-setup
-Wed May 11 19:43:07 2022
+Thu May 12 08:25:13 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,22 +41,22 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Flow Failed - Wed May 11 19:43:07 2022      ;
+; Flow Status                        ; Flow Failed - Thu May 12 08:25:13 2022      ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; de0-nano-test-setup                         ;
 ; Top-level Entity Name              ; neorv32_test_setup_bootloader               ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 6,713 / 22,320 ( 30 % )                     ;
+;     Total combinational functions  ; 5,808 / 22,320 ( 26 % )                     ;
+;     Dedicated logic registers      ; 3,080 / 22,320 ( 14 % )                     ;
+; Total registers                    ; 3080                                        ;
+; Total pins                         ; 85 / 154 ( 55 % )                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 427,008 / 608,256 ( 70 % )                  ;
+; Embedded Multiplier 9-bit elements ; 7 / 132 ( 5 % )                             ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/11/2022 19:42:58 ;
+; Start date & time ; 05/12/2022 08:24:03 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; de0-nano-test-setup ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------------+-------------------------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value       ; Entity Name                   ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------------+-------------------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 71126643906493.165229097825923         ; --                  ; --                            ; --         ;
+; COMPILER_SIGNATURE_ID               ; 134660532534854.165233664315844        ; --                  ; --                            ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --                  ; --                            ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --                  ; --                            ; --         ;
 ; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --                  ; --                            ; --         ;
@@ -98,24 +98,27 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 462 MB              ; 00:00:18                           ;
-; Total                ; 00:00:10     ; --                      ; --                  ; 00:00:18                           ;
+; Analysis & Synthesis ; 00:00:58     ; 1.0                     ; 4895 MB             ; 00:01:21                           ;
+; Fitter               ; 00:00:10     ; 1.0                     ; 4956 MB             ; 00:00:09                           ;
+; Total                ; 00:01:08     ; --                      ; --                  ; 00:01:30                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                        ;
-+----------------------+------------------+----------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
-+----------------------+------------------+----------------+------------+----------------+
-; Analysis & Synthesis ; matej-desktop    ; Ubuntu 20.04.4 ; 20         ; x86_64         ;
-+----------------------+------------------+----------------+------------+----------------+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; LAPTOP-P4V11CDH  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; LAPTOP-P4V11CDH  ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off de0-nano-test-setup -c de0-nano-test-setup
+quartus_fit --read_settings_files=off --write_settings_files=off de0-nano-test-setup -c de0-nano-test-setup
 
 
 

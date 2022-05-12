@@ -18,9 +18,9 @@ entity IOmodul is
 end IOmodul;
 
 architecture Opis of IOmodul is
- 	component vio is
-		port (source : out std_ulogic_vector(3 downto 0));
-	end component vio;
+ 	--component vio is
+	--	port (source : out std_ulogic_vector(3 downto 0));
+	--end component vio;
 	
 	signal line_cnt : unsigned(2 downto 0):="000";
 	signal number_reg : unsigned(3 downto 0):="0000";
@@ -170,13 +170,13 @@ type rom_type is array(0 to 111) of unsigned(4 downto 0);  --16 znakov * 7 vrsti
         "10000"  --#
     );	
 
-	 signal vkey: std_ulogic_vector(3 downto 0);
+	 --signal vkey: std_ulogic_vector(3 downto 0);
 begin
 
-u0: component vio
-		port map (
-			source => vkey  -- sources.source
-	 );
+--u0: component vio
+--		port map (
+--			source => vkey  -- sources.source
+--	 );
 		
 main:process (clock50)
  variable refresh_cnt: unsigned(16 downto 0) := to_unsigned(0,17);
@@ -222,7 +222,7 @@ begin
 		----address "01"----	LED MATRIKA 5X7
 		if addr="01" then
 			iobus(7 downto 0) <= data_led;
-			buttons <= iobus(3 downto 0) or vkey;
+			buttons <= iobus(3 downto 0);-- or vkey;
 		end if;	
 	
 		if div<(25000000/FREQ2) then

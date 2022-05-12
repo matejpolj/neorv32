@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2022.05.07.16:22:47"
- outputDirectory="/mnt/5064E3264BEB0448/github/rubikscube/neorv32/bruh/tmp3/logika-cpu_restored/db/ip/vio/">
+ date="2022.05.12.08:08:29"
+ outputDirectory="C:/Users/mpolj/Documents/diplomska/neorw/neorv32/bruh/tmp3/logika-cpu_restored/db/ip/vio/">
  <perimeter>
   <parameter
      name="AUTO_GENERATION_ID"
@@ -41,43 +41,39 @@
  </perimeter>
  <entity
    path=""
-   parameterizationKey="vio:1.0:AUTO_DEVICE=EP4CE22F17C6,AUTO_DEVICE_FAMILY=Cyclone IV E,AUTO_DEVICE_SPEEDGRADE=6,AUTO_GENERATION_ID=1651933365,AUTO_UNIQUE_ID=(altera_in_system_sources_probes:20.1:create_source_clock=false,create_source_clock_enable=false,device_family=Cyclone IV E,enable_metastability=NO,gui_use_auto_index=true,instance_id=key,probe_width=0,sld_auto_instance_index=YES,sld_instance_index=0,source_initial_value=0,source_width=4)"
+   parameterizationKey="vio:1.0:AUTO_DEVICE=EP4CE22F17C6,AUTO_DEVICE_FAMILY=Cyclone IV E,AUTO_DEVICE_SPEEDGRADE=6,AUTO_GENERATION_ID=1652335706,AUTO_UNIQUE_ID=(altera_in_system_sources_probes:20.1:create_source_clock=false,create_source_clock_enable=false,device_family=Cyclone IV E,enable_metastability=NO,gui_use_auto_index=true,instance_id=key,probe_width=0,sld_auto_instance_index=YES,sld_instance_index=0,source_initial_value=0,source_width=4)"
    instancePathKey="vio"
    kind="vio"
    version="1.0"
    name="vio">
-  <parameter name="AUTO_GENERATION_ID" value="1651933365" />
+  <parameter name="AUTO_GENERATION_ID" value="1652335706" />
   <parameter name="AUTO_DEVICE" value="EP4CE22F17C6" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
   <parameter name="AUTO_UNIQUE_ID" value="" />
   <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
   <generatedFiles>
    <file
-       path="/mnt/5064E3264BEB0448/github/rubikscube/neorv32/bruh/tmp3/logika-cpu_restored/db/ip/vio/vio.v"
+       path="C:/Users/mpolj/Documents/diplomska/neorw/neorv32/bruh/tmp3/logika-cpu_restored/db/ip/vio/vio.v"
        type="VERILOG" />
   </generatedFiles>
   <childGeneratedFiles>
    <file
-       path="/mnt/5064E3264BEB0448/github/rubikscube/neorv32/bruh/tmp3/logika-cpu_restored/db/ip/vio/submodules/altsource_probe_top.v"
+       path="C:/Users/mpolj/Documents/diplomska/neorw/neorv32/bruh/tmp3/logika-cpu_restored/db/ip/vio/submodules/altsource_probe_top.v"
        type="VERILOG"
        attributes="" />
   </childGeneratedFiles>
   <sourceFiles>
    <file
-       path="/mnt/5064E3264BEB0448/github/rubikscube/neorv32/bruh/tmp3/logika-cpu_restored/vio.qsys" />
+       path="C:/Users/mpolj/Documents/diplomska/neorw/neorv32/bruh/tmp3/logika-cpu_restored/vio.qsys" />
   </sourceFiles>
   <childSourceFiles>
    <file
-       path="/mnt/a4b5d085-eea2-4a2e-847d-8e6738b9fd2c/fpga/intelFPGA_lite/20.1/ip/altera/sld/jtag/altera_in_system_sources_probes/altera_in_system_sources_probes_hw.tcl" />
+       path="C:/intelfpga_lite/20.1/ip/altera/sld/jtag/altera_in_system_sources_probes/altera_in_system_sources_probes_hw.tcl" />
   </childSourceFiles>
   <messages>
    <message level="Debug" culprit="vio">queue size: 0 starting:vio "vio"</message>
    <message level="Progress" culprit="min"></message>
    <message level="Progress" culprit="max"></message>
-   <message level="Progress" culprit="current"></message>
-   <message level="Progress" culprit="current"></message>
-   <message level="Progress" culprit="current"></message>
-   <message level="Progress" culprit="current"></message>
    <message level="Progress" culprit="current"></message>
    <message level="Debug">Transform: CustomInstructionTransform</message>
    <message level="Debug">No custom instruction connections, skipping transform </message>
@@ -113,14 +109,14 @@
   <parameter name="gui_use_auto_index" value="true" />
   <generatedFiles>
    <file
-       path="/mnt/5064E3264BEB0448/github/rubikscube/neorv32/bruh/tmp3/logika-cpu_restored/db/ip/vio/submodules/altsource_probe_top.v"
+       path="C:/Users/mpolj/Documents/diplomska/neorw/neorv32/bruh/tmp3/logika-cpu_restored/db/ip/vio/submodules/altsource_probe_top.v"
        type="VERILOG"
        attributes="" />
   </generatedFiles>
   <childGeneratedFiles/>
   <sourceFiles>
    <file
-       path="/mnt/a4b5d085-eea2-4a2e-847d-8e6738b9fd2c/fpga/intelFPGA_lite/20.1/ip/altera/sld/jtag/altera_in_system_sources_probes/altera_in_system_sources_probes_hw.tcl" />
+       path="C:/intelfpga_lite/20.1/ip/altera/sld/jtag/altera_in_system_sources_probes/altera_in_system_sources_probes_hw.tcl" />
   </sourceFiles>
   <childSourceFiles/>
   <instantiator instantiator="vio" as="in_system_sources_probes_0" />

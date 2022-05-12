@@ -1,5 +1,5 @@
 Flow report for logika
-Sat May  7 16:24:33 2022
+Thu May 12 08:09:38 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat May  7 16:24:10 2022       ;
+; Flow Status                        ; Successful - Thu May 12 08:09:32 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; logika                                      ;
 ; Top-level Entity Name              ; logika                                      ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/07/2022 16:22:22 ;
+; Start date & time ; 05/12/2022 08:08:01 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; logika              ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 71126643906493.165193334223276         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 134660532534854.165233568113508        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --          ; --         ;
@@ -96,24 +96,24 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:51     ; 1.0                     ; 442 MB              ; 00:00:56                           ;
-; Fitter               ; 00:00:23     ; 1.0                     ; 969 MB              ; 00:00:07                           ;
-; Assembler            ; 00:00:20     ; 1.0                     ; 354 MB              ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:05     ; 1.0                     ; 483 MB              ; 00:00:02                           ;
-; Total                ; 00:01:39     ; --                      ; --                  ; 00:01:07                           ;
+; Analysis & Synthesis ; 00:01:07     ; 1.0                     ; 4822 MB             ; 00:02:11                           ;
+; Fitter               ; 00:00:15     ; 1.0                     ; 5532 MB             ; 00:00:16                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4684 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:04     ; 1.0                     ; 4790 MB             ; 00:00:04                           ;
+; Total                ; 00:01:29     ; --                      ; --                  ; 00:02:34                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                        ;
-+----------------------+------------------+----------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
-+----------------------+------------------+----------------+------------+----------------+
-; Analysis & Synthesis ; matej-desktop    ; Ubuntu 20.04.4 ; 20         ; x86_64         ;
-; Fitter               ; matej-desktop    ; Ubuntu 20.04.4 ; 20         ; x86_64         ;
-; Assembler            ; matej-desktop    ; Ubuntu 20.04.4 ; 20         ; x86_64         ;
-; Timing Analyzer      ; matej-desktop    ; Ubuntu 20.04.4 ; 20         ; x86_64         ;
-+----------------------+------------------+----------------+------------+----------------+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; LAPTOP-P4V11CDH  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; LAPTOP-P4V11CDH  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; LAPTOP-P4V11CDH  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; LAPTOP-P4V11CDH  ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
 
 
 ------------

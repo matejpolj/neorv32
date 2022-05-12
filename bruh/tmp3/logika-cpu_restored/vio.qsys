@@ -50,7 +50,7 @@
  <module
    name="in_system_sources_probes_0"
    kind="altera_in_system_sources_probes"
-   version="17.0"
+   version="20.1"
    enabled="1"
    autoexport="1">
   <parameter name="create_source_clock" value="false" />

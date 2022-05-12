@@ -1,5 +1,5 @@
 Restore Archived Project report for logika
-Sat May  7 13:35:40 2022
+Thu May 12 08:07:34 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-; Restore Archived Project Status ; Successful - Sat May  7 13:35:40 2022 ;
+; Restore Archived Project Status ; Successful - Thu May 12 08:07:34 2022 ;
 ; Revision Name                   ; logika                                ;
 ; Top-level Entity Name           ; Logika                                ;
 ; Family                          ; Cyclone IV E                          ;
@@ -47,18 +47,25 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------+
 ; Restore Archived Project Messages ;
 +-----------------------------------+
-Info: Successfully restored '/mnt/5064E3264BEB0448/github/rubikscube/neorv32/bruh/tmp3/logika-cpu.qar' into the '/mnt/5064E3264BEB0448/github/rubikscube/neorv32/bruh/tmp3/logika-cpu_restored/' directory
+Info: Successfully restored 'C:/Users/mpolj/Documents/diplomska/neorw/neorv32/bruh/tmp3/logika-cpu.qar' into the 'C:/Users/mpolj/Documents/diplomska/neorw/neorv32/bruh/tmp3/logika-cpu_restored/' directory
 Info: Generated report 'logika.restore.rpt'
-Info (23030): Evaluation of Tcl script /mnt/a4b5d085-eea2-4a2e-847d-8e6738b9fd2c/fpga/intelFPGA_lite/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
-Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 583 megabytes
-    Info: Processing ended: Sat May  7 13:35:40 2022
-    Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:00
+Info (23030): Evaluation of Tcl script c:/intelfpga_lite/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 4821 megabytes
+    Info: Processing ended: Thu May 12 08:07:34 2022
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+
++----------------+
+; Files Restored ;
++----------------+
+; File Name      ;
++----------------+
 
 
 +--------------------------------+
-; Files Restored                 ;
+; Files Not Restored             ;
 +--------------------------------+
 ; File Name                      ;
 +--------------------------------+
@@ -78,12 +85,5 @@ Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
 ; vio.qsys                       ;
 ; vio.sopcinfo                   ;
 +--------------------------------+
-
-
-+--------------------+
-; Files Not Restored ;
-+--------------------+
-; File Name          ;
-+--------------------+
 
 
