@@ -1,5 +1,5 @@
 Flow report for de0-nano-test-setup
-Thu May 12 08:25:13 2022
+Thu May 12 12:44:25 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,17 +41,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Flow Failed - Thu May 12 08:25:13 2022      ;
+; Flow Status                        ; Successful - Thu May 12 12:44:02 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; de0-nano-test-setup                         ;
 ; Top-level Entity Name              ; neorv32_test_setup_bootloader               ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 6,713 / 22,320 ( 30 % )                     ;
-;     Total combinational functions  ; 5,808 / 22,320 ( 26 % )                     ;
-;     Dedicated logic registers      ; 3,080 / 22,320 ( 14 % )                     ;
-; Total registers                    ; 3080                                        ;
+; Total logic elements               ; 6,283 / 22,320 ( 28 % )                     ;
+;     Total combinational functions  ; 5,809 / 22,320 ( 26 % )                     ;
+;     Dedicated logic registers      ; 3,052 / 22,320 ( 14 % )                     ;
+; Total registers                    ; 3052                                        ;
 ; Total pins                         ; 85 / 154 ( 55 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 427,008 / 608,256 ( 70 % )                  ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/12/2022 08:24:03 ;
+; Start date & time ; 05/12/2022 12:41:08 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; de0-nano-test-setup ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------------+-------------------------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value       ; Entity Name                   ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------------+-------------------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 134660532534854.165233664315844        ; --                  ; --                            ; --         ;
+; COMPILER_SIGNATURE_ID               ; 134660532534854.165235206803772        ; --                  ; --                            ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --                  ; --                            ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --                  ; --                            ; --         ;
 ; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --                  ; --                            ; --         ;
@@ -98,9 +98,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:58     ; 1.0                     ; 4895 MB             ; 00:01:21                           ;
-; Fitter               ; 00:00:10     ; 1.0                     ; 4956 MB             ; 00:00:09                           ;
-; Total                ; 00:01:08     ; --                      ; --                  ; 00:01:30                           ;
+; Analysis & Synthesis ; 00:01:02     ; 1.0                     ; 4897 MB             ; 00:01:26                           ;
+; Fitter               ; 00:01:41     ; 1.1                     ; 5546 MB             ; 00:02:42                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4707 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:20     ; 1.3                     ; 4871 MB             ; 00:00:22                           ;
+; Total                ; 00:03:06     ; --                      ; --                  ; 00:04:33                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -111,6 +113,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; LAPTOP-P4V11CDH  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Fitter               ; LAPTOP-P4V11CDH  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; LAPTOP-P4V11CDH  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; LAPTOP-P4V11CDH  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -119,6 +123,8 @@ https://fpgasoftware.intel.com/eula.
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off de0-nano-test-setup -c de0-nano-test-setup
 quartus_fit --read_settings_files=off --write_settings_files=off de0-nano-test-setup -c de0-nano-test-setup
+quartus_asm --read_settings_files=off --write_settings_files=off de0-nano-test-setup -c de0-nano-test-setup
+quartus_sta de0-nano-test-setup -c de0-nano-test-setup
 
 
 

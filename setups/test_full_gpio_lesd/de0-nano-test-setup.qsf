@@ -264,8 +264,8 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[19]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[20]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[21]
 # dotherboard select connections
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[22]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to gpio_o[23]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to iobus[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to iobus[9]
 # dotherboard data connections  2.5-V     3.3-V LVTTL
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to iobus[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to iobus[1]
