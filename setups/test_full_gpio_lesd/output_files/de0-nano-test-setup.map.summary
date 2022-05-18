@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Thu May 12 12:42:11 2022
+Analysis & Synthesis Status : Successful - Thu May 12 18:44:21 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : de0-nano-test-setup
 Top-level Entity Name : neorv32_test_setup_bootloader
 Family : Cyclone IV E
-Total logic elements : 6,717
-    Total combinational functions : 5,804
+Total logic elements : 6,711
+    Total combinational functions : 5,798
     Dedicated logic registers : 3,088
 Total registers : 3088
 Total pins : 85
