@@ -168,9 +168,7 @@ begin
   pwm_o  <= con_pwm_o(9 downto 0);
   -- XIRQ --
   con_xirq_i(1 downto 0) <= xirq_i;
-  -- CLK --
-  --clk_o <= clk_i;
-  --ioclk2 <= ioclk2;
+
 	
 
 end architecture;
