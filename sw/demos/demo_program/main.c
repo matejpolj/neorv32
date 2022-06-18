@@ -110,14 +110,14 @@ int main() {
     tipka1 = getButtonState(but1);
     tipka2 = getButtonState(but2);
 
-    if (tipka1 == 1) {
-        pwm1_ += 50;
-        pwm2_ -= 50;
+    if (tipka1) {
+        pwm1_ += 8;
+        pwm2_ -= 8;
     }
   
-    if (tipka2 == 1) {
-        pwm2_ += 50;
-        pwm1_ -= 50;
+    if (tipka2) {
+        pwm2_ += 8;
+        pwm1_ -= 8;
     }
 
     // output new duty cycle
