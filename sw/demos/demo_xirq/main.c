@@ -40,6 +40,7 @@
  **************************************************************************/
 
 #include <neorv32.h>
+#include "config.h"
 
 
 /**********************************************************************//**
@@ -76,6 +77,11 @@ int main() {
     return 1;
   }
 
+  if (neorv32_gpio_available() == 0) {
+    neorv32_uart0_print("Error! No GPIO unit synthesized!\n");
+    return 1; // nope, no GPIO unit synthesized
+  }
+
 
   // intro
   neorv32_uart0_printf("Zunanja prekinitvena rutina demo!\n");
@@ -99,10 +105,7 @@ int main() {
   // (details: these are "third-level" interrupt handlers)
   // neorv32_xirq_install() also enables the specified XIRQ channel and clears any pending interrupts
   err_cnt = 0;
-  err_cnt += neorv32_xirq_install(0, xirq_handler_ch0); // handler function for channel 0
-  err_cnt += neorv32_xirq_install(1, xirq_handler_ch1); // handler function for channel 1
-  //err_cnt += neorv32_xirq_install(2, xirq_handler_ch2); // handler function for channel 2
-  //err_cnt += neorv32_xirq_install(3, xirq_handler_ch3); // handler function for channel 3
+  err_cnt += neorv32_xirq_install(irq, xirq_handler_ch0); // handler function for channel 0
 
   // check if installation went fine
   if (err_cnt) {
@@ -142,28 +145,15 @@ int main() {
   // handler function (installed via neorv32_xirq_install();).
   // Non-prioritized handling of interrupts (or custom prioritization) can be implemented by manually reading the
   // XIRQ controller's "pending" register. Then it is up to the software to define which pending IRQ should be served first.
+  neorv32_gpio_pin_set(led1);
+  neorv32_gpio_pin_clr(led2);
+
+  uint32_t pred = 0;
   while(1) {
-    neorv32_uart0_printf("in main chennes\n");
+    neorv32_uart0_printf("Iteracija stevilka %i\n", pred);
+    pred++;
+    neorv32_cpu_delay_ms(1500);
   };
-  
-  // just as an example: to disable certain XIRQ interrupt channels, we can
-  // un-install the according handler. this will also clear a pending interrupt for that channel
-  neorv32_xirq_uninstall(0); // disable XIRQ channel 0 and remove associated handler
-  neorv32_xirq_uninstall(1); // disable XIRQ channel 1 and remove associated handler
-  //neorv32_xirq_uninstall(2); // disable XIRQ channel 2 and remove associated handler
-  //neorv32_xirq_uninstall(3); // disable XIRQ channel 3 and remove associated handler
-
-  // you can also manually clear pending interrupts
-  neorv32_xirq_clear_pending(0); // clear pending interrupt of channel 0
-
-  // manually enable and disable XIRQ channels
-  neorv32_xirq_channel_enable(0); // enable channel 0
-  neorv32_xirq_channel_disable(0); // disable channel 0
-
-  // globally enable/disable XIRQ CPU interrupt
-  // this will not affect the XIR configuration / pending interrupts
-  neorv32_xirq_global_enable();
-  neorv32_xirq_global_disable();
 
   return 0;
 }
@@ -176,36 +166,18 @@ int main() {
  **************************************************************************/
 void xirq_handler_ch0(void) {
 
-  neorv32_uart0_printf("XIRQ interrupt from channel %i: %i\n", 0, NEORV32_XIRQ.IPR);
+  static uint8_t led1__ = 1;
+  static uint8_t led2__ = 0;
+
+  neorv32_gpio_pin_toggle(led1);
+  neorv32_gpio_pin_toggle(led2);
+
+  led1__ = !led1__;
+  led2__ = !led2__;
+
+  neorv32_uart0_printf("Trenutno stanje LED: %i, %i\n", led1__, led2__);
+
+  //neorv32_uart0_printf("XIRQ interrupt from channel %i: %i\n", 0, NEORV32_XIRQ.IPR);
 }
 
-/**********************************************************************//**
- * XIRQ handler channel 1.
- *
- * @warning This function has to be of type "void xyz(void)" and must not use any interrupt attributes!
- **************************************************************************/
-void xirq_handler_ch1(void) {
 
-  neorv32_uart0_printf("XIRQ interrupt from channel %i: %i\n", 1, NEORV32_XIRQ.IPR);
-}
-
-/**********************************************************************//**
- * XIRQ handler channel 2.
- *
- * @warning This function has to be of type "void xyz(void)" and must not use any interrupt attributes!
- **************************************************************************/
-/*void xirq_handler_ch2(void) {
-
-  neorv32_uart0_printf("XIRQ interrupt from channel %i\n", 2);
-}*/
-
-/**********************************************************************//**
- * XIRQ handler channel 3.
- *
- * @warning This function has to be of type "void xyz(void)" and must not use any interrupt attributes!
- **************************************************************************/
-/*void xirq_handler_ch3(void) {
-
-  neorv32_uart0_printf("XIRQ interrupt from channel %i\n", 3);
-}
-*/
