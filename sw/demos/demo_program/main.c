@@ -41,6 +41,7 @@
 
 #include <neorv32.h>
 #include "buttons.h"
+#include "config.h"
 
 
 /**********************************************************************//**
@@ -90,15 +91,15 @@ int main() {
 
 
   // deactivate all PWM channels
-  neorv32_pwm_set(0, 0);
-  neorv32_pwm_set(1, 0);
+  neorv32_pwm_set(pwm1, 0);
+  neorv32_pwm_set(pwm2, 0);
 
   // configure and enable PWM
   neorv32_pwm_setup(CLK_PRSC_64);
 
 
-  uint8_t pwm1 = 0;
-  uint8_t pwm2 = 0;
+  uint8_t pwm1_ = 0;
+  uint8_t pwm2_ = 0;
   uint8_t tipka1 = 0;
   uint8_t tipka2 = 0;
 
@@ -106,22 +107,22 @@ int main() {
   while(1) {
   
     // update duty cycle
-    tipka1 = getButtonPress(1);
-    tipka2 = getButtonPress(2);
+    tipka1 = getButtonState(but1);
+    tipka2 = getButtonState(but2);
 
     if (tipka1 == 1) {
-        pwm1 += 8;
-        pwm2 += 8;
+        pwm1_ += 50;
+        pwm2_ -= 50;
     }
   
     if (tipka2 == 1) {
-        pwm2 += 8;
-        pwm1 += 8;
+        pwm2_ += 50;
+        pwm1_ -= 50;
     }
 
     // output new duty cycle
-    neorv32_pwm_set(0, pwm1);
-    neorv32_pwm_set(1, pwm2);
+    neorv32_pwm_set(pwm1, pwm1_);
+    neorv32_pwm_set(pwm2, pwm2_);
 
     neorv32_cpu_delay_ms(10); // wait ~10ms
   }
